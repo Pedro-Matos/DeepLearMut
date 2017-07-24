@@ -8,6 +8,10 @@ from pandas import read_csv
 from pandas import datetime
 from pandas import DataFrame
 from pandas import concat
+from pandas import read_csv
+from pandas import datetime
+from pandas import Series
+from sklearn.preprocessing import MinMaxScaler
 
 # load dataset
 def parser(x):
@@ -48,8 +52,34 @@ def timeseries_to_supervised(data, lag=1):
     return df
 
 
+# create a differenced series
+def difference(dataset, interval=1):
+    diff = list()
+    for i in range(interval, len(dataset)):
+        value = dataset[i] - dataset[i - interval]
+        diff.append(value)
+    return Series(diff)
+
+
+# invert differenced value
+def inverse_difference(history, yhat, interval=1):
+    return yhat + history[-interval]
+
+# load dataset
+def parser(x):
+    return datetime.strptime('190' + x, '%Y-%m')
+
 series = read_csv('shampoo-sales.csv', header=0, parse_dates=[0], index_col=0, squeeze=True, date_parser=parser)
-# transform to supervised learning
+print(series.head())
+# transform scale
 X = series.values
-supervised = timeseries_to_supervised(X, 1)
-print(supervised.head())
+X = X.reshape(len(X), 1)
+scaler = MinMaxScaler(feature_range=(-1, 1))
+scaler = scaler.fit(X)
+scaled_X = scaler.transform(X)
+scaled_series = Series(scaled_X[:, 0])
+print(scaled_series.head())
+# invert transform
+inverted_X = scaler.inverse_transform(scaled_X)
+inverted_series = Series(inverted_X[:, 0])
+print(inverted_series.head())
