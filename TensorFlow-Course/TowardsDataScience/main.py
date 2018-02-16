@@ -16,8 +16,9 @@ class Example:
         print("Loaded training data...")
 
         dictionary, reverse_dictionary = self.build_dataset(training_data)
+        vocab_size = len(dictionary)
 
-        print(dictionary)
+
 
 
     ''' 
@@ -43,6 +44,10 @@ class Example:
         content = np.array(content)
         content = np.reshape(content, [-1, ])
         return content
+
+
+
+
 
 if __name__ == "__main__":
     example = Example()
