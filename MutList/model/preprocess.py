@@ -6,31 +6,25 @@ class PreProcess:
         # Load GLOVE vectors
         self.wordslist_path = '/Users/pmatos9/Desktop/pedrinho/tese/glove/wordsList.npy'
         self.wordsvector_path = '/Users/pmatos9/Desktop/pedrinho/tese/glove/wordVectors.npy'
-        self.wordsList = [] #list of all the words in the Glove. This way, we have a list and then, with the index we can
-                            # access the vector and retrieve the information
-        self.wordVectors = []
         self.text_path = '../corpus/mycorpus/train_final.txt'
-        self.dic_text = {}
-        self.list_id = []
-
-    def main(self):
-        self.load_glove()
-        # print(len(self.wordsList))
-        # print(self.wordVectors.shape)
-        self.load_mutations()
+        self.results_path = '../corpus/mycorpus/mut.tsv'
 
     # function to load the pre-processed words in glove dataset
     def load_glove(self):
-        self.wordsList = np.load(self.wordslist_path)
+        wordsList = np.load(self.wordslist_path)
         print('Loaded the word list!')
-        self.wordsList = self.wordsList.tolist()  # Originally loaded as numpy array
-        self.wordsList = [word.decode('UTF-8') for word in self.wordsList]  # Encode words as UTF-8
-        self.wordVectors = np.load(self.wordsvector_path)
+        wordsList = wordsList.tolist()  # Originally loaded as numpy array
+        wordsList = [word.decode('UTF-8') for word in wordsList]  # Encode words as UTF-8
+        wordVectors = np.load(self.wordsvector_path)
         print('Loaded the word vectors!')
+        return wordsList, wordVectors
 
     # function to load the information about the mutations
     def load_mutations(self):
         # create dictionary with identifier and the text(t + a) as 1st step
+        dic_text = {}
+        list_id = []
+
         with open(self.text_path) as fp:
             lines = fp.readlines()
             for line in lines:
@@ -38,16 +32,24 @@ class PreProcess:
                 id = content[0]
                 text = content[1] + "\t" + content[2]
                 dict = {id : text}
-                self.dic_text.update(dict)
-                self.list_id.append(id)
+                dic_text.update(dict)
+                list_id.append(id)
 
         print("Loaded the mutations texts!")
 
+        dic_results = {}
 
+        with open(self.results_path) as rp:
+            results = rp.readlines()
+            for result in results:
+                content = result.split('\t')
+                id = content[0]
+                r_list = content[1:]
 
+                dic = {id: r_list }
+                dic_results.update(dic)
 
+        print("Loaded the mutations results")
 
-if __name__ == "__main__":
-    pre = PreProcess()
-    pre.main()
+        return dic_text, list_id, dic_results
 
