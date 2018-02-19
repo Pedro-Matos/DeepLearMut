@@ -41,9 +41,11 @@ for line in days_file:
 
 
         if int(list_line[2]) < len(in_title):
-            str_tmp = list_line[0] + "\t" + "T" + "\t" + list_line[1] + "\t" + list_line[2] + "\t" + list_line[3] + "\t" + list_line[4] + list_line[5]
+            print(list_line[5])
+            str_tmp = list_line[0]+"\t"+"T"+"\t"+list_line[1]+"\t"+list_line[2]+"\t"+list_line[3]+"\t"+list_line[4]+"\t"+list_line[5]
         else:
-            str_tmp = list_line[0]+"\t"+"A"+"\t"+list_line[1]+"\t"+list_line[2]+"\t"+list_line[3]+"\t"+list_line[4]+"\t" + list_line[5]
+            print(list_line[5])
+            str_tmp = list_line[0]+"\t"+"A"+"\t"+list_line[1]+"\t"+list_line[2]+"\t"+list_line[3]+"\t"+list_line[4]+"\t"+list_line[5]
         final_tsv.write(str_tmp)
     else:
         if len(line_splitted) == 3:
