@@ -3,6 +3,7 @@ import tensorflow as tf
 from preprocessing import PreProcessing
 from sklearn.model_selection import train_test_split
 import datetime
+from random import randint
 
 class Mutlist:
     def __init__(self):
@@ -31,6 +32,9 @@ class Mutlist:
 
         train_seqs, test_seqs, train_labels, test_labels = self.normalize_data(data, labels)
 
+        self.prepare_lstm(train_seqs, train_labels, test_seqs, test_labels)
+
+
     def normalize_data(self, data, labels):
 
         # split the data to train and to test
@@ -57,7 +61,39 @@ class Mutlist:
 
         return train_seqs, test_seqs, train_labels, test_labels
 
-    def prepare_lstm(self):
+    def get_TrainingBatch(self, train_seqs, train_labels):
+        labels = []
+        dt = np.zeros([self.batchSize, self.maxSeqLength])
+
+        for i in range(self.batchSize):
+            num = randint(0, len(train_seqs) - 1)
+            if train_labels[num] == 0:
+                labels.append([1, 0, 0])
+            elif train_labels[num] == 1:
+                labels.append([0, 1, 0])
+            elif train_labels[num] == 2:
+                labels.append([0, 0, 1])
+            dt[i] = train_seqs[num]
+
+        return dt, labels
+
+    def get_TestBatch(self, test_seqs, test_labels):
+        labels = []
+        dt = np.zeros([self.batchSize, self.maxSeqLength])
+
+        for i in range(self.batchSize):
+            num = randint(0, len(test_seqs) - 1)
+            if test_labels[num] == 0:
+                labels.append([1, 0, 0])
+            elif test_labels[num] == 1:
+                labels.append([0, 1, 0])
+            elif test_labels[num] == 2:
+                labels.append([0, 0, 1])
+            dt[i] = test_seqs[num]
+
+        return dt, labels
+
+    def prepare_lstm(self, train_seqs, train_labels, test_seqs, test_labels):
         # define the network
         tf.reset_default_graph()
 
@@ -98,7 +134,7 @@ class Mutlist:
 
         for i in range(self.iterations):
             # Next batch of reviews
-            nextBatch, nextBatchLabels = self.getTrainBatch()
+            nextBatch, nextBatchLabels = self.get_TrainingBatch(train_seqs, train_labels)
             sess.run(optimizer, {input_data: nextBatch, labels: nextBatchLabels})
 
             # Write summary to TensorBoard
@@ -108,18 +144,22 @@ class Mutlist:
 
             # Save the network every 10,000 training iterations
             if i % 10000 == 0 and i != 0:
-                save_path = saver.save(sess, "/Users/pmatos9/Desktop/pedrinho/tese/checkpoints/MutList/pretrained_lstm.ckpt",
+                save_path = saver.save(sess, "/Users/pmatos9/Desktop/pedrinho/tese/checkpoints/MutList/pretrained_simple_lstm.ckpt",
                                        global_step=i)
                 print("saved to %s" % save_path)
 
         writer.close()
 
-    def get_TrainingBatch(self):
-        labels = []
+        print("\n\n")
+        sess = tf.InteractiveSession()
+        saver = tf.train.Saver()
+        saver.restore(sess, tf.train.latest_checkpoint("/Users/pmatos9/Desktop/pedrinho/tese/checkpoints/MutList/"))
 
-
-
-
+        iterations = 10
+        for i in range(iterations):
+            nextBatch, nextBatchLabels = self.get_TestBatch(test_seqs, test_labels)
+            print("Accuracy for this batch:",
+                  (sess.run(accuracy, {input_data: nextBatch, labels: nextBatchLabels})) * 100)
 
 
 if __name__ == "__main__":
