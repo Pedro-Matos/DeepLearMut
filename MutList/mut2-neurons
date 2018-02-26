@@ -1,0 +1,26 @@
+Mut2(with self.lstmUnits = 192): 	(41.666 | 52.5)
+
+
+Accuracy for this batch: 45.8333343267
+Accuracy for this batch: 33.3333343267
+Accuracy for this batch: 41.6666656733
+Accuracy for this batch: 41.6666656733
+Accuracy for this batch: 45.8333343267
+Accuracy for this batch: 50.0
+Accuracy for this batch: 33.3333343267
+Accuracy for this batch: 45.8333343267
+Accuracy for this batch: 50.0
+Accuracy for this batch: 29.1666656733
+
+___________________________________________________________________________________________________________________
+
+Accuracy for this batch: 50.0
+Accuracy for this batch: 45.8333343267
+Accuracy for this batch: 54.1666686535
+Accuracy for this batch: 62.5
+Accuracy for this batch: 66.6666686535
+Accuracy for this batch: 45.8333343267
+Accuracy for this batch: 45.8333343267
+Accuracy for this batch: 54.1666686535
+Accuracy for this batch: 54.1666686535
+Accuracy for this batch: 45.8333343267

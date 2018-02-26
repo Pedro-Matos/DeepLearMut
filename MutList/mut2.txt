@@ -1,0 +1,64 @@
+Mut2(network with more detail on lstm): 	(54.9 | 49.16 | 49.99 | 46.15 | 45.83)
+
+Accuracy for this batch: 58.3333313465
+Accuracy for this batch: 50.0
+Accuracy for this batch: 50.0
+Accuracy for this batch: 58.3333313465
+Accuracy for this batch: 54.1666686535
+Accuracy for this batch: 50.0
+Accuracy for this batch: 66.6666686535
+Accuracy for this batch: 41.6666656733
+Accuracy for this batch: 62.5
+Accuracy for this batch: 58.3333313465
+
+___________________________________________________________________________________________________________________
+
+Accuracy for this batch: 50.0
+Accuracy for this batch: 50.0
+Accuracy for this batch: 41.6666656733
+Accuracy for this batch: 66.6666686535
+Accuracy for this batch: 54.1666686535
+Accuracy for this batch: 45.8333343267
+Accuracy for this batch: 54.1666686535
+Accuracy for this batch: 29.1666656733
+Accuracy for this batch: 58.3333313465
+Accuracy for this batch: 41.6666656733
+
+___________________________________________________________________________________________________________________
+
+Accuracy for this batch: 66.6666686535
+Accuracy for this batch: 58.3333313465
+Accuracy for this batch: 33.3333343267
+Accuracy for this batch: 50.0
+Accuracy for this batch: 45.8333343267
+Accuracy for this batch: 45.8333343267
+Accuracy for this batch: 41.6666656733
+Accuracy for this batch: 50.0
+Accuracy for this batch: 54.1666686535
+Accuracy for this batch: 54.1666686535
+
+___________________________________________________________________________________________________________________
+
+
+Accuracy for this batch: 54.1666686535
+Accuracy for this batch: 54.1666686535
+Accuracy for this batch: 58.3333313465
+Accuracy for this batch: 29.1666656733
+Accuracy for this batch: 41.6666656733
+Accuracy for this batch: 41.6666656733
+Accuracy for this batch: 37.5
+Accuracy for this batch: 50.0
+Accuracy for this batch: 41.6666656733
+Accuracy for this batch: 54.1666686535
+___________________________________________________________________________________________________________________
+
+Accuracy for this batch: 41.6666656733
+Accuracy for this batch: 33.3333343267
+Accuracy for this batch: 29.1666656733
+Accuracy for this batch: 75.0
+Accuracy for this batch: 37.5
+Accuracy for this batch: 45.8333343267
+Accuracy for this batch: 70.8333313465
+Accuracy for this batch: 29.1666656733
+Accuracy for this batch: 37.5
+Accuracy for this batch: 58.3333313465

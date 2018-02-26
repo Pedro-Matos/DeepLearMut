@@ -10,12 +10,12 @@ class Mutlist:
         self.wordsList = None
         self.wordVectors = None
         self.maxSeqLength = 1  # Maximum length of sentence
-        self.numDimensions = 300  # Dimensions for each word vector
         self.types = {}
         self.batchSize = 24
         self.numClasses = -1
-        self.lstmUnits = 64
+        self.lstmUnits = 192
         self.iterations = 100000
+        self.numDimensions = 300  # Dimensions for each word vector
 
     def main(self):
         preprocess = PreProcessing()
@@ -42,7 +42,6 @@ class Mutlist:
 
         self.prepare_lstm(train_seqs, train_labels, test_seqs, test_labels)
 
-
     def normalize_data(self, data, labels):
 
         # split the data to train and to test
@@ -66,10 +65,9 @@ class Mutlist:
         train_labels = np.array([self.types.get(i) for i in labels_train])
         test_labels = np.array([self.types.get(i) for i in labels_test])
 
-
         return train_seqs, test_seqs, train_labels, test_labels
 
-    def get_TrainingBatch(self, train_seqs, train_labels):
+    def get_training_batch(self, train_seqs, train_labels):
         labels = []
         dt = np.zeros([self.batchSize, self.maxSeqLength])
 
@@ -85,7 +83,7 @@ class Mutlist:
 
         return dt, labels
 
-    def get_TestBatch(self, test_seqs, test_labels):
+    def get_test_batch(self, test_seqs, test_labels):
         labels = []
         dt = np.zeros([self.batchSize, self.maxSeqLength])
 
@@ -111,9 +109,15 @@ class Mutlist:
         data = tf.Variable(tf.zeros([self.batchSize, self.maxSeqLength, self.numDimensions]), dtype=tf.float32)
         data = tf.nn.embedding_lookup(self.wordVectors, input_data)
 
-        lstmCell = tf.contrib.rnn.BasicLSTMCell(self.lstmUnits)
-        lstmCell = tf.contrib.rnn.DropoutWrapper(cell=lstmCell, output_keep_prob=0.75)
-        value, _ = tf.nn.dynamic_rnn(lstmCell, data, dtype=tf.float32)
+        # lstmCell = tf.contrib.rnn.BasicLSTMCell(self.lstmUnits)
+        # lstmCell = tf.contrib.rnn.DropoutWrapper(cell=lstmCell, output_keep_prob=0.75)
+
+        lstm_cells = [tf.contrib.rnn.LSTMCell(num_units=self.lstmUnits)
+                      for layer in range(3)]
+        drop_cells = [tf.contrib.rnn.DropoutWrapper(cell, input_keep_prob=0.75)
+                      for cell in lstm_cells]
+        multi_cells = tf.contrib.rnn.MultiRNNCell(drop_cells)
+        value, _ = tf.nn.dynamic_rnn(multi_cells, data, dtype=tf.float32)
 
         weight = tf.Variable(tf.truncated_normal([self.lstmUnits, self.numClasses]))
         bias = tf.Variable(tf.constant(0.1, shape=[self.numClasses]))
@@ -142,7 +146,7 @@ class Mutlist:
 
         for i in range(self.iterations):
             # Next batch of reviews
-            nextBatch, nextBatchLabels = self.get_TrainingBatch(train_seqs, train_labels)
+            nextBatch, nextBatchLabels = self.get_training_batch(train_seqs, train_labels)
             sess.run(optimizer, {input_data: nextBatch, labels: nextBatchLabels})
 
             # Write summary to TensorBoard
@@ -164,10 +168,16 @@ class Mutlist:
         saver.restore(sess, tf.train.latest_checkpoint("/Users/pmatos9/Desktop/pedrinho/tese/checkpoints/MutList/"))
 
         iterations = 10
+        md = 0
         for i in range(iterations):
-            nextBatch, nextBatchLabels = self.get_TestBatch(test_seqs, test_labels)
-            print("Accuracy for this batch:",
-                  (sess.run(accuracy, {input_data: nextBatch, labels: nextBatchLabels})) * 100)
+            nextBatch, nextBatchLabels = self.get_test_batch(test_seqs, test_labels)
+            acc = (sess.run(accuracy, {input_data: nextBatch, labels: nextBatchLabels})) * 100
+            print("Accuracy for this batch:", acc)
+
+            md = md + acc
+
+        md = md / 10
+        print(md)
 
 
 if __name__ == "__main__":
