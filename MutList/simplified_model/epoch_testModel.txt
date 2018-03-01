@@ -1,0 +1,60 @@
+For epoch 0
+Accuracy 0.25
+Loss 0.991912
+__________________
+For epoch 1
+Accuracy 0.375
+Loss 1.13418
+__________________
+For epoch 2
+Accuracy 0.458333
+Loss 0.930248
+__________________
+For epoch 3
+Accuracy 0.416667
+Loss 0.907407
+__________________
+For epoch 4
+Accuracy 0.541667
+Loss 1.04223
+__________________
+For epoch 5
+Accuracy 0.708333
+Loss 0.743077
+__________________
+For epoch 6
+Accuracy 0.708333
+Loss 0.938742
+__________________
+For epoch 7
+Accuracy 0.625
+Loss 0.785424
+__________________
+For epoch 8
+Accuracy 0.541667
+Loss 0.910265
+__________________
+For epoch 9
+Accuracy 0.541667
+Loss 0.868191
+__________________
+For epoch 10
+Accuracy 0.5
+Loss 0.973863
+__________________
+For epoch 11
+Accuracy 0.541667
+Loss 0.863152
+__________________
+
+
+Testing Accuracy: 0.625
+Testing Accuracy: 0.416667
+Testing Accuracy: 0.416667
+Testing Accuracy: 0.25
+Testing Accuracy: 0.458333
+Testing Accuracy: 0.458333
+Testing Accuracy: 0.375
+Testing Accuracy: 0.541667
+Testing Accuracy: 0.208333
+Testing Accuracy: 0.375
