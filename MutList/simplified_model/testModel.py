@@ -129,7 +129,7 @@ class Teste:
         # optimization
         opt = tf.train.AdamOptimizer(learning_rate=self.learning_rate).minimize(loss)
 
-        # model evaluation
+        # words_vector_model evaluation
         correct_prediction = tf.equal(tf.argmax(prediction, 1), tf.argmax(y, 1))
         accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
