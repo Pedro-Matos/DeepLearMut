@@ -1,4 +1,4 @@
-Mut1(): 	(42.91 | 49.99 | 48.33)
+Simplified Model: 	(42.91 | 49.99 | 48.33)
 
 
 Accuracy for this batch: 50.0
