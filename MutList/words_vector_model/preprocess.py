@@ -1,5 +1,5 @@
 import numpy as np
-
+from gensim.models import KeyedVectors, Word2Vec
 
 
 class PreProcess:
@@ -10,6 +10,7 @@ class PreProcess:
         self.text_path = '../corpus/mycorpus/train_final.txt'
         self.results_path = '../corpus/mycorpus/mut.tsv'
         self.average_words = 0
+        self.word2vec_path = '/Users/pmatos9/Desktop/pedrinho/tese/glove/wikipedia-pubmed-and-PMC-w2v.bin'
 
     # function to load the pre-processed words in glove dataset
     def load_glove(self):
@@ -63,6 +64,22 @@ class PreProcess:
         list_types = list(list_types)
 
         return dic_text, list_id, dic_results, list_types
+
+    # function to load pre-processed words in word2vec from a combination of PubMed and PMC texts
+    def load_word2vec(self):
+        word_vectors = KeyedVectors.load_word2vec_format(self.word2vec_path, binary=True, limit=500000)  # limit just by now to speed up the run time
+
+        print('Found %s word vectors of word2vec' % len(word_vectors.vocab))
+
+        ar = word_vectors.index2word
+        embedding_matrix = np.zeros((500000, 200))
+        for i in range(len(ar)):
+            word = ar[i]
+            embedding_matrix[i] = word_vectors.word_vec(word)
+
+        print(embedding_matrix.shape)
+        print(embedding_matrix[20])
+
 
 #pre = PreProcess()
 #pre.load_mutations()
