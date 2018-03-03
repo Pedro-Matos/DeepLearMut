@@ -17,10 +17,25 @@ class Mutlist:
 
     def create_matrix(self, dic_text, numFiles):
         ids = np.zeros((numFiles, self.maxSeqLength), dtype='int32')
+        dic_counter = {}
+        file_counter = 0
 
         for k, v in dic_text.items():
-            print(k)
+            indexCounter = 0
+            dic_tmp = {file_counter: k}
+            dic_counter.update(dic_tmp)
 
+            for token in v:
+                try:
+                    ids[file_counter][indexCounter] = self.wordsList.index(token)
+                except ValueError:
+                    ids[file_counter][indexCounter] = 999999  # Vector for unkown words
+                indexCounter = indexCounter + 1
+                if indexCounter >= self.maxSeqLength:
+                    break
+            file_counter = file_counter + 1
+        print(dic_counter)
+        return ids
 
     def main(self):
         preprocess = PreProcess()
@@ -28,7 +43,8 @@ class Mutlist:
         dic_text, list_id, dic_results, self.types, self.maxSeqLength = preprocess.load_mutations()
         self.numClasses = len(self.types)
 
-        self.create_matrix(dic_text, len(list_id))
+        ids = self.create_matrix(dic_text, len(list_id))
+
 
 
 
