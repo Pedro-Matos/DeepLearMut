@@ -1,5 +1,7 @@
 import numpy as np
-from gensim.models import KeyedVectors, Word2Vec
+from gensim.models import KeyedVectors
+from collections import defaultdict
+from nltk.tokenize import RegexpTokenizer
 
 
 class PreProcess:
@@ -25,61 +27,60 @@ class PreProcess:
     # function to load the information about the mutations
     def load_mutations(self):
         # create dictionary with identifier and the text(t + a) as 1st step
-        dic_text = {}
         list_id = []
         numwords = []
+
+        tokenizer = RegexpTokenizer(r'\w+')
+        regex_dic = {}
 
         with open(self.text_path) as fp:
             lines = fp.readlines()
             for line in lines:
                 content = line.split('\t')
                 id = content[0]
-                text = content[1] + "\t" + content[2]
-                dict = {id: text}
-                dic_text.update(dict)
+                text = content[1] + " " + content[2]
+
                 list_id.append(id)
 
-                counter = len(content[1].split(" ")) + len(content[2].split(" "))
+                regex_text = tokenizer.tokenize(text)
+                tmp = {id: regex_text}
+                regex_dic.update(tmp)
+
+                counter = len(regex_text)
                 numwords.append(counter)
 
-        self.average_words = sum(numwords)/len(numwords)
+        self.average_words = max(numwords)
 
         print("Loaded the mutations texts!")
 
-        dic_results = {}
+
         list_types = []
+        res_dict = defaultdict(list)
 
         with open(self.results_path) as rp:
             results = rp.readlines()
             for result in results:
                 content = result.split('\t')
                 id = content[0]
-                r_list = content[1:]
                 list_types.append(content[5])
-                dic = {id: r_list}
-                dic_results.update(dic)
+                res_dict[id].append(content[5])
 
         print("Loaded the mutations results")
         list_types = set(list_types)
         list_types = list(list_types)
 
-        return dic_text, list_id, dic_results, list_types
+        return regex_dic, list_id, res_dict, list_types, self.average_words
 
     # function to load pre-processed words in word2vec from a combination of PubMed and PMC texts
     def load_word2vec(self):
-        word_vectors = KeyedVectors.load_word2vec_format(self.word2vec_path, binary=True, limit=500000)  # limit just by now to speed up the run time
+        wordVectors = KeyedVectors.load_word2vec_format(self.word2vec_path, binary=True, limit=500000)  # limit just by now to speed up the run time
 
-        print('Found %s word vectors of word2vec' % len(word_vectors.vocab))
+        print('Found %s word vectors of word2vec' % len(wordVectors.vocab))
 
-        ar = word_vectors.index2word
+        wordsList = wordVectors.index2word
         embedding_matrix = np.zeros((500000, 200))
-        for i in range(len(ar)):
-            word = ar[i]
-            embedding_matrix[i] = word_vectors.word_vec(word)
+        for i in range(len(wordsList)):
+            word = wordsList[i]
+            embedding_matrix[i] = wordVectors.word_vec(word)
 
-        print(embedding_matrix.shape)
-        print(embedding_matrix[20])
-
-
-#pre = PreProcess()
-#pre.load_mutations()
+        return wordsList, embedding_matrix
