@@ -31,7 +31,7 @@ class PreProcess:
         numwords = []
 
         tokenizer = RegexpTokenizer(r'\w+')
-        regex_dic = {}
+        regex_array = []
 
         with open(self.text_path) as fp:
             lines = fp.readlines()
@@ -43,8 +43,8 @@ class PreProcess:
                 list_id.append(id)
 
                 regex_text = tokenizer.tokenize(text)
-                tmp = {id: regex_text}
-                regex_dic.update(tmp)
+
+                regex_array.append(regex_text)
 
                 counter = len(regex_text)
                 numwords.append(counter)
@@ -65,11 +65,16 @@ class PreProcess:
                 list_types.append(content[5])
                 res_dict[id].append(content[5])
 
+        labels = []
+
+        for k, v in res_dict.items():
+            labels.append(v)
+
         print("Loaded the mutations results")
         list_types = set(list_types)
         list_types = list(list_types)
 
-        return regex_dic, list_id, res_dict, list_types, self.average_words
+        return regex_array, list_id, labels, list_types, self.average_words
 
     # function to load pre-processed words in word2vec from a combination of PubMed and PMC texts
     def load_word2vec(self):

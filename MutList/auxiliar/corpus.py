@@ -1,11 +1,6 @@
-
-
-
-
-
-path_read = 'corpus/mycorpus/all.txt'
-path_write = 'corpus/mycorpus/train_final.txt'
-path_write_tsv= 'corpus/mycorpus/mut.tsv'
+path_read = '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList/corpus/mycorpus/all.txt'
+path_write = '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList/corpus/mycorpus/train_final.txt'
+path_write_tsv= '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList/corpus/mycorpus/mut.tsv'
 
 days_file = open(path_read, 'r')
 final = open(path_write, 'w')

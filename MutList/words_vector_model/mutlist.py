@@ -1,4 +1,5 @@
 from preprocess import PreProcess
+from sklearn.model_selection import train_test_split
 import numpy as np
 
 class Mutlist:
@@ -34,24 +35,39 @@ class Mutlist:
                 if indexCounter >= self.maxSeqLength:
                     break
             file_counter = file_counter + 1
-        print(dic_counter)
         return ids
+
+    def split_data(self, data, labels):
+        # split the data to train and to test
+        train_df, test_df = train_test_split(data, test_size=0.1, shuffle=False)
+        labels_train, labels_test = train_test_split(labels, test_size=0.1, shuffle=False)
+
+        return train_df, test_df, labels_train, labels_test
+
 
     def main(self):
         preprocess = PreProcess()
         self.wordsList, self.wordVectors = preprocess.load_word2vec()
-        dic_text, list_id, dic_results, self.types, self.maxSeqLength = preprocess.load_mutations()
+        data, list_id, labels, types, self.maxSeqLength = preprocess.load_mutations()
         self.numClasses = len(self.types)
 
-        ids = self.create_matrix(dic_text, len(list_id))
+        # create dictionary of type and it's respective value in int
+        count = 0
+        for i in types:
+            dic = {i: count}
+            self.types.update(dic)
+            count = count + 1
 
+        # ids = self.create_matrix(dic_text, len(list_id))
 
+        train_df, test_df, labels_train, labels_test = self.split_data(data, labels)
 
-
-
-
-
-
+        # Spit out details about data
+        print("\n=================================\nData details:")
+        print("- Training-set:\t{}".format(len(train_df)))
+        print("- Test-set:\t\t{}".format(len(test_df)))
+        print("- Classes:\t\t{}".format(self.types))
+        print("=================================\n\n")
 
 if __name__ == "__main__":
     mutlist = Mutlist()
