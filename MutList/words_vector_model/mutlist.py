@@ -47,13 +47,39 @@ class Mutlist:
 
         return train_df, test_df, labels_train, labels_test
 
-    def get_train_batch(self, ids):
-        labels = []
+    def get_train_batch(self, labels, ids):
+        l = []
         arr = np.zeros([self.batchSize, self.maxSeqLength])
 
-        
+        for i in range(self.batchSize):
+            if i < (self.batchSize / 3):
+                num = randint(0, 93)
+                lab_list = labels[num]
+                num_list = randint(0, len(lab_list)-1)
+                label_class = self.types.get(lab_list[num_list])
 
+            elif i < (self.batchSize / 3) * 2:
+                num = randint(94, 187)
+                lab_list = labels[num]
+                num_list = randint(0, len(lab_list)-1)
+                label_class = self.types.get(lab_list[num_list])
 
+            elif i < (self.batchSize / 3) * 3:
+                num = randint(188, 281)
+                lab_list = labels[num]
+                num_list = randint(0, len(lab_list)-1)
+                label_class = self.types.get(lab_list[num_list])
+
+            arr[i] = ids[num - 1:num]
+
+            if label_class == 0:
+                l.append([1, 0, 0])
+            elif label_class == 1:
+                l.append([0, 1, 0])
+            elif label_class == 2:
+                l.append([0, 0, 1])
+
+        return arr, l
 
     def train_model(self):
         tf.reset_default_graph()
@@ -146,7 +172,7 @@ class Mutlist:
         print("- Classes:\t\t{}".format(self.types))
         print("=================================\n\n")
 
-        self.get_train_batch(ids)
+        self.get_train_batch(train_df, labels_train, ids)
 
 if __name__ == "__main__":
     mutlist = Mutlist()
