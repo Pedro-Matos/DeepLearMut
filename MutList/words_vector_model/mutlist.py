@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import tensorflow as tf
 import datetime
+from random import randint
 
 class Mutlist:
     def __init__(self):
@@ -18,25 +19,25 @@ class Mutlist:
         self.lstmUnits = 64
         self.iterations = 100000
 
-    def create_matrix(self, dic_text, numFiles):
+    def create_matrix(self, data, numFiles):
         ids = np.zeros((numFiles, self.maxSeqLength), dtype='int32')
-        dic_counter = {}
+
         file_counter = 0
 
-        for k, v in dic_text.items():
-            indexCounter = 0
-            dic_tmp = {file_counter: k}
-            dic_counter.update(dic_tmp)
-
-            for token in v:
+        for index in data:
+            token_counter = 0
+            for token in index:
                 try:
-                    ids[file_counter][indexCounter] = self.wordsList.index(token)
+                    ids[file_counter][token_counter] = self.wordsList.index(token)
                 except ValueError:
-                    ids[file_counter][indexCounter] = 999999  # Vector for unkown words
-                indexCounter = indexCounter + 1
-                if indexCounter >= self.maxSeqLength:
+                    ids[file_counter][token_counter] = 799999
+                token_counter = token_counter + 1
+
+                if token_counter >= self.maxSeqLength:
                     break
+
             file_counter = file_counter + 1
+
         return ids
 
     def split_data(self, data, labels):
@@ -45,6 +46,14 @@ class Mutlist:
         labels_train, labels_test = train_test_split(labels, test_size=0.1, shuffle=False)
 
         return train_df, test_df, labels_train, labels_test
+
+    def get_train_batch(self, ids):
+        labels = []
+        arr = np.zeros([self.batchSize, self.maxSeqLength])
+
+        
+
+
 
     def train_model(self):
         tf.reset_default_graph()
@@ -86,8 +95,8 @@ class Mutlist:
         writer = tf.summary.FileWriter(logdir, sess.graph)
 
         for i in range(self.iterations):
-            # Next Batch of reviews
-            nextBatch, nextBatchLabels = getTrainBatch()
+            # Next Batch 
+            nextBatch, nextBatchLabels = get_train_batch()
             sess.run(optimizer, {input_data: nextBatch, labels: nextBatchLabels})
 
             #Write summary to Tensorboard
@@ -115,8 +124,9 @@ class Mutlist:
     def main(self):
         preprocess = PreProcess()
         self.wordsList, self.wordVectors = preprocess.load_word2vec()
-        data, list_id, labels, types, self.maxSeqLength = preprocess.load_mutations()
+        data, list_id, labels, types, max_length = preprocess.load_mutations()
         self.numClasses = len(self.types)
+        self.maxSeqLength = max_length + 1
 
         # create dictionary of type and it's respective value in int
         count = 0
@@ -125,7 +135,7 @@ class Mutlist:
             self.types.update(dic)
             count = count + 1
 
-        # ids = self.create_matrix(dic_text, len(list_id))
+        ids = self.create_matrix(data, len(list_id))
 
         train_df, test_df, labels_train, labels_test = self.split_data(data, labels)
 
@@ -135,6 +145,8 @@ class Mutlist:
         print("- Test-set:\t\t{}".format(len(test_df)))
         print("- Classes:\t\t{}".format(self.types))
         print("=================================\n\n")
+
+        self.get_train_batch(ids)
 
 if __name__ == "__main__":
     mutlist = Mutlist()
