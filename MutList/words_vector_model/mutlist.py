@@ -19,18 +19,20 @@ class Mutlist:
         self.lstmUnits = 64
         self.iterations = 100000
 
-    def create_matrix(self, data, numFiles):
-        ids = np.zeros((numFiles, self.maxSeqLength), dtype='int32')
+    def create_matrix(self, train, test):
+        num_train = len(train)
+        num_test = len(test)
 
+        ids_train = np.zeros((num_train, self.maxSeqLength), dtype='int32')
         file_counter = 0
 
-        for index in data:
+        for index in train:
             token_counter = 0
             for token in index:
                 try:
-                    ids[file_counter][token_counter] = self.wordsList.index(token)
+                    ids_train[file_counter][token_counter] = self.wordsList.index(token)
                 except ValueError:
-                    ids[file_counter][token_counter] = 799999
+                    ids_train[file_counter][token_counter] = 799999
                 token_counter = token_counter + 1
 
                 if token_counter >= self.maxSeqLength:
@@ -38,7 +40,24 @@ class Mutlist:
 
             file_counter = file_counter + 1
 
-        return ids
+        ids_test = np.zeros((num_test, self.maxSeqLength), dtype='int32')
+        file_counter = 0
+
+        for index in test:
+            token_counter = 0
+            for token in index:
+                try:
+                    ids_test[file_counter][token_counter] = self.wordsList.index(token)
+                except ValueError:
+                    ids_test[file_counter][token_counter] = 799999
+                token_counter = token_counter + 1
+
+                if token_counter >= self.maxSeqLength:
+                    break
+
+            file_counter = file_counter + 1
+
+        return ids_train, ids_test
 
     def split_data(self, data, labels):
         # split the data to train and to test
@@ -47,7 +66,7 @@ class Mutlist:
 
         return train_df, test_df, labels_train, labels_test
 
-    def get_train_batch(self, labels, ids):
+    def get_train_batch(self, ids_train, labels):
         l = []
         arr = np.zeros([self.batchSize, self.maxSeqLength])
 
@@ -70,7 +89,7 @@ class Mutlist:
                 num_list = randint(0, len(lab_list)-1)
                 label_class = self.types.get(lab_list[num_list])
 
-            arr[i] = ids[num - 1:num]
+            arr[i] = ids_train[num - 1:num]
 
             if label_class == 0:
                 l.append([1, 0, 0])
@@ -161,9 +180,9 @@ class Mutlist:
             self.types.update(dic)
             count = count + 1
 
-        ids = self.create_matrix(data, len(list_id))
-
         train_df, test_df, labels_train, labels_test = self.split_data(data, labels)
+
+        ids_train, ids_test = self.create_matrix(train_df, test_df)
 
         # Spit out details about data
         print("\n=================================\nData details:")
@@ -172,7 +191,7 @@ class Mutlist:
         print("- Classes:\t\t{}".format(self.types))
         print("=================================\n\n")
 
-        self.get_train_batch(train_df, labels_train, ids)
+        self.get_train_batch(ids_train, labels_train)
 
 if __name__ == "__main__":
     mutlist = Mutlist()
