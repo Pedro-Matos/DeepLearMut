@@ -78,12 +78,12 @@ class PreProcess:
 
     # function to load pre-processed words in word2vec from a combination of PubMed and PMC texts
     def load_word2vec(self):
-        wordVectors = KeyedVectors.load_word2vec_format(self.word2vec_path, binary=True, limit=500000)  # limit just by now to speed up the run time
+        wordVectors = KeyedVectors.load_word2vec_format(self.word2vec_path, binary=True, limit=499999)  # limit just by now to speed up the run time
 
         print('Found %s word vectors of word2vec' % len(wordVectors.vocab))
 
         wordsList = wordVectors.index2word
-        embedding_matrix = np.zeros((500000, 200))
+        embedding_matrix = np.zeros((500000, 200), dtype='float32')
         for i in range(len(wordsList)):
             word = wordsList[i]
             embedding_matrix[i] = wordVectors.word_vec(word)

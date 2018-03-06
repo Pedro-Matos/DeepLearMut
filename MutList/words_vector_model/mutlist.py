@@ -32,7 +32,7 @@ class Mutlist:
                 try:
                     ids_train[file_counter][token_counter] = self.wordsList.index(token)
                 except ValueError:
-                    ids_train[file_counter][token_counter] = 799999
+                    ids_train[file_counter][token_counter] = 499999  # full of zeros
                 token_counter = token_counter + 1
 
                 if token_counter >= self.maxSeqLength:
@@ -49,13 +49,16 @@ class Mutlist:
                 try:
                     ids_test[file_counter][token_counter] = self.wordsList.index(token)
                 except ValueError:
-                    ids_test[file_counter][token_counter] = 799999
+                    ids_test[file_counter][token_counter] = 499999  # full of zeros
                 token_counter = token_counter + 1
 
                 if token_counter >= self.maxSeqLength:
                     break
 
             file_counter = file_counter + 1
+
+        print(ids_train.shape)
+        print(ids_test.shape)
 
         return ids_train, ids_test
 
@@ -89,7 +92,8 @@ class Mutlist:
                 num_list = randint(0, len(lab_list)-1)
                 label_class = self.types.get(lab_list[num_list])
 
-            arr[i] = ids_train[num - 1:num]
+            # arr[i] = ids_train[num - 1:num]   # ValueError: could not broadcast input array from shape (0,429) into shape (429)
+            arr[i] = ids_train[num]
 
             if label_class == 0:
                 l.append([1, 0, 0])
@@ -100,7 +104,7 @@ class Mutlist:
 
         return arr, l
 
-    def train_model(self):
+    def train_model(self, ids_train, labels_train, ids_test, labels_test):
         tf.reset_default_graph()
 
         labels = tf.placeholder(tf.float32, [self.batchSize, self.numClasses])
@@ -132,45 +136,37 @@ class Mutlist:
         saver = tf.train.Saver()
         sess.run(tf.global_variables_initializer())
 
-        # to use TensorBoard
-        tf.summary.scalar('Loss', loss)
-        tf.summary.scalar('Accuracy', accuracy)
-        merged = tf.summary.merge_all()
-        logdir = "tensorboard/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + "/"
-        writer = tf.summary.FileWriter(logdir, sess.graph)
+
 
         for i in range(self.iterations):
             # Next Batch 
-            nextBatch, nextBatchLabels = get_train_batch()
+            nextBatch, nextBatchLabels = self.get_train_batch(ids_train, labels_train)
             sess.run(optimizer, {input_data: nextBatch, labels: nextBatchLabels})
 
-            #Write summary to Tensorboard
-            if (i % 50 == 0):
-                summary = sess.run(merged, {input_data: nextBatch, labels: nextBatchLabels})
-                writer.add_summary(summary, i)
+            print(i)
+            if (i % 1000 == 0 and i != 0):
+                print("Already done %s" % i)
 
             #Save the network every 10,000 training iterations
             if (i % 10000 == 0 and i != 0):
-                save_path = saver.save(sess, "models/pretrained_lstm.ckpt", global_step=i)
+                save_path = saver.save(sess, "/Users/pmatos9/Desktop/pedrinho/tese/checkpoints/MutList/words/pretrained_lstm.ckpt",
+                                       global_step=i)
                 print("saved to %s" % save_path)
 
-        writer.close()
-
-        sess = tf.InteractiveSession()
-        saver = tf.train.Saver()
-        saver.restore(sess, tf.train.latest_checkpoint('models'))
-
-        iterations = 10
-        for i in range(iterations):
-            nextBatch, nextBatchLabels = getTestBatch()
-            print("Accuracy for this batch:",
-                  (sess.run(accuracy, {input_data: nextBatch, labels: nextBatchLabels})) * 100)
+        # sess = tf.InteractiveSession()
+        # saver = tf.train.Saver()
+        # saver.restore(sess, tf.train.latest_checkpoint('models'))
+        #
+        # iterations = 10
+        # for i in range(iterations):
+        #     nextBatch, nextBatchLabels = getTestBatch()
+        #     print("Accuracy for this batch:",
+        #           (sess.run(accuracy, {input_data: nextBatch, labels: nextBatchLabels})) * 100)
 
     def main(self):
         preprocess = PreProcess()
         self.wordsList, self.wordVectors = preprocess.load_word2vec()
         data, list_id, labels, types, max_length = preprocess.load_mutations()
-        self.numClasses = len(self.types)
         self.maxSeqLength = max_length + 1
 
         # create dictionary of type and it's respective value in int
@@ -180,8 +176,9 @@ class Mutlist:
             self.types.update(dic)
             count = count + 1
 
-        train_df, test_df, labels_train, labels_test = self.split_data(data, labels)
+        self.numClasses = len(self.types)
 
+        train_df, test_df, labels_train, labels_test = self.split_data(data, labels)
         ids_train, ids_test = self.create_matrix(train_df, test_df)
 
         # Spit out details about data
@@ -191,7 +188,7 @@ class Mutlist:
         print("- Classes:\t\t{}".format(self.types))
         print("=================================\n\n")
 
-        self.get_train_batch(ids_train, labels_train)
+        self.train_model(ids_train, labels_train, ids_test, labels_test)
 
 if __name__ == "__main__":
     mutlist = Mutlist()
