@@ -1,7 +1,6 @@
 import numpy as np
 
 
-
 class PreProcessing:
     def __init__(self):
         # Load GLOVE vectors
@@ -24,19 +23,38 @@ class PreProcessing:
 
     # function to load information about the mutations
     def load_mutations(self):
+        # types = []
+        # with open(self.results_path) as rp:
+        #     results = rp.readlines()
+        #     for result in results:
+        #         content = result.split('\t')
+        #         self.data.append(content[4])
+        #         self.labels.append(content[5])
+        #         types.append(content[5])
+        #
+        # types = set(types)
+        # self.types = list(types)
+        # print("Loaded the data!")
+        #
+        # return self.data, self.labels, self.types
+
         types = []
+        tmp_dic = {}
         with open(self.results_path) as rp:
             results = rp.readlines()
             for result in results:
                 content = result.split('\t')
-                self.data.append(content[4])
-                self.labels.append(content[5])
+                x = {content[4]:content[5]}
+                tmp_dic.update(x)
                 types.append(content[5])
+
+        for k, v in tmp_dic.items():
+            self.data.append(k)
+            self.labels.append(v)
 
         types = set(types)
         self.types = list(types)
         print("Loaded the data!")
 
         return self.data, self.labels, self.types
-
 

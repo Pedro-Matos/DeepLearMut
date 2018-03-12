@@ -4,6 +4,7 @@ from preprocessing import PreProcessing
 from sklearn.model_selection import train_test_split
 from random import randint
 import sys
+import time
 
 class Teste:
     def __init__(self):
@@ -13,7 +14,7 @@ class Teste:
         # unrolled through x time steps
         self.time_steps = 1
         # hidden LSTM units
-        self.num_units = 128
+        self.num_units = 64
         # learning rate for adam
         self.learning_rate = 0.001
         # size of batch
@@ -43,6 +44,7 @@ class Teste:
         print("=================================\n\n")
 
         self.train(train_seqs, test_seqs, train_labels, test_labels)
+
 
     def normalize_data(self, data, labels):
 
@@ -102,6 +104,8 @@ class Teste:
         return dt, labels
 
     def train(self, train_seqs, test_seqs, train_labels, test_labels):
+        start = time.time()
+
         # weights and biases of appropriate shape to accomplish above task
         out_weights = tf.Variable(tf.random_normal([self.num_units, self.numClasses]))
         out_bias = tf.Variable(tf.random_normal([self.numClasses]))
@@ -140,41 +144,28 @@ class Teste:
         with tf.Session() as sess:
             sess.run(init)
 
-            for epoch in range(12):
-                iter = 1
-                while iter < self.iterations:
-                    # Next batch of reviews
-                    next_batch, next_batch_labels = self.get_TrainingBatch(train_seqs, train_labels)
-                    batch_x = next_batch.reshape((self.batch_size, self.time_steps, self.maxSeqLength))
-                    sess.run(opt, feed_dict={x: batch_x, y: next_batch_labels})
+            iter = 1
+            while iter < self.iterations:
+                # Next batch of reviews
+                next_batch, next_batch_labels = self.get_TrainingBatch(train_seqs, train_labels)
+                batch_x = next_batch.reshape((self.batch_size, self.time_steps, self.maxSeqLength))
+                sess.run(opt, feed_dict={x: batch_x, y: next_batch_labels})
 
-                    # if iter % 10000 == 0 and iter != 0:
-                    #     acc = sess.run(accuracy, feed_dict={x: batch_x, y: next_batch_labels})
-                    #     los = sess.run(loss, feed_dict={x: batch_x, y: next_batch_labels})
-                    #     print("For iter ", iter)
-                    #     print("Accuracy ", acc)
-                    #     print("Loss ", los)
-                    #     print("__________________")
+                if iter % 10000 == 0 and iter != 0:
+                    print("\n\n")
+                    acc = sess.run(accuracy, feed_dict={x: batch_x, y: next_batch_labels})
 
-                    iter = iter + 1
+                    file.write("For iteration " + str(iter))
+                    file.write("\n")
+                    file.write("Accuracy " + str(acc))
+                    file.write("\n")
+                    file.write("__________________\n")
+                    file.flush()
+                    file.write("\n\n")
 
-                print("\n\n")
-                acc = sess.run(accuracy, feed_dict={x: batch_x, y: next_batch_labels})
-                los = sess.run(loss, feed_dict={x: batch_x, y: next_batch_labels})
-                file.write("For epoch " + str(epoch))
-                file.write("\n")
+                iter = iter + 1
 
-                file.write("Accuracy " + str(acc))
-                file.write("\n")
 
-                file.write("Loss " + str(los))
-                file.write("\n")
-
-                file.write("__________________\n")
-
-                file.flush()
-
-            file.write("\n\n")
             iterations = 10
             for i in range(iterations):
                 # calculating test accuracy
@@ -187,6 +178,10 @@ class Teste:
                 file.flush()
 
             file.close()
+
+            end = time.time()
+            print("Time: ")
+            print(end - start)
 
 
 if __name__ == "__main__":
