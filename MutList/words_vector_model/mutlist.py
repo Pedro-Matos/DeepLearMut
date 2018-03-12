@@ -17,7 +17,7 @@ class Mutlist:
         self.numDimensions = 200  # Dimensions for each word vector
         self.batchSize = 24
         self.lstmUnits = 64
-        self.iterations = 100000
+        self.iterations = 1000
 
     def create_matrix(self, train, test):
         num_train = len(train)
@@ -96,11 +96,13 @@ class Mutlist:
             arr[i] = ids_train[num]
 
             if label_class == 0:
-                l.append([1, 0, 0])
+                l.append([1, 0, 0, 0])
             elif label_class == 1:
-                l.append([0, 1, 0])
+                l.append([0, 1, 0, 0])
             elif label_class == 2:
-                l.append([0, 0, 1])
+                l.append([0, 0, 1, 0])
+            elif label_class == 3:
+                l.append([0, 0, 0, 1])
 
         return arr, l
 
@@ -143,14 +145,11 @@ class Mutlist:
             nextBatch, nextBatchLabels = self.get_train_batch(ids_train, labels_train)
             sess.run(optimizer, {input_data: nextBatch, labels: nextBatchLabels})
 
-            print(i)
-            if (i % 1000 == 0 and i != 0):
-                print("Already done %s" % i)
-
-            #Save the network every 10,000 training iterations
-            if (i % 10000 == 0 and i != 0):
+            #Save the network every XXX training iterations
+            if i % 100 == 0 and i != 0:
                 save_path = saver.save(sess, "/Users/pmatos9/Desktop/pedrinho/tese/checkpoints/MutList/words/pretrained_lstm.ckpt",
                                        global_step=i)
+                print("Accuracy for this batch:", (sess.run(accuracy, {input_data: nextBatch, labels: nextBatchLabels})) * 100)
                 print("saved to %s" % save_path)
 
         # sess = tf.InteractiveSession()

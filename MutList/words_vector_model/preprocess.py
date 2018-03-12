@@ -9,8 +9,8 @@ class PreProcess:
         # Load GLOVE vectors
         self.wordslist_path = '/Users/pmatos9/Desktop/pedrinho/tese/glove/wordsList.npy'
         self.wordsvector_path = '/Users/pmatos9/Desktop/pedrinho/tese/glove/wordVectors.npy'
-        self.text_path = '../corpus/mycorpus/train_final.txt'
-        self.results_path = '../corpus/mycorpus/mut.tsv'
+        self.text_path = '../corpus/mycorpus_novo/abstract.txt'
+        self.results_path = '../corpus/mycorpus_novo/mut.tsv'
         self.average_words = 0
         self.word2vec_path = '/Users/pmatos9/Desktop/pedrinho/tese/glove/wikipedia-pubmed-and-PMC-w2v.bin'
 
@@ -62,8 +62,8 @@ class PreProcess:
             for result in results:
                 content = result.split('\t')
                 id = content[0]
-                list_types.append(content[5])
-                res_dict[id].append(content[5])
+                list_types.append(content[4])
+                res_dict[id].append(content[4])
 
         labels = []
 
