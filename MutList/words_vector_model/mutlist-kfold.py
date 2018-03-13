@@ -18,9 +18,10 @@ class Mutlist:
         self.k = 5  # value for k fold cross validation
 
         self.numDimensions = 200  # Dimensions for each word vector
-        self.batchSize = 24
+        self.batchSize = 14
         self.lstmUnits = 64
-        self.iterations = 1000
+        self.iterations = 5
+        self.epochs = 1
 
     def split_data(self, data, labels):
         # split the data to train and to test
@@ -78,6 +79,33 @@ class Mutlist:
 
         return ids_test
 
+    def get_train_batch(self, data, labels, ids, idx):
+        l = []
+        arr = np.zeros([self.batchSize, self.maxSeqLength])
+
+        num = idx * self.batchSize
+
+        for i in range(self.batchSize):
+
+            indice = num + i
+            lab_list = labels[indice]
+            num_list = randint(0, len(lab_list) - 1)
+            label_class = self.types.get(lab_list[num_list])
+
+            # arr[i] = ids_train[num - 1:num]   # ValueError: could not broadcast input array from shape (0,429) into shape (429)
+            arr[i] = ids[indice]
+
+            if label_class == 0:
+                l.append([1, 0, 0, 0])
+            elif label_class == 1:
+                l.append([0, 1, 0, 0])
+            elif label_class == 2:
+                l.append([0, 0, 1, 0])
+            elif label_class == 3:
+                l.append([0, 0, 0, 1])
+
+        return arr, l
+
     def train_model(self, train_bins, label_bins, ids_train):
         tf.reset_default_graph()
 
@@ -109,6 +137,39 @@ class Mutlist:
         sess = tf.InteractiveSession()
         saver = tf.train.Saver()
         sess.run(tf.global_variables_initializer())
+
+        for epoch in range(self.epochs):
+            acc = 0
+            # we need to try all combinations with 4 as training and 1 as validation
+            for idx in range(len(train_bins)):
+
+                # 5 iterations need to get all the dataset from bin
+                validation = train_bins[idx]
+                validation_labels = label_bins[idx]
+                validation_ids = ids_train[idx]
+
+                tmp_train = [x for i,x in enumerate(train_bins) if i !=idx]
+                tmp_labels = [x for i, x in enumerate(label_bins) if i != idx]
+                tmp_ids = [x for i, x in enumerate(ids_train) if i != idx]
+
+                for j in range(len(tmp_train)):
+                    for i in range(self.iterations):
+                        nextBatch, nextBatchLabels = self.get_train_batch(tmp_train[j], tmp_labels[j], tmp_ids[j], i)
+                        sess.run(optimizer, {input_data: nextBatch, labels: nextBatchLabels})
+
+                # calculate accuracy with the validation data
+                acc_bin = 0
+                for i in range(self.iterations):
+                    nextBatch, nextBatchLabels = self.get_train_batch(validation, validation_labels, validation_ids, i)
+                    tmp_acc = sess.run(accuracy, {input_data: nextBatch, labels: nextBatchLabels}) * 100
+                    acc_bin = acc_bin + tmp_acc
+                acc_bin = acc_bin / 5
+                acc = acc + acc_bin
+            f_acc = acc / len(train_bins)
+            print("Accuracy for epoch %s is %s" % (str(epoch), str(f_acc)))
+
+
+
 
     def main(self):
         preprocess = PreProcess()
@@ -146,10 +207,6 @@ class Mutlist:
         train_bins = [train_1, train_2, train_3, train_4, train_5]
         label_bins = [labels_1, labels_2, labels_3, labels_4, labels_5]
         ids_train = [ids_train1, ids_train2, ids_train3, ids_train4, ids_train5]
-        print(len(train_bins))
-        print(len(label_bins))
-        print(len(ids_train))
-
 
         self.train_model(train_bins, label_bins, ids_train)
 
