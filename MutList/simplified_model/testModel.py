@@ -19,7 +19,7 @@ class Teste:
         self.learning_rate = 0.001
         # size of batch
         self.batch_size = 24
-        self.iterations = 100000
+        self.iterations = 1000
 
     def main(self):
         preprocess = PreProcessing()
@@ -151,7 +151,7 @@ class Teste:
                 batch_x = next_batch.reshape((self.batch_size, self.time_steps, self.maxSeqLength))
                 sess.run(opt, feed_dict={x: batch_x, y: next_batch_labels})
 
-                if iter % 10000 == 0 and iter != 0:
+                if iter % 100 == 0 and iter != 0:
                     print("\n\n")
                     acc = sess.run(accuracy, feed_dict={x: batch_x, y: next_batch_labels})
 

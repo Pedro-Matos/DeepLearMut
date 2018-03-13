@@ -1,0 +1,55 @@
+For iteration 100
+Accuracy 0.5
+__________________
+
+
+For iteration 200
+Accuracy 0.458333
+__________________
+
+
+For iteration 300
+Accuracy 0.5
+__________________
+
+
+For iteration 400
+Accuracy 0.375
+__________________
+
+
+For iteration 500
+Accuracy 0.458333
+__________________
+
+
+For iteration 600
+Accuracy 0.458333
+__________________
+
+
+For iteration 700
+Accuracy 0.5
+__________________
+
+
+For iteration 800
+Accuracy 0.458333
+__________________
+
+
+For iteration 900
+Accuracy 0.583333
+__________________
+
+
+Testing Accuracy: 0.416667
+Testing Accuracy: 0.666667
+Testing Accuracy: 0.458333
+Testing Accuracy: 0.458333
+Testing Accuracy: 0.5
+Testing Accuracy: 0.416667
+Testing Accuracy: 0.416667
+Testing Accuracy: 0.375
+Testing Accuracy: 0.291667
+Testing Accuracy: 0.291667
