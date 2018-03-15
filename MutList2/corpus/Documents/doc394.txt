@@ -1,0 +1,13 @@
+16525586	Mutations in coagulation factor XIII A gene in eight unrelated Indians. Five novel mutations identified by a novel PCR-CSGE approach.	Factor XIII deficiency is a rare autosomal (1:2,000,000) recessive disorder of blood coagulation usually attributed to mutations in the coagulation factor XIII (FXIII) A gene. We have studied the molecular basis of FXIII deficiency in eight unrelated South Indian patients. Their diagnosis was based on clinical history, normal plasma clotting times and increased solubility of fibrin clot in 5 mol/l urea. Genomic DNA was screened for FXIII A gene defects by a novel PCR and CSGE strategy. Mutations were identified in all these patients. Five of these were novel mutations occurring in four patients. These included a novel c.210T > G transversion in homozygosity in exon 3 predicting a Tyr69X in the beta-sandwich domain in one patient. Another patient was compound heterozygote for a novel c.791C > T transition predicting a Ser263Phe in the core domain and a novel c.2045-1G > A transition at the acceptor splice junction of intron 14. Two novel frame shifts were also identified in two patients in a homozygous condition. One of them resulted from a single base 'G' duplication (c.892_895dupG) at codons Ser290/Ala291fs affecting the core domain and the other was due to a single base 'A' duplication (c.1642_1644dupA) and at codonTyr547fs affecting barrel-1 domain. The remaining four patients had the previously reported Arg260His, Ser413Leu, and Val414Phe (n = 2) missense mutations in the core domain. The novel mutations identified were considered to be disease causative by studying the nature of mutation, the degree of conservation of the mutated aminoacid among transglutaminases of different species and by molecular modeling. Apart from describing a significant number of novel mutations, this report is the first study from Southern India to describe FXIII A gene mutations.
+16525586	1004	1017	c.2045-1G > A	DNA	SUB	G|2045-1|A
+16525586	1219	1232	c.892_895dupG	DNA	DUP	|892_895|G|
+16525586	1244	1259	Ser290/Ala291fs	Protein	FS	S,A|290,291||
+16525586	1342	1357	c.1642_1644dupA	DNA	DUP	|1642_1644|A|
+16525586	1371	1379	Tyr547fs	Protein	FS	Y|547||
+16525586	1463	1472	Arg260His	Protein	SUB	R|260|H
+16525586	1474	1483	Ser413Leu	Protein	SUB	S|413|L
+16525586	1489	1498	Val414Phe	Protein	SUB	V|414|F
+16525586	760	770	c.210T > G	DNA	SUB	T|210|G
+16525586	823	829	Tyr69X	Protein	SUB	Y|69|X
+16525586	928	938	c.791C > T	DNA	SUB	C|791|T
+16525586	963	972	Ser263Phe	Protein	SUB	S|263|F

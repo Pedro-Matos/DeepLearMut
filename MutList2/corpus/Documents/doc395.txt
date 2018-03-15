@@ -1,0 +1,20 @@
+16256386	Phenylketonuria mutations in Northern China.	Mutation spectrum of phenylalanine hydroxylase (PAH) gene in patients with phenylketonuria (PKU) in Northern China is described with a discussion on genotype-phenotype correlation. By using PCR/SSCP and DNA sequencing, all exons of PAH gene in the 185 unrelated patients with PKU from Northern China were studied. A total of 70 different mutations, including 42 missense, 12 splice, 7 nonsense, 5 deletion, 3 insertion, and 1 silence/splice mutations, were detected in 349/370 mutant alleles (94.3%). Deletion, insertion, and frameshift mutations were found for the first time in China PKU patients. The mutations R243Q, EX6-96A>G, R111X, Y356X, and R413P were the prevalent mutations with relative frequencies of 22.2, 11.1, 8.7, 6.5, and 6.5%, respectively. Fifteen novel mutations were identified in this study: I38fsX19, IVS4+3G>C, Y154H, R157K, R157I, T200fsX6, Q267H, Q267E, F302fsX39, G346R, S349A, L367L, R400K, IVS12+4A>G, and IVS12+6T>A. Each of them occurs at very low frequency (0.3-1.1%). The mutation spectrum of PKU in Chinese is similar to other Asian populations but significantly different from European populations. Altogether, 70 different mutations are found in 109 genotypes distributed among 185 PKU patients. As shown by the analysis, the predicted residual activity found in the majority of PKU individuals match their in vivo phenotypes, though evidence is also found for both phenotypic inconsistencies among subjects with similar genotypes and discordance between the in vitro and in vivo effects of some mutant alleles. The study enables us to construct a national database in China serving as a valuable tool for genetic counseling and prognostic evaluation of future cases of PKU.
+16256386	659	664	R243Q	Protein	SUB	R|243|Q
+16256386	666	675	EX6-96A>G	DNA	SUB	A|EX6-96|G
+16256386	677	682	R111X	Protein	SUB	R|111|X
+16256386	684	689	Y356X	Protein	SUB	Y|356|X
+16256386	695	700	R413P	Protein	SUB	R|413|P
+16256386	860	868	I38fsX19	Protein	FS	I|38||19
+16256386	870	879	IVS4+3G>C	DNA	SUB	G|IVS4+3|C
+16256386	881	886	Y154H	Protein	SUB	Y|154|H
+16256386	888	893	R157K	Protein	SUB	R|157|K
+16256386	895	900	R157I	Protein	SUB	R|157|I
+16256386	902	910	T200fsX6	Protein	FS	T|200||6
+16256386	912	917	Q267H	Protein	SUB	Q|267|H
+16256386	919	924	Q267E	Protein	SUB	Q|267|E
+16256386	926	935	F302fsX39	Protein	FS	F|302||39
+16256386	937	942	G346R	Protein	SUB	G|346|R
+16256386	944	949	S349A	Protein	SUB	S|349|A
+16256386	958	963	R400K	Protein	SUB	R|400|K
+16256386	965	975	IVS12+4A>G	DNA	SUB	A|IVS12+4|G
+16256386	981	991	IVS12+6T>A	DNA	SUB	T|IVS12+6|A

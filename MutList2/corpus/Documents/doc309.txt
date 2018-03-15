@@ -1,0 +1,12 @@
+15135245	A new but frequent mutation of apoB-100-apoB His3543Tyr.	ApolipoproteinB 100 (apoB-100) is an important component of atherogenic lipoproteins such as LDL and serves as a ligand for the LDL-receptor. Familial defective apolipoproteinB 100 (FDB) is caused by a R3500Q mutation of the apoB gene and results in decreased binding of LDL to the LDL-receptor. So far FDB is the most frequent and best studied alteration of apoB-100. Apart from this, three other apoB mutations, R3500W, R3531C and R3480W, affecting binding to the LDL-receptor are known to date. We screened the apoB gene segment of codons 3448-3561 by denaturing gradient gel electrophoresis (DGGE) analysis in a total of 853 consecutively sampled German patients undergoing diagnostic coronary angiography for suspected CAD. By this, a new single base mutation was detected and confirmed by DNA sequencing. The mutation, CAC(3543)TAC results in a His3543Tyr substitution in apoB-100 (H3543Y). The prevalence of heterozygotes for H3543Y in the study population was 0.47% compared to 0.12% for the known Arg 3500 Gln (R3500Q) mutation. In conclusion, the new mutation is four times more frequent than "classical" FDB and thus appears to be the most common apoB mutation in Germany.
+15135245	1063	1075	Arg 3500 Gln	Protein	SUB	R|3500|Q
+15135245	1077	1083	R3500Q	Protein	SUB	R|3500|Q
+15135245	259	265	R3500Q	Protein	SUB	R|3500|Q
+15135245	45	55	His3543Tyr	Protein	SUB	H|3543|Y
+15135245	471	477	R3500W	Protein	SUB	R|3500|W
+15135245	479	485	R3531C	Protein	SUB	R|3531|C
+15135245	490	496	R3480W	Protein	SUB	R|3480|W
+15135245	882	894	CAC(3543)TAC	DNA	SUB	C|CODON3543|T
+15135245	908	918	His3543Tyr	Protein	SUB	H|3543|Y
+15135245	945	951	H3543Y	Protein	SUB	H|3543|Y
+15135245	990	996	H3543Y	Protein	SUB	H|3543|Y

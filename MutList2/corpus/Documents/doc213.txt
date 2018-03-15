@@ -1,0 +1,5 @@
+12636044	Identification of new polymorphisms in the CACNA1S gene.	We identified four novel polymorphisms in the CACNA1S gene that encodes the alpha1-subunit of the dihydropyridine receptor. Mutations in this gene are associated with two genetic diseases: malignant hyperthermia and hypokalemic periodic paralysis. The nucleotide substitutions c2403T --> C and c5398T --> C did not result in amino acid replacement, the nucleotide substitution c4475C --> A caused the replacement of the Ala1492 with an Asp residue and an A insertion was identified in intron 36. By using methods based on digestion with restriction enzymes we calculated the frequencies of these novel polymorphisms, as well as heterozygosity, in normal subjects from southern Italy.
+12636044	477	496	Ala1492 with an Asp	Protein	SUB	A|1492|D
+12636044	334	346	c2403T --> C	DNA	SUB	T|2403|C
+12636044	351	363	c5398T --> C	DNA	SUB	T|5398|C
+12636044	434	446	c4475C --> A	DNA	SUB	C|4475|A

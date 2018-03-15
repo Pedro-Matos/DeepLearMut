@@ -1,0 +1,17 @@
+15069170	Four novel mutations in the thiazide-sensitive Na-Cl co-transporter gene in Japanese patients with Gitelman's syndrome.	BACKGROUND: Gitelman's syndrome (GS) is an autosomal recessive disorder resulting from inactivating mutations in the thiazide-sensitive Na-Cl co-transporter (NCCT) gene. To date, almost 90 mutations have been identified. It is possible that there is a population-specific distribution of mutations. In this study, we analysed mutations in the NCCT gene of seven Japanese patients with GS. METHODS: Peripheral blood mononuclear cells were isolated from patients with GS, their family members and healthy control subjects. A mutation analysis of the NCCT gene was performed completely by direct automated sequencing of polymerase chain reaction-amplified DNA products. In patients with a deletion or splice site mutation, we undertook cDNA sequence analysis. RESULTS: We identified nine mutations. Five of them [c.185C>T (Thr60Met), c.1712C>T (Ala569Val), c.1930C>T (Arg642Cys), c.2552T>A (Leu849His) and c.1932delC] have been reported in Japanese patients, but not in GS patients from other ethnic groups. The remaining four mutations [c.7A>T (Met1Leu), c.1181_1186+20del26, c.1811_1812delAT and IVS16+1G>A] were novel. In cDNA derived from a patient with c.1181_1186+20del26, a deletion of exon 9 and a frameshift at the start of exon 10 were observed. In cDNA derived from patients with IVS16+1G>A, an additional 96 bp insertion between exons 16 and 17 was observed. Six out of seven patients were compound heterozygotes, and the remaining one carried a single heterozygous mutation. CONCLUSIONS: We found four novel mutations in the NCCT gene in seven Japanese patients with GS. Moreover, our study suggests that the distribution of mutations in the NCCT gene in Japanese GS patients potentially differs from that in other populations.
+15069170	1008	1017	Leu849His	Protein	SUB	L|849|H
+15069170	1023	1033	c.1932delC	DNA	DEL	|1932|C
+15069170	1155	1161	c.7A>T	DNA	SUB	A|7|T
+15069170	1163	1170	Met1Leu	Protein	SUB	M|1|L
+15069170	1173	1192	c.1181_1186+20del26	DNA	DEL	|1181_1186+20|26
+15069170	1194	1210	c.1811_1812delAT	DNA	DEL	|1811_1812|AT
+15069170	1215	1225	IVS16+1G>A	DNA	SUB	G|IVS16+1|A
+15069170	1275	1294	c.1181_1186+20del26	DNA	DEL	|1181_1186+20|26
+15069170	1408	1418	IVS16+1G>A	DNA	SUB	G|IVS16+1|A
+15069170	930	938	c.185C>T	DNA	SUB	C|185|T
+15069170	940	948	Thr60Met	Protein	SUB	T|60|M
+15069170	951	960	c.1712C>T	DNA	SUB	C|1712|T
+15069170	962	971	Ala569Val	Protein	SUB	A|569|V
+15069170	974	983	c.1930C>T	DNA	SUB	C|1930|T
+15069170	985	994	Arg642Cys	Protein	SUB	R|642|C
+15069170	997	1006	c.2552T>A	DNA	SUB	T|2552|A

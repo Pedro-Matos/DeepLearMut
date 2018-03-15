@@ -1,0 +1,13 @@
+17003923	Gene polymorphisms implicated in influencing susceptibility to venous and arterial thromboembolism: frequency distribution in a healthy German population.	Evolvement and progression of cardiovascular diseases affecting the venous and arterial system are influenced by a multitude of environmental and hereditary factors. Many of these hereditary factors consist of defined gene polymorphisms, such as single nucleotide polymorphisms (SNPs) or insertion-deletion polymorphisms, which directly or indirectly affect the hemostatic system. The frequencies of individual hemostatic gene polymorphisms in different normal populations are well defined. However, descriptions of patterns of genetic variability of a larger extent of different factors of hereditary hypercoagulability in single populations are scarce. The aim of this study was i) to give a detailed description of the frequencies of factors of hereditary thrombophilia and their combinations in a German population (n = 282) and ii) to compare their distributions with those reported for other regions. Variants of coagulation factors [factor V 1691G>A (factor V Leiden), factor V 4070A>G (factor V HR2 haplotype), factor VII Arg353Gln, factor XIII Val34Leu, beta-fibrinogen -455G>A, prothrombin 20210G>A], coagulation inhibitors [tissue factor pathway inhibitor 536C>T, thrombomodulin 127G>A], fibrinolytic factors [angiotensin converting enzyme intron 16 insertion/deletion, factor VII-activating protease 1601G>A (FSAP Marburg I), plasminogen activator inhibitor 1-675 insertion/deletion (5G/4G), tissue plasminogen activator intron h deletion/insertion], and other factors implicated in influencing susceptibility to thromboembolic diseases [apolipoprotein E2/E3/E4, glycoprotein Ia 807C>T, methylenetetrahydrofolate reductase 677C>T] were included. The distribution of glycoprotein Ia 807C>T deviated significantly from the Hardy-Weinberg equilibrium, and a comparison with previously published data indicates marked region and ethnicity dependent differences in the genotype distributions of some other factors.
+17003923	1104	1111	1691G>A	DNA	SUB	G|1691|A
+17003923	1140	1147	4070A>G	DNA	SUB	A|4070|G
+17003923	1185	1194	Arg353Gln	Protein	SUB	R|353|Q
+17003923	1208	1216	Val34Leu	Protein	SUB	V|34|L
+17003923	1234	1241	-455G>A	DNA	SUB	G|-455|A
+17003923	1255	1263	20210G>A	DNA	SUB	G|20210|A
+17003923	1322	1328	536C>T	DNA	SUB	C|536|T
+17003923	1345	1351	127G>A	DNA	SUB	G|127|A
+17003923	1467	1474	1601G>A	DNA	SUB	G|1601|A
+17003923	1746	1752	807C>T	DNA	SUB	C|807|T
+17003923	1790	1796	677C>T	DNA	SUB	C|677|T
+17003923	1849	1855	807C>T	DNA	SUB	C|807|T

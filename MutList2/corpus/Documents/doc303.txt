@@ -1,0 +1,20 @@
+15623763	TGFBI gene mutations causing lattice and granular corneal dystrophies in Indian patients.	PURPOSE: To identify mutations in the TGFBI gene in Indian patients with lattice corneal dystrophy (LCD) or granular corneal dystrophy (GCD) and to look for genotype-phenotype correlations. METHODS: Thirty-seven unrelated patients were studied, 18 with LCD and 19 with GCD. The diagnosis of LCD or GCD was made on the basis of clinical and/or histopathological evaluation. Exons and flanking intron sequences of the TGFBI gene were amplified by PCR with specific primers. PCR products were screened by the method of single-strand conformation polymorphism followed by sequencing. Mutations were confirmed by screening at least 100 unrelated normal control subjects. RESULTS: Mutations were identified in 14 of 18 patients with LCD and in all 19 patients with GCD. In LCD, three novel heterozygous mutations found were glycine-594-valine (Gly594Val) in 2 of 18 patients, valine-539-aspartic acid (Val539Asp) in 1 patient, and deletion of valine 624, valine 625 (Val624-Val625del) in 1 patient. In addition, mutation of arginine 124-to-cysteine (Arg124Cys) was found in 8 of 18 patients and histidine 626-to-arginine (His626Arg) in 2 of 18 patients. Atypical clinical features for LCD were noted in patients with the Gly594Val and Val624-Val625del mutations. In GCD, 18 patients with GCD type I had a mutation of arginine 555-to-tryptophan (Arg555Trp) and 1 patient with GCD type III (Reis-Bucklers dystrophy), had the Arg124Leu mutation. Seven novel single-nucleotide polymorphisms (SNPs) were also found, of which a change of leucine 269 to phenylalanine (Leu269Phe) was found in 12 of 18 patients with the Arg555Trp mutation. CONCLUSIONS: Arg124Cys and Arg555Trp appear to be the predominant mutations causing LCD and GCD, respectively, in the population studied. The novel mutations identified in this study are associated with distinct phenotypes.
+15623763	1051	1067	Val624-Val625del	Protein	DEL	|624_625|VV
+15623763	1108	1132	arginine 124-to-cysteine	Protein	SUB	R|124|C
+15623763	1134	1143	Arg124Cys	Protein	SUB	R|124|C
+15623763	1179	1204	histidine 626-to-arginine	Protein	SUB	H|626|R
+15623763	1206	1215	His626Arg	Protein	SUB	H|626|R
+15623763	1305	1314	Gly594Val	Protein	SUB	G|594|V
+15623763	1319	1335	Val624-Val625del	Protein	DEL	|624_625|VV
+15623763	1401	1427	arginine 555-to-tryptophan	Protein	SUB	R|555|W
+15623763	1429	1438	Arg555Trp	Protein	SUB	R|555|W
+15623763	1507	1516	Arg124Leu	Protein	SUB	R|124|L
+15623763	1616	1644	leucine 269 to phenylalanine	Protein	SUB	L|269|F
+15623763	1646	1655	Leu269Phe	Protein	SUB	L|269|F
+15623763	1697	1706	Arg555Trp	Protein	SUB	R|555|W
+15623763	1730	1739	Arg124Cys	Protein	SUB	R|124|C
+15623763	1744	1753	Arg555Trp	Protein	SUB	R|555|W
+15623763	908	926	glycine-594-valine	Protein	SUB	G|594|V
+15623763	928	937	Gly594Val	Protein	SUB	G|594|V
+15623763	960	979	valine-539-aspartic	Protein	SUB	V|539|D
+15623763	986	995	Val539Asp	Protein	SUB	V|539|D
