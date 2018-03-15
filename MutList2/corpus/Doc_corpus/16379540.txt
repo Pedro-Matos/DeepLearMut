@@ -1,8 +1,7 @@
-Indirect CFTR mutation identification by PCR/OLA anomalous electropherograms
-Mutations of CFTR gene are responsible for cystic fibrosis (CF) and other clinical conditions such as congenital absence of the vas deferens (CAVD), chronic pancreatitis (IP), and idiopathic disseminated bronchiectasis (DBE) classified as CFTR-related disorders
-The PCR/OLA assay is designed to detect 31 known mutations including the 24 most common CF mutations worldwide, as identified by the CF Consortium
-In order to define the CFTR genotype a series of 1812 individuals from central-southern Italy with and without CF manifestations were screened by using the PCR/OLA assay
-Here we report the description of five cases of anomalous electropherograms obtained after PCR/OLA analysis, that led to the identification, in the homozygous state, of two point mutations (D110H and S589N) not included in the assay test panel, a large gene deletion (CFTRdel14b_17b), and an exonic polymorphism (c.4002A > G)
-Haplotype and real time PCR analysis were also performed in the subject carrying the large CFTR deletion
-The study demonstrates that the PCR/OLA assay, besides being an efficient and user-friendly method to screen known mutations in the CFTR gene, may also function as a mutation/polymorphism-scanning assay, at least for certain nucleotide changes located in some critical regions of the gene.
-
+Indirect CFTR mutation identification by PCR/OLA anomalous electropherograms.
+Mutations of CFTR gene are responsible for cystic fibrosis (CF) and other clinical conditions such as congenital absence of the vas deferens (CAVD), chronic pancreatitis (IP), and idiopathic disseminated bronchiectasis (DBE) classified as CFTR-related disorders.
+The PCR/OLA assay is designed to detect 31 known mutations including the 24 most common CF mutations worldwide, as identified by the CF Consortium.
+In order to define the CFTR genotype a series of 1812 individuals from central-southern Italy with and without CF manifestations were screened by using the PCR/OLA assay.
+Here we report the description of five cases of anomalous electropherograms obtained after PCR/OLA analysis, that led to the identification, in the homozygous state, of two point mutations (D110H and S589N) not included in the assay test panel, a large gene deletion (CFTRdel14b_17b), and an exonic polymorphism (c.4002A > G).
+Haplotype and real time PCR analysis were also performed in the subject carrying the large CFTR deletion.
+The study demonstrates that the PCR/OLA assay, besides being an efficient and user-friendly method to screen known mutations in the CFTR gene, may also function as a mutation/polymorphism-scanning assay, at least for certain nucleotide changes located in some critical regions of the gene..

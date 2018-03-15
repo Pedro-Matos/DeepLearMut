@@ -1,11 +1,10 @@
-A splice site mutation in hERG leads to cryptic splicing in human long QT syndrome
-Mutations in the human ether-a-go-go-related gene (hERG) cause type 2 long QT syndrome
-In this study, we investigated the pathogenic mechanism of the hERG splice site mutation 2398+1G>C and the genotype-phenotype relationship of mutation carriers in three unrelated kindreds with long QT syndrome
-The effect of 2398+1G>C on mRNA splicing was studied by analysis of RNA isolated from lymphocytes of index patients and using minigenes expressed in HEK293 cells and neonatal rat ventricular myocytes
-RT-PCR analysis revealed that the 2398+1G>C mutation disrupted the normal splicing and activated a cryptic splice donor site in intron 9, leading to the inclusion of 54 nt of the intron 9 sequence in hERG mRNA
-The cryptic splicing resulted in an in-frame insertion of 18 amino acids in the middle of the cyclic nucleotide binding domain
-In patch clamp experiments the splice mutant did not generate hERG current
-Western blot and immunostaining studies showed that the mutant expressed an immature form of hERG protein that failed to reach the plasma membrane
-Coexpression of the mutant and wild-type channels led to a dominant negative suppression of wild-type channel function by intracellular retention of heteromeric channels
-Our results demonstrate that 2398+1G>C activates a cryptic site and generates a full-length hERG protein with an insertion of 18 amino acids, which leads to a trafficking defect of the mutant channel.
-
+A splice site mutation in hERG leads to cryptic splicing in human long QT syndrome.
+Mutations in the human ether-a-go-go-related gene (hERG) cause type 2 long QT syndrome.
+In this study, we investigated the pathogenic mechanism of the hERG splice site mutation 2398+1G>C and the genotype-phenotype relationship of mutation carriers in three unrelated kindreds with long QT syndrome.
+The effect of 2398+1G>C on mRNA splicing was studied by analysis of RNA isolated from lymphocytes of index patients and using minigenes expressed in HEK293 cells and neonatal rat ventricular myocytes.
+RT-PCR analysis revealed that the 2398+1G>C mutation disrupted the normal splicing and activated a cryptic splice donor site in intron 9, leading to the inclusion of 54 nt of the intron 9 sequence in hERG mRNA.
+The cryptic splicing resulted in an in-frame insertion of 18 amino acids in the middle of the cyclic nucleotide binding domain.
+In patch clamp experiments the splice mutant did not generate hERG current.
+Western blot and immunostaining studies showed that the mutant expressed an immature form of hERG protein that failed to reach the plasma membrane.
+Coexpression of the mutant and wild-type channels led to a dominant negative suppression of wild-type channel function by intracellular retention of heteromeric channels.
+Our results demonstrate that 2398+1G>C activates a cryptic site and generates a full-length hERG protein with an insertion of 18 amino acids, which leads to a trafficking defect of the mutant channel..

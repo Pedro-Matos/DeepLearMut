@@ -1,10 +1,9 @@
-Y179C, F486L and N550H are BRCA1 variants that may be associated with breast cancer in a Sicilian family: results of a 5-year GOIM (Gruppo Oncologico dell'Italia Meridionale) prospective study
-BACKGROUND: Over 600 different pathogenic mutations have been identified in the BRCA1 gene
-Nevertheless, numerous missense mutations of unknown biological function still exist
-Understanding of biological significance of these mutations should help in genetic counselling to carriers and their families
-PATIENTS AND METHODS: A total of 104 patients with breast and/or ovarian cancer whose genetic counselling answered the criteria of the American Society of Clinical Oncology (ASCO 2003), were prospectively screened for mutations in all coding exons of the BRCA1 gene by automatic direct sequencing
-RESULTS: During these mutational screening procedures one case presented three mutations classified in the Breast Cancer Information Core Database as unknown variants
-These were 655A/G found in exon 8 of BRCA1, 1575T/C and 1767A/C found in exon 11 of the same gene
-The identification of the three unknown variants in  the proband (16SIRIO) and in her mother and sister indicates that such alterations exist in cis
-CONCLUSIONS: Our results suggest that the charge and stechiometry variations determined by the changes in the amino acids Y179C, F486L and N550H might produce an effect on the conformation of the protein and, consequently, on its function.
-
+Y179C, F486L and N550H are BRCA1 variants that may be associated with breast cancer in a Sicilian family: results of a 5-year GOIM (Gruppo Oncologico dell'Italia Meridionale) prospective study.
+BACKGROUND: Over 600 different pathogenic mutations have been identified in the BRCA1 gene.
+Nevertheless, numerous missense mutations of unknown biological function still exist.
+Understanding of biological significance of these mutations should help in genetic counselling to carriers and their families.
+PATIENTS AND METHODS: A total of 104 patients with breast and/or ovarian cancer whose genetic counselling answered the criteria of the American Society of Clinical Oncology (ASCO 2003), were prospectively screened for mutations in all coding exons of the BRCA1 gene by automatic direct sequencing.
+RESULTS: During these mutational screening procedures one case presented three mutations classified in the Breast Cancer Information Core Database as unknown variants.
+These were 655A/G found in exon 8 of BRCA1, 1575T/C and 1767A/C found in exon 11 of the same gene.
+The identification of the three unknown variants in  the proband (16SIRIO) and in her mother and sister indicates that such alterations exist in cis.
+CONCLUSIONS: Our results suggest that the charge and stechiometry variations determined by the changes in the amino acids Y179C, F486L and N550H might produce an effect on the conformation of the protein and, consequently, on its function..

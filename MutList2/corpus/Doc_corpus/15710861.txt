@@ -1,14 +1,13 @@
-Adult onset metachromatic leukodystrophy without electroclinical peripheral nervous system involvement: a new mutation in the ARSA gene
-BACKGROUND: Metachromatic leukodystrophy (MLD) is a lysosomal storage disease caused by the deficiency of arylsulfatase A (ARSA)
-Clinically, the disease is heterogeneous with respect to the age of onset, affection of peripheral and central nervous systems, and progression
-OBJECTIVES: To analyze mutations in the ARSA gene of a patient with adult-onset MLD with no signs of peripheral polyneuropathy and to emphasize the clinical, neuroradiologic, neuropathologic, and genetic features of the disease
-DESIGN: Case study of a patient clinically presenting with rapidly progressive dementia and behavioral abnormalities
-We report the findings of clinical evaluation and neurophysiologic and neuropathologic studies of peripheral nerves; we also performed DNA sequence analysis, transfections, metabolic labeling, and immunoprecipitation of mutant ARSA polypeptides
-SETTING: Genetic research and clinical unit, university hospital
-RESULTS: Genetic analysis revealed homozygosity for a novel mutation in exon 3 of ARSA (F219V)
-This substitution leads to a misfolded unstable enzyme with a specific activity less than 1% of normal
-There were no clinical or neurophysiologic signs of peripheral nervous system dysfunction
-Typical neuropathologic signs for MLD were absent from nerve biopsy specimens
-CONCLUSIONS: This novel mutation is associated with progressive psychocognitive impairment without clinical or electrophysiologic signs and only minor morphologic signs of peripheral nerve affection
-The F219V substitution causes reduction in enzyme activity to an extent unexpected for an adult patient with MLD.
-
+Adult onset metachromatic leukodystrophy without electroclinical peripheral nervous system involvement: a new mutation in the ARSA gene.
+BACKGROUND: Metachromatic leukodystrophy (MLD) is a lysosomal storage disease caused by the deficiency of arylsulfatase A (ARSA).
+Clinically, the disease is heterogeneous with respect to the age of onset, affection of peripheral and central nervous systems, and progression.
+OBJECTIVES: To analyze mutations in the ARSA gene of a patient with adult-onset MLD with no signs of peripheral polyneuropathy and to emphasize the clinical, neuroradiologic, neuropathologic, and genetic features of the disease.
+DESIGN: Case study of a patient clinically presenting with rapidly progressive dementia and behavioral abnormalities.
+We report the findings of clinical evaluation and neurophysiologic and neuropathologic studies of peripheral nerves; we also performed DNA sequence analysis, transfections, metabolic labeling, and immunoprecipitation of mutant ARSA polypeptides.
+SETTING: Genetic research and clinical unit, university hospital.
+RESULTS: Genetic analysis revealed homozygosity for a novel mutation in exon 3 of ARSA (F219V).
+This substitution leads to a misfolded unstable enzyme with a specific activity less than 1% of normal.
+There were no clinical or neurophysiologic signs of peripheral nervous system dysfunction.
+Typical neuropathologic signs for MLD were absent from nerve biopsy specimens.
+CONCLUSIONS: This novel mutation is associated with progressive psychocognitive impairment without clinical or electrophysiologic signs and only minor morphologic signs of peripheral nerve affection.
+The F219V substitution causes reduction in enzyme activity to an extent unexpected for an adult patient with MLD..

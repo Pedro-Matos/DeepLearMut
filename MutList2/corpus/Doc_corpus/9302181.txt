@@ -1,9 +1,8 @@
-Identification of two germline point mutations in the 5'UTR of the androgen receptor gene in men with prostate cancer
-PURPOSE: As part of an ongoing study to identify germline mutations and/or polymorphisms in the androgen receptor (AR) gene which might be associated with prostate cancer, the 5'-untranslated region (5'UTR) of the AR gene was screened in genomic DNA of prostate cancer cases
-This region, which is > 1 kb in length,  might modulate AR expression by affecting transcription and/or translation rates
-A life-time exposure to enhanced AR expression, in turn, could potentially predispose to prostate cancer
-MATERIALS AND METHODS: Genomic DNA samples from 38 prostate cancer cases were analyzed for mutations in the 5'UTR of the AR gene
-RESULTS: Two mutations were identified
-One mutation, G2T, is located within the  AR transcription initiation site 1 (AR-TIS I), and the second, C214A, within a GC rich region of the 5'UTR
-CONCLUSIONS: Although 5'UTR mutations in the AR gene might only rarely occur in men with prostate cancer, the occasional mutation in this area may contribute to  the disease by altering rates of transcription and/or translation of this gene.
-
+Identification of two germline point mutations in the 5'UTR of the androgen receptor gene in men with prostate cancer.
+PURPOSE: As part of an ongoing study to identify germline mutations and/or polymorphisms in the androgen receptor (AR) gene which might be associated with prostate cancer, the 5'-untranslated region (5'UTR) of the AR gene was screened in genomic DNA of prostate cancer cases.
+This region, which is > 1 kb in length,  might modulate AR expression by affecting transcription and/or translation rates.
+A life-time exposure to enhanced AR expression, in turn, could potentially predispose to prostate cancer.
+MATERIALS AND METHODS: Genomic DNA samples from 38 prostate cancer cases were analyzed for mutations in the 5'UTR of the AR gene.
+RESULTS: Two mutations were identified.
+One mutation, G2T, is located within the  AR transcription initiation site 1 (AR-TIS I), and the second, C214A, within a GC rich region of the 5'UTR.
+CONCLUSIONS: Although 5'UTR mutations in the AR gene might only rarely occur in men with prostate cancer, the occasional mutation in this area may contribute to  the disease by altering rates of transcription and/or translation of this gene..

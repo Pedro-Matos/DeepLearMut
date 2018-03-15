@@ -1,11 +1,10 @@
-Epidermal growth factor receptor activation in prostate cancer by three novel missense mutations
-While epidermal growth factor receptor (EGFR) dysregulation is known to play a critical role in prostate carcinogenesis, there has been no direct evidence indicating EGFR mutations induce tumorigenesis in prostate cancer
-We previously  identified four novel EGFR somatic mutations in the EGFR tyrosine kinase domain of prostate cancer patients: G735S, G796S, E804G and R841K
-In this study, we investigated the oncogenic potential of these somatic mutations by establishing stable clonal NIH3T3 cells expressing these four mutations and WT EGFR to determine their ability to increase cell proliferation and invasion
-In the absence of the EGF ligand, cell proliferation was readily increased in G735S, G796S and E804G mutants compared to WT EGFR
-The addition of EGF ligand greatly increased cell growth and transforming ability of these same EGFR mutants
-Matrigel invasion assays showed enhanced invasion with G735S, G796S and E804G mutants
-Western blot analysis showed that these EGFR mutations enhanced cell growth and invasion via constitutive and hyperactive tyrosine phosphorylation and led to the activation of mitogen-activated protein kinase (MAPK), signal transducer and activator of transcription 3 (STAT3) and Akt pathways
-Our findings demonstrate the oncogenic activation of three novel EGFR somatic missense mutations in prostate cancer
-Molecules that regulate the mechanisms of  their oncogenic activation represent novel targets for limiting tumor cell progression, and further elucidation of these mutations will have utility in prostate cancer treatment.
-
+Epidermal growth factor receptor activation in prostate cancer by three novel missense mutations.
+While epidermal growth factor receptor (EGFR) dysregulation is known to play a critical role in prostate carcinogenesis, there has been no direct evidence indicating EGFR mutations induce tumorigenesis in prostate cancer.
+We previously  identified four novel EGFR somatic mutations in the EGFR tyrosine kinase domain of prostate cancer patients: G735S, G796S, E804G and R841K.
+In this study, we investigated the oncogenic potential of these somatic mutations by establishing stable clonal NIH3T3 cells expressing these four mutations and WT EGFR to determine their ability to increase cell proliferation and invasion.
+In the absence of the EGF ligand, cell proliferation was readily increased in G735S, G796S and E804G mutants compared to WT EGFR.
+The addition of EGF ligand greatly increased cell growth and transforming ability of these same EGFR mutants.
+Matrigel invasion assays showed enhanced invasion with G735S, G796S and E804G mutants.
+Western blot analysis showed that these EGFR mutations enhanced cell growth and invasion via constitutive and hyperactive tyrosine phosphorylation and led to the activation of mitogen-activated protein kinase (MAPK), signal transducer and activator of transcription 3 (STAT3) and Akt pathways.
+Our findings demonstrate the oncogenic activation of three novel EGFR somatic missense mutations in prostate cancer.
+Molecules that regulate the mechanisms of  their oncogenic activation represent novel targets for limiting tumor cell progression, and further elucidation of these mutations will have utility in prostate cancer treatment..

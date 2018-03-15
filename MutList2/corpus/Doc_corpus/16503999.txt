@@ -1,13 +1,12 @@
-HFE H63D mutation frequency shows an increase in Turkish women with breast cancer
-BACKGROUND: The hereditary hemochromatosis gene HFE plays a pivotal role in iron  homeostasis
-The association between cancer and HFE hetero- or homozygosity has previously been shown including hepatocellular and nonhepatocellular malignancies
-This study was performed to compare frequencies of HFE C282Y and H63D variants in Turkish women with breast cancer and healthy controls
-METHODS: Archived DNA samples of Hacettepe University Oncology Institute were used in this study
-The HFE gene was investigated by PCR-RFLP
-RESULTS: All subjects studied were free from C282Y mutation
-Thirty-nine patients had H63D mutation and were all heterozygous
-H63D allele frequency was 22.2% (39/176) in the breast cancer patients, and 14% (28/200) in the healthy volunteers
-Statistical analysis of cases with HFE H63D phenotype showed significant difference between breast cancer and healthy volunteers (P = 0.02)
-CONCLUSION: Our results suggest that HFE H63D mutation frequencies were increased in the breast cancer patients in comparison to those in the general population
-Also, odds ratios (odds ratio = 2.05) computed in this study suggest that H63D has a positive association with breast cancer.
-
+HFE H63D mutation frequency shows an increase in Turkish women with breast cancer.
+BACKGROUND: The hereditary hemochromatosis gene HFE plays a pivotal role in iron  homeostasis.
+The association between cancer and HFE hetero- or homozygosity has previously been shown including hepatocellular and nonhepatocellular malignancies.
+This study was performed to compare frequencies of HFE C282Y and H63D variants in Turkish women with breast cancer and healthy controls.
+METHODS: Archived DNA samples of Hacettepe University Oncology Institute were used in this study.
+The HFE gene was investigated by PCR-RFLP.
+RESULTS: All subjects studied were free from C282Y mutation.
+Thirty-nine patients had H63D mutation and were all heterozygous.
+H63D allele frequency was 22.2% (39/176) in the breast cancer patients, and 14% (28/200) in the healthy volunteers.
+Statistical analysis of cases with HFE H63D phenotype showed significant difference between breast cancer and healthy volunteers (P = 0.02).
+CONCLUSION: Our results suggest that HFE H63D mutation frequencies were increased in the breast cancer patients in comparison to those in the general population.
+Also, odds ratios (odds ratio = 2.05) computed in this study suggest that H63D has a positive association with breast cancer..

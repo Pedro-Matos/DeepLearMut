@@ -1,9 +1,8 @@
-Alteration in the gene encoding protein tyrosine phosphatase nonreceptor type 6 (PTPN6/SHP1) may contribute to neutrophilic dermatoses
-We have found a B2 repeat insertion in the gene encoding protein tyrosine phosphatase nonreceptor type 6 (PTPN6) in a mouse that developed a skin disorder with clinical and histopathological features resembling those seen in human neutrophilic dermatoses
-Neutrophilic dermatoses are a group of complex heterogeneous autoinflammatory diseases that all demonstrate excessive neutrophil infiltration of the skin
-Therefore, we tested the cDNA and genomic DNA sequences of PTPN6 from patients with Sweet's syndrome (SW) and pyoderma gangrenosum and found numerous novel splice variants in different combinations
-Isoforms resulting from deletions of exons 2, 5, 11, and 15 and retention of intron 1 or 5 were the most common in a patients with a familial case of SW, who had a neonatal onset of an inflammatory disorder with skin lesions and a biopsy specimen consistent with SW
-These isoforms were associated with a heterozygous E441G mutation and a heterozygous 1.7-kbp deletion in the promoter region of the PTPN6 gene
-Although full-length PTPN6 was detected in all other patients with either pyoderma gangrenosum or SW, it was always associated with splice variants: a partial deletion of exon 4 with the complete deletion of exon 5, alterations that were not detected in healthy controls
-The defect in transcriptional regulation of the hematopoietic PTPN6 appears to be involved in the pathogenesis of certain subsets of the heterogeneous group of neutrophilic dermatoses.
-
+Alteration in the gene encoding protein tyrosine phosphatase nonreceptor type 6 (PTPN6/SHP1) may contribute to neutrophilic dermatoses.
+We have found a B2 repeat insertion in the gene encoding protein tyrosine phosphatase nonreceptor type 6 (PTPN6) in a mouse that developed a skin disorder with clinical and histopathological features resembling those seen in human neutrophilic dermatoses.
+Neutrophilic dermatoses are a group of complex heterogeneous autoinflammatory diseases that all demonstrate excessive neutrophil infiltration of the skin.
+Therefore, we tested the cDNA and genomic DNA sequences of PTPN6 from patients with Sweet's syndrome (SW) and pyoderma gangrenosum and found numerous novel splice variants in different combinations.
+Isoforms resulting from deletions of exons 2, 5, 11, and 15 and retention of intron 1 or 5 were the most common in a patients with a familial case of SW, who had a neonatal onset of an inflammatory disorder with skin lesions and a biopsy specimen consistent with SW.
+These isoforms were associated with a heterozygous E441G mutation and a heterozygous 1.7-kbp deletion in the promoter region of the PTPN6 gene.
+Although full-length PTPN6 was detected in all other patients with either pyoderma gangrenosum or SW, it was always associated with splice variants: a partial deletion of exon 4 with the complete deletion of exon 5, alterations that were not detected in healthy controls.
+The defect in transcriptional regulation of the hematopoietic PTPN6 appears to be involved in the pathogenesis of certain subsets of the heterogeneous group of neutrophilic dermatoses..

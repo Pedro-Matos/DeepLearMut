@@ -1,8 +1,7 @@
-The DU145 human prostate carcinoma cell line harbors a temperature-sensitive allele of p53
-BACKGROUND: Some nuances of mutant and wild-type p53 activity have been uncovered utilizing temperature sensitive (TS) alleles
-However, few human tumor derived cell lines possess a TS p53 mutant
-METHODS: The cell lines DU145 (heterozygous p53, P223L, and V274F) and PC3 (p53-null, where exogenous P223L and V274F were introduced individually or in combination) were examined for TS p53 activity as revealed by reporter construct  and target gene activation
-RESULTS: TS p53 function was observed in DU145 and expression of the P223L allele in PC3 conferred a TS p53 profile
-Activation of p21Waf1 demonstrated that P223L  TS activity may have been influenced by cellular context
-CONCLUSIONS: The DU145 cell line harbors a TS mutant of p53 and, in addition to being a widely used model of human prostate carcinoma, may also reveal new insights into p53 function due to the unique transcriptional properties of its TS phenotype.
-
+The DU145 human prostate carcinoma cell line harbors a temperature-sensitive allele of p53.
+BACKGROUND: Some nuances of mutant and wild-type p53 activity have been uncovered utilizing temperature sensitive (TS) alleles.
+However, few human tumor derived cell lines possess a TS p53 mutant.
+METHODS: The cell lines DU145 (heterozygous p53, P223L, and V274F) and PC3 (p53-null, where exogenous P223L and V274F were introduced individually or in combination) were examined for TS p53 activity as revealed by reporter construct  and target gene activation.
+RESULTS: TS p53 function was observed in DU145 and expression of the P223L allele in PC3 conferred a TS p53 profile.
+Activation of p21Waf1 demonstrated that P223L  TS activity may have been influenced by cellular context.
+CONCLUSIONS: The DU145 cell line harbors a TS mutant of p53 and, in addition to being a widely used model of human prostate carcinoma, may also reveal new insights into p53 function due to the unique transcriptional properties of its TS phenotype..

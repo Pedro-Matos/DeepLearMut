@@ -1,10 +1,9 @@
-A naturally occurring mutation in an ATP-binding domain of the recombination repair gene XRCC3 ablates its function without causing cancer susceptibility
-Inherited mutations of the BRCA1 and BRCA2 genes, whose protein products are necessary for the homology-directed DNA repair pathway, confer a dominant susceptibility to cancer
-We have investigated whether mutations of genes encoding other components of the same DNA repair pathway can also affect cancer susceptibility
-We have identified three novel non-synonymous substitutions in one such gene, encoding the RAD51-related protein XRCC3
-One of these variants, D213N, occurs in a highly conserved ATP-binding domain and completely abrogates the ability of the transfected gene to correct the phenotype of XRCC3 deficient cells
-The D213N variant was found in the heterozygous state in DNA from 3/1577 healthy individuals
-However, we did not detect this variant at all amongst 187 breast cancer families and 1300 unrelated patients with common cancers
-Thus we have no evidence that D213N increases the risk of cancer
-We propose that not all components of the homologous recombination repair complex can act as cancer susceptibility genes.
-
+A naturally occurring mutation in an ATP-binding domain of the recombination repair gene XRCC3 ablates its function without causing cancer susceptibility.
+Inherited mutations of the BRCA1 and BRCA2 genes, whose protein products are necessary for the homology-directed DNA repair pathway, confer a dominant susceptibility to cancer.
+We have investigated whether mutations of genes encoding other components of the same DNA repair pathway can also affect cancer susceptibility.
+We have identified three novel non-synonymous substitutions in one such gene, encoding the RAD51-related protein XRCC3.
+One of these variants, D213N, occurs in a highly conserved ATP-binding domain and completely abrogates the ability of the transfected gene to correct the phenotype of XRCC3 deficient cells.
+The D213N variant was found in the heterozygous state in DNA from 3/1577 healthy individuals.
+However, we did not detect this variant at all amongst 187 breast cancer families and 1300 unrelated patients with common cancers.
+Thus we have no evidence that D213N increases the risk of cancer.
+We propose that not all components of the homologous recombination repair complex can act as cancer susceptibility genes..

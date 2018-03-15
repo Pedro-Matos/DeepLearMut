@@ -1,11 +1,10 @@
-A new but frequent mutation of apoB-100-apoB His3543Tyr
-ApolipoproteinB 100 (apoB-100) is an important component of atherogenic lipoproteins such as LDL and serves as a ligand for the LDL-receptor
-Familial defective apolipoproteinB 100 (FDB) is caused by a R3500Q mutation of the apoB gene and results in decreased binding of LDL to the LDL-receptor
-So far FDB is the most frequent and best studied alteration of apoB-100
-Apart from this, three other apoB mutations, R3500W, R3531C and R3480W, affecting binding to the LDL-receptor are known to date
-We screened the apoB gene segment of codons 3448-3561 by denaturing gradient gel electrophoresis (DGGE) analysis in a total of 853 consecutively sampled German patients undergoing diagnostic coronary angiography for suspected CAD
-By this, a new single base mutation was detected and confirmed by DNA sequencing
-The mutation, CAC(3543)TAC results in a His3543Tyr substitution in apoB-100 (H3543Y)
-The prevalence of heterozygotes for H3543Y in the study population was 0.47% compared to 0.12% for the known Arg 3500 Gln (R3500Q) mutation
-In conclusion, the new mutation is four times more frequent than "classical" FDB and thus appears to be the most common apoB mutation in Germany.
-
+A new but frequent mutation of apoB-100-apoB His3543Tyr.
+ApolipoproteinB 100 (apoB-100) is an important component of atherogenic lipoproteins such as LDL and serves as a ligand for the LDL-receptor.
+Familial defective apolipoproteinB 100 (FDB) is caused by a R3500Q mutation of the apoB gene and results in decreased binding of LDL to the LDL-receptor.
+So far FDB is the most frequent and best studied alteration of apoB-100.
+Apart from this, three other apoB mutations, R3500W, R3531C and R3480W, affecting binding to the LDL-receptor are known to date.
+We screened the apoB gene segment of codons 3448-3561 by denaturing gradient gel electrophoresis (DGGE) analysis in a total of 853 consecutively sampled German patients undergoing diagnostic coronary angiography for suspected CAD.
+By this, a new single base mutation was detected and confirmed by DNA sequencing.
+The mutation, CAC(3543)TAC results in a His3543Tyr substitution in apoB-100 (H3543Y).
+The prevalence of heterozygotes for H3543Y in the study population was 0.47% compared to 0.12% for the known Arg 3500 Gln (R3500Q) mutation.
+In conclusion, the new mutation is four times more frequent than "classical" FDB and thus appears to be the most common apoB mutation in Germany..

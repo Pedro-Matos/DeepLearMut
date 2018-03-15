@@ -1,12 +1,11 @@
-FGFR4 Arg388 allele is associated with resistance to adjuvant therapy in primary  breast cancer
-PURPOSE: A recent study presented first evidence that a single nucleotide polymorphism (SNP) at codon 388 of fibroblast growth factor receptor 4 (FGFR4) gene, causing a transmembrane domain missense mutation (Gly388Arg), is associated with disease outcome in node-positive breast cancer
-This article addresses the clinical relevance of this SNP, FGFR4 genotype, phenotype, and HER2 regarding patient outcome and influence of adjuvant systemic therapy in a substantial primary breast cancer collective (n = 372; median follow-up, 94.5 months)
-METHODS: Polymerase chain reaction restriction fragment length polymorphism analysis of germ-line polymorphism was performed in uninvolved lymph nodes; FGFR4 and HER2 expression were assessed immunohistochemically in tissue microarrays
-RESULTS: In 51% of patients, homo- or heterozygous Arg388 allele was present
-No  correlation existed between FGFR4 genotype and expression or HER2 status
-In node-negative patients, FGFR4 genotype was not correlated with disease outcome
-In node-positive patients, however, FGFR4 Arg388 was significantly associated with poor disease-free survival (DFS; P = .02) and overall survival (OS; P = .04)
-Notably, this association seems to be attributable to relatively poor therapy response in Arg388 carriers, reflected in their significantly shorter DFS (P = .02) and OS (P = .045) among patients receiving adjuvant systemic therapy
-It is also seen as a significant interaction term in a multivariate proportional  hazards model with Arg388 carriers having only about half as much benefit from adjuvant systemic therapy as wild-type carriers
-CONCLUSION: According to this study, FGFR4 Arg388 genotype is a marker for breast cancer progression in patients with adjuvant systemic therapy, particularly chemotherapy, and thus may indicate therapy resistance.
-
+FGFR4 Arg388 allele is associated with resistance to adjuvant therapy in primary  breast cancer.
+PURPOSE: A recent study presented first evidence that a single nucleotide polymorphism (SNP) at codon 388 of fibroblast growth factor receptor 4 (FGFR4) gene, causing a transmembrane domain missense mutation (Gly388Arg), is associated with disease outcome in node-positive breast cancer.
+This article addresses the clinical relevance of this SNP, FGFR4 genotype, phenotype, and HER2 regarding patient outcome and influence of adjuvant systemic therapy in a substantial primary breast cancer collective (n = 372; median follow-up, 94.5 months).
+METHODS: Polymerase chain reaction restriction fragment length polymorphism analysis of germ-line polymorphism was performed in uninvolved lymph nodes; FGFR4 and HER2 expression were assessed immunohistochemically in tissue microarrays.
+RESULTS: In 51% of patients, homo- or heterozygous Arg388 allele was present.
+No  correlation existed between FGFR4 genotype and expression or HER2 status.
+In node-negative patients, FGFR4 genotype was not correlated with disease outcome.
+In node-positive patients, however, FGFR4 Arg388 was significantly associated with poor disease-free survival (DFS; P = .02) and overall survival (OS; P = .04).
+Notably, this association seems to be attributable to relatively poor therapy response in Arg388 carriers, reflected in their significantly shorter DFS (P = .02) and OS (P = .045) among patients receiving adjuvant systemic therapy.
+It is also seen as a significant interaction term in a multivariate proportional  hazards model with Arg388 carriers having only about half as much benefit from adjuvant systemic therapy as wild-type carriers.
+CONCLUSION: According to this study, FGFR4 Arg388 genotype is a marker for breast cancer progression in patients with adjuvant systemic therapy, particularly chemotherapy, and thus may indicate therapy resistance..

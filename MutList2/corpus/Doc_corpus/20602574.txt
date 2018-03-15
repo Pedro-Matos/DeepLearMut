@@ -1,13 +1,12 @@
-Bikunin and a1-microglobulin/bikunin precursor (AMBP) gene mutational screening in patients with kidney stones: a case-control study
-OBJECTIVE: Bikunin is an inhibitor of kidney stone formation synthesized in the liver together with a(1)-microglobulin from the a(1)-microglobulin/bikunin precursor (AMBP) gene
-The aim of this study was to investigate the possible association between bikunin/AMBP gene polymorphisms and urinary stone formation
-MATERIAL AND METHODS: To analyse the DNA, blood samples were taken from 75 kidney stone formers who had a familial stone history, 35 sporadic stone formers and 101 healthy individuals
-Four exons of bikunin gene and five parts of the promoter region of the AMBP gene were screened using single-strand conformation polymorphism and nucleotide sequence analysis
-RESULTS: The Init-2 region of the promoter of AMBP gene had polymorphisms at positions -218 and -189 nt giving three different genotypes having 1,3, 2,4 and 1,2,3,4 alleles with frequencies of 17.06%, 60.19% and 22.75%, respectively, in all groups
-Therefore, the Init-2 region appears to be polymorphic
-As a result, the 1,3 allele has -218G and -189T complying with the reference database sequence, the 2,4 allele has -218G and T-189C substitution and the allele 1,2,3,4 genotype has substitutions at positions G-218C and T-189C
-CONCLUSIONS: There were no significant differences in allele distribution between patients and controls
-These common alleles exist in the Turkish population independent of stone formation
-These results are the first to demonstrate the existence of bikunin and AMBP promoter polymorphism
-Although the Init-2 region of the AMBP gene is the binding site for various transcription factors, the results showed no association between these observed genotypes and stone-forming phenotypes.
-
+Bikunin and a1-microglobulin/bikunin precursor (AMBP) gene mutational screening in patients with kidney stones: a case-control study.
+OBJECTIVE: Bikunin is an inhibitor of kidney stone formation synthesized in the liver together with a(1)-microglobulin from the a(1)-microglobulin/bikunin precursor (AMBP) gene.
+The aim of this study was to investigate the possible association between bikunin/AMBP gene polymorphisms and urinary stone formation.
+MATERIAL AND METHODS: To analyse the DNA, blood samples were taken from 75 kidney stone formers who had a familial stone history, 35 sporadic stone formers and 101 healthy individuals.
+Four exons of bikunin gene and five parts of the promoter region of the AMBP gene were screened using single-strand conformation polymorphism and nucleotide sequence analysis.
+RESULTS: The Init-2 region of the promoter of AMBP gene had polymorphisms at positions -218 and -189 nt giving three different genotypes having 1,3, 2,4 and 1,2,3,4 alleles with frequencies of 17.06%, 60.19% and 22.75%, respectively, in all groups.
+Therefore, the Init-2 region appears to be polymorphic.
+As a result, the 1,3 allele has -218G and -189T complying with the reference database sequence, the 2,4 allele has -218G and T-189C substitution and the allele 1,2,3,4 genotype has substitutions at positions G-218C and T-189C.
+CONCLUSIONS: There were no significant differences in allele distribution between patients and controls.
+These common alleles exist in the Turkish population independent of stone formation.
+These results are the first to demonstrate the existence of bikunin and AMBP promoter polymorphism.
+Although the Init-2 region of the AMBP gene is the binding site for various transcription factors, the results showed no association between these observed genotypes and stone-forming phenotypes..

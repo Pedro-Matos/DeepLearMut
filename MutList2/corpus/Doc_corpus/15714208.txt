@@ -1,14 +1,13 @@
-Mutation screening and association study of RNASEL as a prostate cancer susceptibility gene
-To date, germline mutations have been found in three candidate genes for hereditary prostate cancer: ELAC2 at 17p11, RNASEL at 1q25 and MSR1 at 8p22
-RNASEL, encoding the 2',5'-oligoadenylate-dependant RNase L, seems to have rare mutations in different ethnicities, such as M1I in Afro-Americans, E265X in men of European descent and 471delAAAG in Ashkenazi Jews
-In order to evaluate the relevance of RNASEL in the German population, we sequenced its open reading frame to determine the spectrum and frequency of germline mutations
-The screen included 303 affected men from 136 Caucasian families, of which 45 met the criteria for hereditary prostate cancer
-Variants were analysed using a family-based association test, and genotyped in an additional 227 sporadic prostate cancer patients and 207 controls
-We identified only two sib pairs (1.4% of our families) cosegregating conspicuous RNASEL variants with prostate cancer:  the nonsense mutation E265X, and a new amino-acid substitution (R400P) of unknown functional relevance
-Both alleles were also found at low frequencies (1.4 and 0.5%, respectively) in controls
-No significant association of polymorphisms (I97L, R462Q and D541E) was observed, neither in case-control analyses nor by family-based association tests
-In contrast to previous reports, our study does not suggest that common variants (i.e
-R462Q) modify disease risk
-Our results are not consistent with a high penetrance of deleterious RNASEL mutations
-Due to the low frequency of germline mutations present in our sample, RNASEL does not have a significant impact on prostate cancer susceptibility in the German population.
-
+Mutation screening and association study of RNASEL as a prostate cancer susceptibility gene.
+To date, germline mutations have been found in three candidate genes for hereditary prostate cancer: ELAC2 at 17p11, RNASEL at 1q25 and MSR1 at 8p22.
+RNASEL, encoding the 2',5'-oligoadenylate-dependant RNase L, seems to have rare mutations in different ethnicities, such as M1I in Afro-Americans, E265X in men of European descent and 471delAAAG in Ashkenazi Jews.
+In order to evaluate the relevance of RNASEL in the German population, we sequenced its open reading frame to determine the spectrum and frequency of germline mutations.
+The screen included 303 affected men from 136 Caucasian families, of which 45 met the criteria for hereditary prostate cancer.
+Variants were analysed using a family-based association test, and genotyped in an additional 227 sporadic prostate cancer patients and 207 controls.
+We identified only two sib pairs (1.4% of our families) cosegregating conspicuous RNASEL variants with prostate cancer:  the nonsense mutation E265X, and a new amino-acid substitution (R400P) of unknown functional relevance.
+Both alleles were also found at low frequencies (1.4 and 0.5%, respectively) in controls.
+No significant association of polymorphisms (I97L, R462Q and D541E) was observed, neither in case-control analyses nor by family-based association tests.
+In contrast to previous reports, our study does not suggest that common variants (i.e.
+R462Q) modify disease risk.
+Our results are not consistent with a high penetrance of deleterious RNASEL mutations.
+Due to the low frequency of germline mutations present in our sample, RNASEL does not have a significant impact on prostate cancer susceptibility in the German population..

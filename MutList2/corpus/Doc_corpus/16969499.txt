@@ -1,13 +1,12 @@
-Missense mutations of BRCA1 gene affect the binding with p53 both in vitro and in vivo
-Women with BRCA1 gene mutations have an increased risk for breast and ovarian cancer (BOC)
-Classification of missense variants as neutral or disease causing is still a challenge and has major implications for genetic counseling
-BRCA1 is  organized in an N-terminal ring-finger domain and two BRCT (breast cancer C-terminus) domains, involved in protein-protein interaction
-The integrity of the C-terminal, BRCT repeat region is also critical for BRCA1 tumor suppressor function
-Several molecular partners of BRCA1 have so far been identified; among  them, the tumor suppressor protein p53 seems to play a major role
-This study was aimed at evaluating the impact of two missense mutations, namely the W1837R and the S1841N, previously identified in BOC patients and located in the BRCT domain  of the BRCA1 gene, on the binding capacity of this protein to p53
-Co-immunoprecipitation assays of E
-coli-expressed wild-type and mutated BRCTs challenged with a HeLa cell extract revealed, for the S1841N variant a significant reduction in the binding activity to p53, while the W1837R mutant showed an inverse effect
-Furthermore, a clonogenic soft agar growth assay performed on HeLa cells stably transfected with either wild-type or mutant BRCA1  showed a marked decrease of the growth in wild-type BRCA1-overexpressing cells and in BRCA1S1841N-transfected cells, while no significant changes were detected  in the BRCA1W1837R-transfected cells
-These results demonstrate that: i) distinct single nucleotide changes in the BRCT domain of BRCA1 affect binding of this protein to the tumor suppressor p53, and ii) the two missense mutations here described are likely to play a role in breast tumorigenesis
-We suggest that in vitro/in vivo experiments testing the effects of unclassified BRCA1 gene variants should therefore be taken in to consideration and that increased surveillance should be adopted in individuals bearing these two BRCA1 missense alterations.
-
+Missense mutations of BRCA1 gene affect the binding with p53 both in vitro and in vivo.
+Women with BRCA1 gene mutations have an increased risk for breast and ovarian cancer (BOC).
+Classification of missense variants as neutral or disease causing is still a challenge and has major implications for genetic counseling.
+BRCA1 is  organized in an N-terminal ring-finger domain and two BRCT (breast cancer C-terminus) domains, involved in protein-protein interaction.
+The integrity of the C-terminal, BRCT repeat region is also critical for BRCA1 tumor suppressor function.
+Several molecular partners of BRCA1 have so far been identified; among  them, the tumor suppressor protein p53 seems to play a major role.
+This study was aimed at evaluating the impact of two missense mutations, namely the W1837R and the S1841N, previously identified in BOC patients and located in the BRCT domain  of the BRCA1 gene, on the binding capacity of this protein to p53.
+Co-immunoprecipitation assays of E.
+coli-expressed wild-type and mutated BRCTs challenged with a HeLa cell extract revealed, for the S1841N variant a significant reduction in the binding activity to p53, while the W1837R mutant showed an inverse effect.
+Furthermore, a clonogenic soft agar growth assay performed on HeLa cells stably transfected with either wild-type or mutant BRCA1  showed a marked decrease of the growth in wild-type BRCA1-overexpressing cells and in BRCA1S1841N-transfected cells, while no significant changes were detected  in the BRCA1W1837R-transfected cells.
+These results demonstrate that: i) distinct single nucleotide changes in the BRCT domain of BRCA1 affect binding of this protein to the tumor suppressor p53, and ii) the two missense mutations here described are likely to play a role in breast tumorigenesis.
+We suggest that in vitro/in vivo experiments testing the effects of unclassified BRCA1 gene variants should therefore be taken in to consideration and that increased surveillance should be adopted in individuals bearing these two BRCA1 missense alterations..

@@ -1,16 +1,15 @@
-Genetic polymorphisms of renin-angiotensin system and progression of interstitial nephritis
-Genes of the renin-angiotensin system (RAS) are involved in the progression of renal failure
-Among them, the angiotensin-converting enzyme (ACE), angiotensinogen (AGT) and angiotensin II type 1 receptor (AT1R) genes are of particular interest
-We examined polymorphisms of these three genes for association with the development of interstitial nephritis and progression to end-stage renal failure
-The allele frequency and genotype distribution were compared in 90 patients with interstitial nephritis and 200 healthy controls
-DNA samples were genotyped by polymerase chain reaction (PCR)
-We did not find statistically significant differences between groups in the insertion/deletion polymorphism of the ACE gene
-An involvement of M235T polymorphism of the AGT gene in renal disease was observed in our study
-The frequency of the T allele was higher in patients than in controls (32% vs
-24%)
-In the A1166C AT1R polymorphism the homozygous CC genotype was also more frequent in interstitial nephritis patients (7% vs
-3.5%)
-In patients carrying the C allele, an average time to ESRD was significantly shorter than in subjects with the AA genotype
-Our study shows the association of the AGT and AT1R gene polymorphisms with the development and progression of interstitial nephritis
-The C allele of the A1166C polymorphism appears to be a risk factor for faster disease progression.
-
+Genetic polymorphisms of renin-angiotensin system and progression of interstitial nephritis.
+Genes of the renin-angiotensin system (RAS) are involved in the progression of renal failure.
+Among them, the angiotensin-converting enzyme (ACE), angiotensinogen (AGT) and angiotensin II type 1 receptor (AT1R) genes are of particular interest.
+We examined polymorphisms of these three genes for association with the development of interstitial nephritis and progression to end-stage renal failure.
+The allele frequency and genotype distribution were compared in 90 patients with interstitial nephritis and 200 healthy controls.
+DNA samples were genotyped by polymerase chain reaction (PCR).
+We did not find statistically significant differences between groups in the insertion/deletion polymorphism of the ACE gene.
+An involvement of M235T polymorphism of the AGT gene in renal disease was observed in our study.
+The frequency of the T allele was higher in patients than in controls (32% vs.
+24%).
+In the A1166C AT1R polymorphism the homozygous CC genotype was also more frequent in interstitial nephritis patients (7% vs.
+3.5%).
+In patients carrying the C allele, an average time to ESRD was significantly shorter than in subjects with the AA genotype.
+Our study shows the association of the AGT and AT1R gene polymorphisms with the development and progression of interstitial nephritis.
+The C allele of the A1166C polymorphism appears to be a risk factor for faster disease progression..

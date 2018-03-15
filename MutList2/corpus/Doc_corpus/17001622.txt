@@ -1,13 +1,12 @@
-Characterization of the breast cancer associated ATM 7271T>G (V2424G) mutation by gene expression profiling
-Mutations in ATM are responsible for the autosomal recessive disorder ataxia telangiectasia
-Heterozygous mutations in ATM have been associated with an elevated risk of breast cancer
-We previously reported one breast cancer family in which ATM 7271T>G (V2424G) segregated with disease, and apparently acted in a  dominant negative manner
-We now report the screening of 782 multiple-case breast cancer families that identified two additional index cases with ATM 7271T>G
-Phylogenetic sequence analysis showed that V2424 is a highly conserved residue, and that the 2424G variant is likely to interfere with function
-To elucidate the consequences of this mutation, we expression profiled wild-type, heterozygous, and homozygous lymphoblastoid cell lines (LCLs) from Scottish and Australian families using an oligonucleotide microarray
-Cluster analysis revealed 77 genes  that were differentially expressed in homozygous and heterozygous V2424G cells (compared to wild-type) and 11 genes differentially expressed in the homozygous cells
-We also evaluated the profiles of LCLs after exposure to ionizing radiation (IR) and identified 77 genes that were differentially expressed in wild-type cells, but not in homozygous or heterozygous V2424G cells
-We validated the expression differences by RT-PCR in additional heterozygous V2424G LCLs from  another breast cancer family
-We found no consistent cytotoxicity or abrogation of ATM kinase activity after IR in seven heterozygous V2424G LCLs, compared to wild-type LCLs, but did find an increase in the number of chromosomal aberrations
-These data suggest that the V2424G missense mutation acts largely as a dominant negative in terms of the associated expression profiles.
-
+Characterization of the breast cancer associated ATM 7271T>G (V2424G) mutation by gene expression profiling.
+Mutations in ATM are responsible for the autosomal recessive disorder ataxia telangiectasia.
+Heterozygous mutations in ATM have been associated with an elevated risk of breast cancer.
+We previously reported one breast cancer family in which ATM 7271T>G (V2424G) segregated with disease, and apparently acted in a  dominant negative manner.
+We now report the screening of 782 multiple-case breast cancer families that identified two additional index cases with ATM 7271T>G.
+Phylogenetic sequence analysis showed that V2424 is a highly conserved residue, and that the 2424G variant is likely to interfere with function.
+To elucidate the consequences of this mutation, we expression profiled wild-type, heterozygous, and homozygous lymphoblastoid cell lines (LCLs) from Scottish and Australian families using an oligonucleotide microarray.
+Cluster analysis revealed 77 genes  that were differentially expressed in homozygous and heterozygous V2424G cells (compared to wild-type) and 11 genes differentially expressed in the homozygous cells.
+We also evaluated the profiles of LCLs after exposure to ionizing radiation (IR) and identified 77 genes that were differentially expressed in wild-type cells, but not in homozygous or heterozygous V2424G cells.
+We validated the expression differences by RT-PCR in additional heterozygous V2424G LCLs from  another breast cancer family.
+We found no consistent cytotoxicity or abrogation of ATM kinase activity after IR in seven heterozygous V2424G LCLs, compared to wild-type LCLs, but did find an increase in the number of chromosomal aberrations.
+These data suggest that the V2424G missense mutation acts largely as a dominant negative in terms of the associated expression profiles..

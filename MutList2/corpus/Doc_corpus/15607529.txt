@@ -1,10 +1,9 @@
-Leydig cell hypoplasia due to inactivation of luteinizing hormone receptor by a novel homozygous nonsense truncation mutation in the seventh transmembrane domain
-Inactivating mutations in the LH receptor are the predominant cause for male pseudohermaphroditism in subjects with Leydig cell hypoplasia (LCH)
-The severity of the mutations, correlates with residual receptor activities
-Here, we detail the clinical presentation of one subject with complete male pseudohermaphroditism and LCH
-We identify within the proband and her similarly afflicted sibling a homozygous T to G transversion at nucleotide 1836 in exon 11 of the LH/CGR gene
-This causes conversion of a tyrosine codon into a stop codon at codon 612 in the seventh transmembrane domain, resulting in a truncated receptor that lacks a cytoplasmic tail
-In vitro, in contrast to cells expressing a normal LHR, cells transfected with the mutant cDNA exhibit neither surface binding of radiolabeled hCG nor cAMP generation
-In vitro expression under the control of the LHR signal peptide of either a wild type or mutant LHR-GFP fusion protein shows no differences in receptor cellular localization
-In conclusion, the in vitro studies suggest that residues in the seventh transmembrane domain and cytoplasmic tail are important for receptor binding and activation without playing a major role in receptor cellular trafficking.
-
+Leydig cell hypoplasia due to inactivation of luteinizing hormone receptor by a novel homozygous nonsense truncation mutation in the seventh transmembrane domain.
+Inactivating mutations in the LH receptor are the predominant cause for male pseudohermaphroditism in subjects with Leydig cell hypoplasia (LCH).
+The severity of the mutations, correlates with residual receptor activities.
+Here, we detail the clinical presentation of one subject with complete male pseudohermaphroditism and LCH.
+We identify within the proband and her similarly afflicted sibling a homozygous T to G transversion at nucleotide 1836 in exon 11 of the LH/CGR gene.
+This causes conversion of a tyrosine codon into a stop codon at codon 612 in the seventh transmembrane domain, resulting in a truncated receptor that lacks a cytoplasmic tail.
+In vitro, in contrast to cells expressing a normal LHR, cells transfected with the mutant cDNA exhibit neither surface binding of radiolabeled hCG nor cAMP generation.
+In vitro expression under the control of the LHR signal peptide of either a wild type or mutant LHR-GFP fusion protein shows no differences in receptor cellular localization.
+In conclusion, the in vitro studies suggest that residues in the seventh transmembrane domain and cytoplasmic tail are important for receptor binding and activation without playing a major role in receptor cellular trafficking..

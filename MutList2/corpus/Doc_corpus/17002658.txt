@@ -1,15 +1,14 @@
-Severe prothrombin deficiency caused by prothrombin-Edmonton (R-4Q) combined with a previously undetected deletion
-BACKGROUND: During infancy, a male patient experienced several life-threatening bleeding episodes
-Standard coagulation tests revealed that the patient's plasma prothrombin activity was 8%, while his father's and mother's levels were 74% and 62%, respectively
-OBJECTIVES: A molecular genetic approach was used to determine the molecular basis of prothrombin deficiency within the family
-PATIENT/METHODS: Prothrombin genomic DNA fragments were amplified by using the polymerase chain reaction (PCR)
-In addition, liver cDNA fragments were amplified from the patient by using reverse transcription (RT) and PCR
-The nucleotide sequences of the DNA fragments were determined
-RESULTS: A novel, heterozygous point mutation (g.1755 G > A, named prothrombin-Edmonton) was detected in the patient and his mother, resulting in the mutation of Arg-4 in the prothrombin propeptide to Gln (R-4Q)
-RT-PCR analysis of the patient's liver sample demonstrated the presence of two mRNA transcripts that differed by the presence or absence of exon 11
-Real-time PCR analysis on genomic DNA and cDNA confirmed a deletion (g.10435_10809del) in the paternal allele
-CONCLUSIONS: The patient has a maternally-inherited point mutation (R-4Q) and a paternally-inherited deletion
-By analogy with the previously reported factor IX San Dimas, the R-4Q mutation probably causes under-carboxylation of prothrombin and poor cleavage of the propeptide in the hepatocyte
-The deletion probably results in a polypeptide that lacks 50 amino acids from the protease domain; this is likely to impair folding, secretion, stability and/or activity of the truncated prothrombin
-The two mutations combine to give the prothrombin deficiency observed in the patient.
-
+Severe prothrombin deficiency caused by prothrombin-Edmonton (R-4Q) combined with a previously undetected deletion.
+BACKGROUND: During infancy, a male patient experienced several life-threatening bleeding episodes.
+Standard coagulation tests revealed that the patient's plasma prothrombin activity was 8%, while his father's and mother's levels were 74% and 62%, respectively.
+OBJECTIVES: A molecular genetic approach was used to determine the molecular basis of prothrombin deficiency within the family.
+PATIENT/METHODS: Prothrombin genomic DNA fragments were amplified by using the polymerase chain reaction (PCR).
+In addition, liver cDNA fragments were amplified from the patient by using reverse transcription (RT) and PCR.
+The nucleotide sequences of the DNA fragments were determined.
+RESULTS: A novel, heterozygous point mutation (g.1755 G > A, named prothrombin-Edmonton) was detected in the patient and his mother, resulting in the mutation of Arg-4 in the prothrombin propeptide to Gln (R-4Q).
+RT-PCR analysis of the patient's liver sample demonstrated the presence of two mRNA transcripts that differed by the presence or absence of exon 11.
+Real-time PCR analysis on genomic DNA and cDNA confirmed a deletion (g.10435_10809del) in the paternal allele.
+CONCLUSIONS: The patient has a maternally-inherited point mutation (R-4Q) and a paternally-inherited deletion.
+By analogy with the previously reported factor IX San Dimas, the R-4Q mutation probably causes under-carboxylation of prothrombin and poor cleavage of the propeptide in the hepatocyte.
+The deletion probably results in a polypeptide that lacks 50 amino acids from the protease domain; this is likely to impair folding, secretion, stability and/or activity of the truncated prothrombin.
+The two mutations combine to give the prothrombin deficiency observed in the patient..

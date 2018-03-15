@@ -1,11 +1,10 @@
-Restricted genetic defects underlie human complement C6 deficiency
-Complement C6 homozygous deficiency (C6D) has been rarely observed in Caucasians but was reported at higher prevalence among African-Americans
-We report on the molecular basis of C6D in seven unrelated black individuals of North or Central Africa descent who live in France
-These patients have presented Neisseria meningitidis infection (four cases), focal and segmental glomerulosclerosis with hyalinosis (one case), systemic lupus erythematosus (one case) or Still's disease (one case)
-All patients exhibited undetectable antigenic C6 by using a sensitive ELISA assay
-An additional four cases of complete C6 deficiency with no associated disease have been characterized after family studies
-Exons 6, 7 and 12 have been described recently as the location of molecular defects on the C6 gene in randomly chosen black Americans
-Genomic DNA from the seven patients were subjected to direct polymerase chain reaction amplification of these three exons
-Nucleotide sequencing analysis of the amplified DNA fragments revealed a homozygous single-base deletion (1936delG) in exon 12 in three cases and four compound heterozygous deletions for a single base in exon 7 (1195delC) or in exon 6 (878delA) associated with the same deletion in exon 12 (1936delG)
-Our observations further establish the restricted pattern of genetic defects associated with homozygous C6 complement deficiency in individuals of African descent.
-
+Restricted genetic defects underlie human complement C6 deficiency.
+Complement C6 homozygous deficiency (C6D) has been rarely observed in Caucasians but was reported at higher prevalence among African-Americans.
+We report on the molecular basis of C6D in seven unrelated black individuals of North or Central Africa descent who live in France.
+These patients have presented Neisseria meningitidis infection (four cases), focal and segmental glomerulosclerosis with hyalinosis (one case), systemic lupus erythematosus (one case) or Still's disease (one case).
+All patients exhibited undetectable antigenic C6 by using a sensitive ELISA assay.
+An additional four cases of complete C6 deficiency with no associated disease have been characterized after family studies.
+Exons 6, 7 and 12 have been described recently as the location of molecular defects on the C6 gene in randomly chosen black Americans.
+Genomic DNA from the seven patients were subjected to direct polymerase chain reaction amplification of these three exons.
+Nucleotide sequencing analysis of the amplified DNA fragments revealed a homozygous single-base deletion (1936delG) in exon 12 in three cases and four compound heterozygous deletions for a single base in exon 7 (1195delC) or in exon 6 (878delA) associated with the same deletion in exon 12 (1936delG).
+Our observations further establish the restricted pattern of genetic defects associated with homozygous C6 complement deficiency in individuals of African descent..

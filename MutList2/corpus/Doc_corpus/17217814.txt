@@ -1,11 +1,10 @@
-[Prevalence of Val158Met polymorphism in COMT gene on non-BRCA1/2 hereditary breast cancer]
-OBJECTIVE: To explore the prevalence of Val158Met polymorphism in Catechol-O-methyltransferase (COMT) gene and its effect on genetic susceptibility for breast cancer in Shanghai population
-METHODS: A total of 114 patients with BRCA1/BRCA 2 negative hereditary breast cancer from independent families and 121 age-matched healthy controls were analyzed
-Genotype analysis was conducted by polymerase chain reaction (PCR) and  then DNA direct sequencing
-The odd ratios (OR) and 95% confidence intervals (CI) were calculated by unconditional logistic regression model
-RESULTS: The frequency of Val158Met polymorphism GG, GA and AA genotype in case group and control was 0.58 (65), 0.32 (36), 0.10 (11) and 0.60 (66), 0.35 (41), 0.03 (3), respectively
-The frequency of allele-containing genotypes is significantly higher in early-onset breast cancer patients (0.57) than in familial ones (0.35)
-Compared with GG (Val/Val) genotype, AA (Met/Met) genotype  confers a significantly increased risk for breast cancer (adjusted OR = 3.15; 95% CI, 0.70 - 14.19), especially among premenopausal women (adjusted OR = 9.98; 95%  CI, 1.00 - 99.64)
-Borderline significantly association was found between AA genotype (adjusted OR = 7.57; 95% CI, 0.57 - 101.28) and susceptibility for breast cancer in BMI < or = 23 kg/m(2) group
-CONCLUSIONS: Val158Met polymorphism in COMT gene could be a candidate for low penetrance breast cancer susceptibility in Shanghai population, especially among  premenopausal women and early-onset breast cancer patients.
-
+[Prevalence of Val158Met polymorphism in COMT gene on non-BRCA1/2 hereditary breast cancer].
+OBJECTIVE: To explore the prevalence of Val158Met polymorphism in Catechol-O-methyltransferase (COMT) gene and its effect on genetic susceptibility for breast cancer in Shanghai population.
+METHODS: A total of 114 patients with BRCA1/BRCA 2 negative hereditary breast cancer from independent families and 121 age-matched healthy controls were analyzed.
+Genotype analysis was conducted by polymerase chain reaction (PCR) and  then DNA direct sequencing.
+The odd ratios (OR) and 95% confidence intervals (CI) were calculated by unconditional logistic regression model.
+RESULTS: The frequency of Val158Met polymorphism GG, GA and AA genotype in case group and control was 0.58 (65), 0.32 (36), 0.10 (11) and 0.60 (66), 0.35 (41), 0.03 (3), respectively.
+The frequency of allele-containing genotypes is significantly higher in early-onset breast cancer patients (0.57) than in familial ones (0.35).
+Compared with GG (Val/Val) genotype, AA (Met/Met) genotype  confers a significantly increased risk for breast cancer (adjusted OR = 3.15; 95% CI, 0.70 - 14.19), especially among premenopausal women (adjusted OR = 9.98; 95%  CI, 1.00 - 99.64).
+Borderline significantly association was found between AA genotype (adjusted OR = 7.57; 95% CI, 0.57 - 101.28) and susceptibility for breast cancer in BMI < or = 23 kg/m(2) group.
+CONCLUSIONS: Val158Met polymorphism in COMT gene could be a candidate for low penetrance breast cancer susceptibility in Shanghai population, especially among  premenopausal women and early-onset breast cancer patients..

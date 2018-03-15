@@ -1,14 +1,13 @@
-Relationship between glutathione S-transferase M1, P1 and T1 polymorphisms and early onset prostate cancer
-There is evidence suggesting that polymorphic variations in the glutathione S-transferases (GSTs) are associated with cancer susceptibility
-Inter-individual differences in cancer susceptibility may be mediated in part through polymorphic  variability in the bioactivation and detoxification of carcinogens
-The GSTs have been consistently implicated as cancer susceptibility genes in this context
-The  GST supergene family includes several loci with well characterized polymorphisms
-Approximately 50% of the Caucasian population are homozygous for deletions in GSTM1 and approximately 20% are homozygous for deletions in GSTT1, resulting in conjugation deficiency of mutagenic electrophiles to glutathione
-The GSTP1 gene  has a polymorphism at codon 105 resulting in an Ile to Val substitution which consequently alters the enzymatic activity of the protein and this has been suggested as a putative high-risk genotype in various cancers
-We investigated the relationship between GST polymorphisms and young onset prostate cancer in a case-control study
-GSTM1, GSTT1 and GSTP1 genotypes were determined for 275 prostate cancer patients and for 280 geographically matched control subjects
-We  found no significant difference in the frequency of GSTM1 or GSTT1 null genotypes between cases and controls
-GSTP1 genotype was, however, significantly associated with prostate cancer risk: the Ile/Ile homozygotes had the lowest risk and there  was a trend in increasing the risk with the number of 105 Val alleles: Ile/Val odds ratio (OR)= 1.30 (95% FCI 0.99-1.69), Val/Val OR = 1.80 (95% FCI 1.11-2.91); Ptrend = 0.026
-These results suggest that the GSTP1 polymorphism may be a risk factor for developing young onset prostate cancer
-We also found that carrying more than one putative high-risk allele in the carcinogen metabolizing GST family was associated with an elevated risk for early onset prostate cancer (OR 2.48, 95% FCI 1.22-5.04, Ptrend = 0.017).
-
+Relationship between glutathione S-transferase M1, P1 and T1 polymorphisms and early onset prostate cancer.
+There is evidence suggesting that polymorphic variations in the glutathione S-transferases (GSTs) are associated with cancer susceptibility.
+Inter-individual differences in cancer susceptibility may be mediated in part through polymorphic  variability in the bioactivation and detoxification of carcinogens.
+The GSTs have been consistently implicated as cancer susceptibility genes in this context.
+The  GST supergene family includes several loci with well characterized polymorphisms.
+Approximately 50% of the Caucasian population are homozygous for deletions in GSTM1 and approximately 20% are homozygous for deletions in GSTT1, resulting in conjugation deficiency of mutagenic electrophiles to glutathione.
+The GSTP1 gene  has a polymorphism at codon 105 resulting in an Ile to Val substitution which consequently alters the enzymatic activity of the protein and this has been suggested as a putative high-risk genotype in various cancers.
+We investigated the relationship between GST polymorphisms and young onset prostate cancer in a case-control study.
+GSTM1, GSTT1 and GSTP1 genotypes were determined for 275 prostate cancer patients and for 280 geographically matched control subjects.
+We  found no significant difference in the frequency of GSTM1 or GSTT1 null genotypes between cases and controls.
+GSTP1 genotype was, however, significantly associated with prostate cancer risk: the Ile/Ile homozygotes had the lowest risk and there  was a trend in increasing the risk with the number of 105 Val alleles: Ile/Val odds ratio (OR)= 1.30 (95% FCI 0.99-1.69), Val/Val OR = 1.80 (95% FCI 1.11-2.91); Ptrend = 0.026.
+These results suggest that the GSTP1 polymorphism may be a risk factor for developing young onset prostate cancer.
+We also found that carrying more than one putative high-risk allele in the carcinogen metabolizing GST family was associated with an elevated risk for early onset prostate cancer (OR 2.48, 95% FCI 1.22-5.04, Ptrend = 0.017)..

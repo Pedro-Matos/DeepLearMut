@@ -1,11 +1,10 @@
-A novel point mutation in CD18 causing leukocyte adhesion deficiency in a Chinese patient
-BACKGROUND: Leukocyte adhesion deficiency type 1 (LAD-1) is a rare, autosomal recessive inherited immunodeficiency disease characterized by recurrent severe bacterial infection, impaired pus formation, poor wound healing, associated with the mutation in the CD18 gene responsible for the ability of the leucocytes to migrate from the blood stream towards the site of inflammation
-Correct and early diagnosis of LAD-1 is vital to the success of treatment and prevention of aggressive infections
-The purpose of this study was to collect the clinical findings of the disease and to identify the genetic entity
-METHODS: CD18 expression in the peripheral blood leukocytes from the patient, his parents and normal control was measured with flow cytometry
-The entire coding regions of the CD18 gene were screened with direct sequencing genomic DNA
-RESULTS: CD18 expression level on this patient's leukocyte surface was significantly decreased, with normal level in control group, his father and mother
-Gene analysis revealed that this patient had a homozygous c.899A > T missense mutation in exon 8 of CD18 gene, causing the substitution of Asp to Val at the 300 amino acid
-His parents were both heterozygous carriers while no such mutation was found in 50 normal controls
-CONCLUSION: This study disclosed a novel point mutation Asp 300 Val located in a highly conserved region (HCR) of CD18 and confirmed the heterogeneity of the mutations causing LAD-1, indicating it was quite beneficial to establish correct and early diagnosis in children with severe LAD-1.
-
+A novel point mutation in CD18 causing leukocyte adhesion deficiency in a Chinese patient.
+BACKGROUND: Leukocyte adhesion deficiency type 1 (LAD-1) is a rare, autosomal recessive inherited immunodeficiency disease characterized by recurrent severe bacterial infection, impaired pus formation, poor wound healing, associated with the mutation in the CD18 gene responsible for the ability of the leucocytes to migrate from the blood stream towards the site of inflammation.
+Correct and early diagnosis of LAD-1 is vital to the success of treatment and prevention of aggressive infections.
+The purpose of this study was to collect the clinical findings of the disease and to identify the genetic entity.
+METHODS: CD18 expression in the peripheral blood leukocytes from the patient, his parents and normal control was measured with flow cytometry.
+The entire coding regions of the CD18 gene were screened with direct sequencing genomic DNA.
+RESULTS: CD18 expression level on this patient's leukocyte surface was significantly decreased, with normal level in control group, his father and mother.
+Gene analysis revealed that this patient had a homozygous c.899A > T missense mutation in exon 8 of CD18 gene, causing the substitution of Asp to Val at the 300 amino acid.
+His parents were both heterozygous carriers while no such mutation was found in 50 normal controls.
+CONCLUSION: This study disclosed a novel point mutation Asp 300 Val located in a highly conserved region (HCR) of CD18 and confirmed the heterogeneity of the mutations causing LAD-1, indicating it was quite beneficial to establish correct and early diagnosis in children with severe LAD-1..

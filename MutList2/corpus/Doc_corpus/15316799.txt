@@ -1,11 +1,10 @@
-Genetic variation in apolipoprotein D and Alzheimer's disease
-Apolipoprotein D (apoD) is a lipoprotein-associated glycoprotein, structurally unrelated to apoE, that transports small hydrophobic ligands including cholesterol and sterols
-Levels are increased in the hippocampus and CSF of Alzheimer's disease (AD) patients
-We tested whether variation in the APOD gene affects AD risk
-Four single nucleotide polymorphisms (SNPs) were investigated (in map order): exon 2, 15T-->C encodes an amino acid substitution Phe-->Ser at codon 15; intron 2, -352G-->A; intron 3, +45C-->T; intron 4, +718C-->T, determined by SNaPshot assay
-SNP frequencies for 394 eastern Finnish AD patients were compared with those found for 470 control subjects, dividing subjects also into early-onset AD (EOAD; < or = 65 years) and late-onset AD (LOAD; >65 years) groups
-The -352G allele was associated with a significant 3-fold increase in the risk of EOAD (OR: 2.7; 95% CI: 1.1-6.5)
-The -352G containing haplotypes were more common for EOAD cases (TGCC: 0.48 vs 0.41; TGCT: 0.08 vs 0.01 (p = 0.002)
-In the Grade-of-membership analysis, APOD genotype frequencies at each SNP site and disease status were used to construct two latent groups: the affected group carried -352 as GG or GA and +45 CC, was often women and enriched in APOE epsilon4
-Each method suggested that the -352G allele frequency is higher for EOAD in the eastern Finnish population.
-
+Genetic variation in apolipoprotein D and Alzheimer's disease.
+Apolipoprotein D (apoD) is a lipoprotein-associated glycoprotein, structurally unrelated to apoE, that transports small hydrophobic ligands including cholesterol and sterols.
+Levels are increased in the hippocampus and CSF of Alzheimer's disease (AD) patients.
+We tested whether variation in the APOD gene affects AD risk.
+Four single nucleotide polymorphisms (SNPs) were investigated (in map order): exon 2, 15T-->C encodes an amino acid substitution Phe-->Ser at codon 15; intron 2, -352G-->A; intron 3, +45C-->T; intron 4, +718C-->T, determined by SNaPshot assay.
+SNP frequencies for 394 eastern Finnish AD patients were compared with those found for 470 control subjects, dividing subjects also into early-onset AD (EOAD; < or = 65 years) and late-onset AD (LOAD; >65 years) groups.
+The -352G allele was associated with a significant 3-fold increase in the risk of EOAD (OR: 2.7; 95% CI: 1.1-6.5).
+The -352G containing haplotypes were more common for EOAD cases (TGCC: 0.48 vs 0.41; TGCT: 0.08 vs 0.01 (p = 0.002).
+In the Grade-of-membership analysis, APOD genotype frequencies at each SNP site and disease status were used to construct two latent groups: the affected group carried -352 as GG or GA and +45 CC, was often women and enriched in APOE epsilon4.
+Each method suggested that the -352G allele frequency is higher for EOAD in the eastern Finnish population..

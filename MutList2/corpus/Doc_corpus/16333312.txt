@@ -1,11 +1,10 @@
-BARD1 variants Cys557Ser and Val507Met in breast cancer predisposition
-BARD1 (BRCA1-associated RING-domain 1) is a tumor suppressor whose protein product interacts with BRCA1, and in which rare somatic and germline mutations have been reported in breast, uterine, and endometrial cancers
-We aimed to evaluate whether there are BARD1 genetic variants that contribute to breast cancer risk by screening the gene for germline alterations in 45 Finnish familial breast cancer patients and in seven patients with both breast and ovarian cancer
-Two of the missense alterations identified (Cys557Ser and Val507Met) were recently suggested to associate with an increased breast cancer risk
-We also analyzed these variants in large and independent series of familial and unselected breast cancer patients and healthy controls
-No clearly deleterious mutations were detected in the initial mutation screening
-No association of the  Cys557Ser and breast cancer risk was observed as the variant was found altogether in 1.4% (16/1181) of familial and 2.2% (34/1565) of unselected breast cancer patients, and in 2.5% (27/1083) of healthy controls
-The frequency of the Val-allele of the Val507Met variant was modestly higher among breast cancer patients than among healthy controls, although the difference did not reach statistical significance
-No statistically significant association of the Cys557Ser or Val507Met variants with any clinicopathologic parameters was observed
-These results suggest that the contribution of the BARD1 germline variants to breast cancer predisposition is very limited, and that neither Cys557Ser nor Val507Met have an effect on familial breast cancer susceptibility.
-
+BARD1 variants Cys557Ser and Val507Met in breast cancer predisposition.
+BARD1 (BRCA1-associated RING-domain 1) is a tumor suppressor whose protein product interacts with BRCA1, and in which rare somatic and germline mutations have been reported in breast, uterine, and endometrial cancers.
+We aimed to evaluate whether there are BARD1 genetic variants that contribute to breast cancer risk by screening the gene for germline alterations in 45 Finnish familial breast cancer patients and in seven patients with both breast and ovarian cancer.
+Two of the missense alterations identified (Cys557Ser and Val507Met) were recently suggested to associate with an increased breast cancer risk.
+We also analyzed these variants in large and independent series of familial and unselected breast cancer patients and healthy controls.
+No clearly deleterious mutations were detected in the initial mutation screening.
+No association of the  Cys557Ser and breast cancer risk was observed as the variant was found altogether in 1.4% (16/1181) of familial and 2.2% (34/1565) of unselected breast cancer patients, and in 2.5% (27/1083) of healthy controls.
+The frequency of the Val-allele of the Val507Met variant was modestly higher among breast cancer patients than among healthy controls, although the difference did not reach statistical significance.
+No statistically significant association of the Cys557Ser or Val507Met variants with any clinicopathologic parameters was observed.
+These results suggest that the contribution of the BARD1 germline variants to breast cancer predisposition is very limited, and that neither Cys557Ser nor Val507Met have an effect on familial breast cancer susceptibility..

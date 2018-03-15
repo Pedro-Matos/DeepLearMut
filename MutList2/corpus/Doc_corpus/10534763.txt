@@ -1,13 +1,12 @@
-Identification of germline missense mutations and rare allelic variants in the ATM gene in early-onset breast cancer
-Epidemiological studies have shown an increased risk of breast cancer in obligate ataxia telangiectasia (A-T) heterozygotes
-We analyzed 100 samples from young breast cancer patients for mutations in ataxia-telangiectasia mutated (ATM), the  gene responsible for the autosomal recessive condition, A-T, to determine whether A-T heterozygosity predisposes such individuals to develop breast cancer
-These patients were selected from families with a moderate or absent family history of  breast cancer and included a subset of 16 radiosensitive patients
-Forty-four germline sequence variants were detected by fluorescent chemical cleavage of mismatch of RT-PCR products
-These included seven rare variants found in nine patients (three described for the first time), but no truncating mutations
-Although three variants were detected in the radiosensitive subset, this was not  statistically significant compared to the nonradiosensitive group
-One variant, G2765S, is likely to be a missense mutation, but the other six variants probably  represent rare polymorphisms
-However, five of the seven rare germline variants detected showed loss of heterozygosity of the wild-type ATM allele for one or more markers close to the ATM locus in matched tumor DNA
-This high rate of somatic inactivation of ATM may indicate either that these rare variants play a role in breast cancer development or alternatively that a neighboring tumor suppressor gene is important for tumorigenesis
-We found germline truncating ATM  mutations to be rare in these young breast cancer patients and therefore they are unlikely to play a role in the etiology of their disease
-Genes Chromosomes Cancer 26:286-294, 1999.
-
+Identification of germline missense mutations and rare allelic variants in the ATM gene in early-onset breast cancer.
+Epidemiological studies have shown an increased risk of breast cancer in obligate ataxia telangiectasia (A-T) heterozygotes.
+We analyzed 100 samples from young breast cancer patients for mutations in ataxia-telangiectasia mutated (ATM), the  gene responsible for the autosomal recessive condition, A-T, to determine whether A-T heterozygosity predisposes such individuals to develop breast cancer.
+These patients were selected from families with a moderate or absent family history of  breast cancer and included a subset of 16 radiosensitive patients.
+Forty-four germline sequence variants were detected by fluorescent chemical cleavage of mismatch of RT-PCR products.
+These included seven rare variants found in nine patients (three described for the first time), but no truncating mutations.
+Although three variants were detected in the radiosensitive subset, this was not  statistically significant compared to the nonradiosensitive group.
+One variant, G2765S, is likely to be a missense mutation, but the other six variants probably  represent rare polymorphisms.
+However, five of the seven rare germline variants detected showed loss of heterozygosity of the wild-type ATM allele for one or more markers close to the ATM locus in matched tumor DNA.
+This high rate of somatic inactivation of ATM may indicate either that these rare variants play a role in breast cancer development or alternatively that a neighboring tumor suppressor gene is important for tumorigenesis.
+We found germline truncating ATM  mutations to be rare in these young breast cancer patients and therefore they are unlikely to play a role in the etiology of their disease.
+Genes Chromosomes Cancer 26:286-294, 1999..

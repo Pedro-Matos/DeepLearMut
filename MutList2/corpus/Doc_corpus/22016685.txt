@@ -1,11 +1,10 @@
-A novel missense mutation Asp506Gly in Exon 13 of the F11 gene in an asymptomatic Korean woman with mild factor XI deficiency
-Factor XI (FXI) deficiency is a rare autosomal recessive coagulation disorder most commonly found in Ashkenazi and Iraqi Jews, but it is also found in other ethnic groups
-It is a trauma or surgery-related bleeding disorder, but spontaneous bleeding is rarely seen
-The clinical manifestation of bleeding in FXI deficiency cases is variable and seems to poorly correlate with plasma FXI levels
-The molecular pathology of FXI deficiency is mutation in the F11 gene on the chromosome band 4q35
-We report a novel mutation of the F11 gene in an 18-year-old asymptomatic Korean woman with mild FXI deficiency
-Pre-operative laboratory screen tests for lipoma on her back revealed slightly prolonged activated partial thromboplastin time (45.2 sec; reference range, 23.2-39.4 sec)
-Her FXI activity (35%) was slightly lower than the normal FXI activity (reference range, 50-150%)
-Direct sequence analysis of the F11 gene revealed a heterozygous A to G substitution in nucleotide 1517 (c.1517A>G) of exon 13, resulting in the substitution of aspartic acid with glycine in codon 506 (p.Asp506Gly)
-To the best of our knowledge, the Asp506Gly is a novel missense mutation, and this is the first genetically confirmed case of mild FXI deficiency in Korea.
-
+A novel missense mutation Asp506Gly in Exon 13 of the F11 gene in an asymptomatic Korean woman with mild factor XI deficiency.
+Factor XI (FXI) deficiency is a rare autosomal recessive coagulation disorder most commonly found in Ashkenazi and Iraqi Jews, but it is also found in other ethnic groups.
+It is a trauma or surgery-related bleeding disorder, but spontaneous bleeding is rarely seen.
+The clinical manifestation of bleeding in FXI deficiency cases is variable and seems to poorly correlate with plasma FXI levels.
+The molecular pathology of FXI deficiency is mutation in the F11 gene on the chromosome band 4q35.
+We report a novel mutation of the F11 gene in an 18-year-old asymptomatic Korean woman with mild FXI deficiency.
+Pre-operative laboratory screen tests for lipoma on her back revealed slightly prolonged activated partial thromboplastin time (45.2 sec; reference range, 23.2-39.4 sec).
+Her FXI activity (35%) was slightly lower than the normal FXI activity (reference range, 50-150%).
+Direct sequence analysis of the F11 gene revealed a heterozygous A to G substitution in nucleotide 1517 (c.1517A>G) of exon 13, resulting in the substitution of aspartic acid with glycine in codon 506 (p.Asp506Gly).
+To the best of our knowledge, the Asp506Gly is a novel missense mutation, and this is the first genetically confirmed case of mild FXI deficiency in Korea..

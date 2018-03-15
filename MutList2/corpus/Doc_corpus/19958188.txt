@@ -1,11 +1,10 @@
-Molecular analysis of gamma-globin promoters, HS-111 and 3'HS1, in beta-thalassemia intermedia patients associated with high levels of Hb F
-The nucleotide (nt) variations in the promoter region of the gamma-globin genes, HS-111 and 3'HS1 regions, were studied in Iranian patients with beta-thalassemia intermedia (beta-TI), beta-thalassemia major (beta-TM) and healthy individuals
-Of the five nt variations at the 5' end of the (A)gamma-globin gene, -369 (C>G), -611 (-T) and -603/604 (GA>AG) were found in all samples, whereas -588 (A>G) and -AAGC at -222 to -225 were found at different frequencies in the studied groups
-Therefore, the -369, -611 and -603/604 variations were considered common mutations in this population, and the difference with respect to the -AAGC deletion was not significant
-However, the A allele of the -588 variation and [+] allele of the XmnI polymorphism were more frequent in beta-TI patients, especially those who had the IVS-II-1(G>A)/IVS-II-1(G>A) genotype
-The + allele of XmnI also had complete correlation with the A allele of -588 variation
-The HS-111 (-21 A) variation also showed association with beta-TI patients who had high levels of Hb F
-Bearing in mind that the -588 variation lies within the postulated adult-specific silencer region and that the majority of beta-TI patients had allele A, then it can be envisaged that this allele could have a role in altering the repressor function at this region
-Therefore, the A allele of -588, [+] allele of XmnI and HS-111 (-21 A) variation are useful genetic markers to differentiate between beta-TM and beta-TI patients
-However, these nt changes alone may not be the only elements raising the level of Hb F, other regulatory and modifying factors also play a role in Hb F production.
-
+Molecular analysis of gamma-globin promoters, HS-111 and 3'HS1, in beta-thalassemia intermedia patients associated with high levels of Hb F.
+The nucleotide (nt) variations in the promoter region of the gamma-globin genes, HS-111 and 3'HS1 regions, were studied in Iranian patients with beta-thalassemia intermedia (beta-TI), beta-thalassemia major (beta-TM) and healthy individuals.
+Of the five nt variations at the 5' end of the (A)gamma-globin gene, -369 (C>G), -611 (-T) and -603/604 (GA>AG) were found in all samples, whereas -588 (A>G) and -AAGC at -222 to -225 were found at different frequencies in the studied groups.
+Therefore, the -369, -611 and -603/604 variations were considered common mutations in this population, and the difference with respect to the -AAGC deletion was not significant.
+However, the A allele of the -588 variation and [+] allele of the XmnI polymorphism were more frequent in beta-TI patients, especially those who had the IVS-II-1(G>A)/IVS-II-1(G>A) genotype.
+The + allele of XmnI also had complete correlation with the A allele of -588 variation.
+The HS-111 (-21 A) variation also showed association with beta-TI patients who had high levels of Hb F.
+Bearing in mind that the -588 variation lies within the postulated adult-specific silencer region and that the majority of beta-TI patients had allele A, then it can be envisaged that this allele could have a role in altering the repressor function at this region.
+Therefore, the A allele of -588, [+] allele of XmnI and HS-111 (-21 A) variation are useful genetic markers to differentiate between beta-TM and beta-TI patients.
+However, these nt changes alone may not be the only elements raising the level of Hb F, other regulatory and modifying factors also play a role in Hb F production..

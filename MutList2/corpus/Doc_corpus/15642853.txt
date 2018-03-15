@@ -1,18 +1,17 @@
-Parkin mutations and early-onset parkinsonism in a Taiwanese cohort
-BACKGROUND: Loss of function of the parkin gene (PRKN) is the predominant genetic cause of juvenile and early-onset parkinsonism in Japan, Europe, and the United States
-OBJECTIVES: To evaluate the frequency of PRKN mutations in Taiwanese (ethnic Chinese) patients with early-onset parkinsonism and to explore genotype-phenotype correlations
-DESIGN: Clinical assessment included medical, neurologic, and psychiatric evaluation
-Genomic DNA sequencing and quantitative polymerase chain reaction were performed to identify PRKN mutations
-Gene expression was examined in patient lymphoblastoid cell lines, in which PRKN mutations were identified
-PATIENTS: Forty-one Taiwanese patients with early-onset parkinsonism (aged <50 years at onset)
-RESULTS: Four of 41 probands had PRKN mutations
-One proband had compound heterozygous mutations, with a PRKN exon 2 deletion and an exon 7 G284R substitution
-The phenotype resembled typical Parkinson disease
-Three patients were mutation carriers
-One proband had PRKN exon 2 and exon 3 deletions in the same allele
-However, this patient's phenotype was that of classic "parkin-proven" autosomal recessive juvenile parkinsonism, characterized by symmetrical foot dystonia at onset, gait disturbance, diurnal change, and very slow progression
-The 2 remaining carriers had novel heterozygous exon 11 R396G substitutions
-Patients with PRKN mutations were younger at onset than those without mutations, and they required a lower dose of levodopa despite longer disease duration
-CONCLUSIONS: Mutations in PRKN are a rare cause of early-onset parkinsonism in Taiwanese individuals
-The overall mutation frequency, adjusted for age at onset, was comparable with that reported for white cohorts; however, the point mutations identified seem to be population specific.
-
+Parkin mutations and early-onset parkinsonism in a Taiwanese cohort.
+BACKGROUND: Loss of function of the parkin gene (PRKN) is the predominant genetic cause of juvenile and early-onset parkinsonism in Japan, Europe, and the United States.
+OBJECTIVES: To evaluate the frequency of PRKN mutations in Taiwanese (ethnic Chinese) patients with early-onset parkinsonism and to explore genotype-phenotype correlations.
+DESIGN: Clinical assessment included medical, neurologic, and psychiatric evaluation.
+Genomic DNA sequencing and quantitative polymerase chain reaction were performed to identify PRKN mutations.
+Gene expression was examined in patient lymphoblastoid cell lines, in which PRKN mutations were identified.
+PATIENTS: Forty-one Taiwanese patients with early-onset parkinsonism (aged <50 years at onset).
+RESULTS: Four of 41 probands had PRKN mutations.
+One proband had compound heterozygous mutations, with a PRKN exon 2 deletion and an exon 7 G284R substitution.
+The phenotype resembled typical Parkinson disease.
+Three patients were mutation carriers.
+One proband had PRKN exon 2 and exon 3 deletions in the same allele.
+However, this patient's phenotype was that of classic "parkin-proven" autosomal recessive juvenile parkinsonism, characterized by symmetrical foot dystonia at onset, gait disturbance, diurnal change, and very slow progression.
+The 2 remaining carriers had novel heterozygous exon 11 R396G substitutions.
+Patients with PRKN mutations were younger at onset than those without mutations, and they required a lower dose of levodopa despite longer disease duration.
+CONCLUSIONS: Mutations in PRKN are a rare cause of early-onset parkinsonism in Taiwanese individuals.
+The overall mutation frequency, adjusted for age at onset, was comparable with that reported for white cohorts; however, the point mutations identified seem to be population specific..

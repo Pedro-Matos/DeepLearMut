@@ -1,13 +1,12 @@
-Progressive decline of vasopressin secretion in familial autosomal dominant neurohypophyseal diabetes insipidus presenting a novel mutation in the vasopressin-neurophysin II gene
-OBJECTIVE: Familial autosomal dominant neurohypophyseal diabetes insipidus (FNDI) is a rare form of central diabetes insipidus (DI), which is caused by mutations in the vasopressin-neurophysin II (AVP-NPII) gene
-The present study evaluated the AVP secretion over time and analysed the structure of the AVP-NPII gene in a Brazilian family with FNDI
-SUBJECTS AND DESIGN: Four affected members and one nonaffected member from one Brazilian family with FNDI were studied
-The diagnosis of central DI was established by fluid deprivation test and hypertonic saline infusion
-Two affected members were assessed twice within a 6-year interval
-For molecular analysis, genomic DNA was extracted and the AVP-NPII gene was amplified by polymerase chain reaction
-RESULTS: The functional assessment of patients with FNDI over time confirmed a progressive loss in AVP secretion
-Two patients were first diagnosed as partial central DI and, several years later, they developed severe central DI
-Sequencing analysis revealed a heterozygous new point mutation in the nucleotide 1892 in the coding sequence for neurophysin-II of the AVP-NPII gene (1892G>C) predicting an amino acid substitution (A68P) in all affected members
-CONCLUSION: Our data demonstrate a gradual vasopressinergic deficiency due to a novel mutation in the AVP-NPII gene in a Brazilian family with FNDI
-The accumulation of A68P mutated precursor might have a cytotoxicity effect, leading to a gradual death of magnocellular neurones, and a progressive decline in AVP secretion.
-
+Progressive decline of vasopressin secretion in familial autosomal dominant neurohypophyseal diabetes insipidus presenting a novel mutation in the vasopressin-neurophysin II gene.
+OBJECTIVE: Familial autosomal dominant neurohypophyseal diabetes insipidus (FNDI) is a rare form of central diabetes insipidus (DI), which is caused by mutations in the vasopressin-neurophysin II (AVP-NPII) gene.
+The present study evaluated the AVP secretion over time and analysed the structure of the AVP-NPII gene in a Brazilian family with FNDI.
+SUBJECTS AND DESIGN: Four affected members and one nonaffected member from one Brazilian family with FNDI were studied.
+The diagnosis of central DI was established by fluid deprivation test and hypertonic saline infusion.
+Two affected members were assessed twice within a 6-year interval.
+For molecular analysis, genomic DNA was extracted and the AVP-NPII gene was amplified by polymerase chain reaction.
+RESULTS: The functional assessment of patients with FNDI over time confirmed a progressive loss in AVP secretion.
+Two patients were first diagnosed as partial central DI and, several years later, they developed severe central DI.
+Sequencing analysis revealed a heterozygous new point mutation in the nucleotide 1892 in the coding sequence for neurophysin-II of the AVP-NPII gene (1892G>C) predicting an amino acid substitution (A68P) in all affected members.
+CONCLUSION: Our data demonstrate a gradual vasopressinergic deficiency due to a novel mutation in the AVP-NPII gene in a Brazilian family with FNDI.
+The accumulation of A68P mutated precursor might have a cytotoxicity effect, leading to a gradual death of magnocellular neurones, and a progressive decline in AVP secretion..

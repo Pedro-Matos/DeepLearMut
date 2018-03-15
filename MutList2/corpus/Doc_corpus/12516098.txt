@@ -1,14 +1,13 @@
-The patched polymorphism Pro1315Leu (C3944T) may modulate the association between use of oral contraceptives and breast cancer risk
-The gene coding for the human homologue of the Drosophila segment polarity gene patched (PTCH1) is mutated in several common human tumors
-In mice, haplodeficiency at the Ptch1 locus results in severe histologic defects in mammary ductal structure
-We found no mutations within the coding region of PTCH1 in 17 human primary breast carcinomas
-However, the biallelic Pro1315Leu (C3944T) polymorphism of PTCH1 was significantly associated with breast cancer in 41 Bavarian patients compared to 85 healthy controls
-We investigated whether this variant influences susceptibility for breast cancer in 611 breast cancer patients diagnosed by age 50 years and 1,057 controls matched by age and study region in Germany and in 1,093 breast cancer patients from the United Kingdom
-Allele and genotype frequencies were not different between cases and controls
-However, multivariate logistic regression analysis revealed an effect modification of oral contraceptive use (OC) on breast cancer risk by Leu-carrier status
-Compared to women who have Pro/Pro and never used OC, Pro/Pro OC users had an increased odds  ratio for breast cancer of 1.7
-The odds ratio was also 1.7 for Leu-carriers who  never used OC, but this was attenuated among Leu-carriers who ever used OC by 20%
-The gene-environmental interaction was confirmed in case-only analysis of the German and British studies, yielding an interaction odds ratio of 0.7 for premenopausal women (p = 0.06)
-Longer duration of pill use was associated with a significantly greater risk reduction (p for trend = 0.015)
-Our novel observation of a differential effect of OC use on breast cancer risk by PTCH1 1315Leu-carrier status suggests the interesting possibility of the Sonic hedgehog/Patched (SHH/PTCH1) signaling pathway being involved in hormone-induced development of breast carcinoma.
-
+The patched polymorphism Pro1315Leu (C3944T) may modulate the association between use of oral contraceptives and breast cancer risk.
+The gene coding for the human homologue of the Drosophila segment polarity gene patched (PTCH1) is mutated in several common human tumors.
+In mice, haplodeficiency at the Ptch1 locus results in severe histologic defects in mammary ductal structure.
+We found no mutations within the coding region of PTCH1 in 17 human primary breast carcinomas.
+However, the biallelic Pro1315Leu (C3944T) polymorphism of PTCH1 was significantly associated with breast cancer in 41 Bavarian patients compared to 85 healthy controls.
+We investigated whether this variant influences susceptibility for breast cancer in 611 breast cancer patients diagnosed by age 50 years and 1,057 controls matched by age and study region in Germany and in 1,093 breast cancer patients from the United Kingdom.
+Allele and genotype frequencies were not different between cases and controls.
+However, multivariate logistic regression analysis revealed an effect modification of oral contraceptive use (OC) on breast cancer risk by Leu-carrier status.
+Compared to women who have Pro/Pro and never used OC, Pro/Pro OC users had an increased odds  ratio for breast cancer of 1.7.
+The odds ratio was also 1.7 for Leu-carriers who  never used OC, but this was attenuated among Leu-carriers who ever used OC by 20%.
+The gene-environmental interaction was confirmed in case-only analysis of the German and British studies, yielding an interaction odds ratio of 0.7 for premenopausal women (p = 0.06).
+Longer duration of pill use was associated with a significantly greater risk reduction (p for trend = 0.015).
+Our novel observation of a differential effect of OC use on breast cancer risk by PTCH1 1315Leu-carrier status suggests the interesting possibility of the Sonic hedgehog/Patched (SHH/PTCH1) signaling pathway being involved in hormone-induced development of breast carcinoma..

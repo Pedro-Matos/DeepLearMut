@@ -1,10 +1,9 @@
-Characterization of HSD17B1 sequence variants in breast cancer cases from French  Canadian families with high risk of breast and ovarian cancer
-A family history of disease and estrogen exposure are risk factors for breast cancer
-The HSD17B1 gene encodes a key steroidogenic enzyme that catalyses the final step of estradiol biosynthesis, rendering it a good candidate gene for breast cancer susceptibility
-The current study was designed to screen for HSD17B1 germline mutations potentially involved in breast cancer susceptibility
- DNA samples from 50 individuals affected with breast cancer from non-BRCA1/2 French Canadian families with a high risk of breast and ovarian cancer were screened for sequence variants in HSD17B1
-Our study identified 28 sequence variants, including three non-synonymous variants, p.Ala238Val, p.Arg259His, p.Ser313Gly, one of which (p.Arg259His) was not previously reported
-Functional assays failed to show changes in either activity or recombinant proteins levels for all three variants
-Thus, our resequencing analysis does not support the existence of deleterious, gain-of-function or transcription mutations in HSD17B1, which could explain the clustering of breast cancer cases in non-BRCA1/2 high-risk French Canadian families
-However, a haplotype-based approach was used  to establish tSNPs, providing a valuable tool for further searches of common disease-associated variants in this gene, using large cohorts.
-
+Characterization of HSD17B1 sequence variants in breast cancer cases from French  Canadian families with high risk of breast and ovarian cancer.
+A family history of disease and estrogen exposure are risk factors for breast cancer.
+The HSD17B1 gene encodes a key steroidogenic enzyme that catalyses the final step of estradiol biosynthesis, rendering it a good candidate gene for breast cancer susceptibility.
+The current study was designed to screen for HSD17B1 germline mutations potentially involved in breast cancer susceptibility.
+ DNA samples from 50 individuals affected with breast cancer from non-BRCA1/2 French Canadian families with a high risk of breast and ovarian cancer were screened for sequence variants in HSD17B1.
+Our study identified 28 sequence variants, including three non-synonymous variants, p.Ala238Val, p.Arg259His, p.Ser313Gly, one of which (p.Arg259His) was not previously reported.
+Functional assays failed to show changes in either activity or recombinant proteins levels for all three variants.
+Thus, our resequencing analysis does not support the existence of deleterious, gain-of-function or transcription mutations in HSD17B1, which could explain the clustering of breast cancer cases in non-BRCA1/2 high-risk French Canadian families.
+However, a haplotype-based approach was used  to establish tSNPs, providing a valuable tool for further searches of common disease-associated variants in this gene, using large cohorts..

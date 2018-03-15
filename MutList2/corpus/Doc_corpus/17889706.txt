@@ -1,12 +1,11 @@
-Identification of rare variants in the hLIMD1 gene in breast cancer
-The hLIMD1 gene is located at chromosome 3p21 and was identified as a putative tumor suppressor gene using an elimination test assay
-Chromosome 3p21 loci are frequently deleted in a number of cancers, including breast
-The 3p21.3 locus harbors a number of tumor suppressor candidates, including LIMD1, a member of the ZYXIN family of genes
-LIMD1 directly interacts with RB and is thought to play a  role in suppressing tumor growth
-To investigate whether mutations in the LIMD1 gene could potentially be involved in breast cancer, we used single-stranded conformation polymorphism analysis on DNA from 235 breast cancers and 95 controls
-We identified four novel coding region alterations, including two amino acid substitutions at positions 255 and 302
-The two remaining novel variants were found at amino acid positions 246 and 647 and encoded silent alterations
-The rare Ser255Arg variant was identified in only sporadic breast tumors (2/165 tumors)
-Some ZYXIN proteins are phosphorylated by serine/threonine kinases, and  the Ser255Arg change is located in a region phosphorylated on serine residues
-Together, the data suggest that this variant may warrant further characterization.
-
+Identification of rare variants in the hLIMD1 gene in breast cancer.
+The hLIMD1 gene is located at chromosome 3p21 and was identified as a putative tumor suppressor gene using an elimination test assay.
+Chromosome 3p21 loci are frequently deleted in a number of cancers, including breast.
+The 3p21.3 locus harbors a number of tumor suppressor candidates, including LIMD1, a member of the ZYXIN family of genes.
+LIMD1 directly interacts with RB and is thought to play a  role in suppressing tumor growth.
+To investigate whether mutations in the LIMD1 gene could potentially be involved in breast cancer, we used single-stranded conformation polymorphism analysis on DNA from 235 breast cancers and 95 controls.
+We identified four novel coding region alterations, including two amino acid substitutions at positions 255 and 302.
+The two remaining novel variants were found at amino acid positions 246 and 647 and encoded silent alterations.
+The rare Ser255Arg variant was identified in only sporadic breast tumors (2/165 tumors).
+Some ZYXIN proteins are phosphorylated by serine/threonine kinases, and  the Ser255Arg change is located in a region phosphorylated on serine residues.
+Together, the data suggest that this variant may warrant further characterization..

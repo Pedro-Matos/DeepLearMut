@@ -1,8 +1,7 @@
-Spectrum of mutations in the arylsulfatase A gene in a Canadian DNA collection including two novel frameshift mutations, a new missense mutation (C488R) and an MLD mutation (R84Q) in cis with a pseudodeficiency allele
-We describe three novel mutations in the human arylsulfatase A gene in three patients with MLD, an autosomal recessive lysosomal storage disorder
-An insertion, 2590_2591insCCCC in exon 8 and a deletion, 752_758delGCCGGCC, in exon 3 will both result in frameshifts
-A mutation in exon 8, 2566T-->C, results in a missense mutation C488R, disrupting an unusual cysteine-knot at the C-terminal end of the protein
-All three mutations are heterozygous with previously documented mutations
-A previously reported mutation, R84Q was identified on a pseudodeficiency allele
-These mutations are part of a heterogeneous spectrum of mutations found in a collection of DNA samples from MLD patients from across Canada and the USA.
-
+Spectrum of mutations in the arylsulfatase A gene in a Canadian DNA collection including two novel frameshift mutations, a new missense mutation (C488R) and an MLD mutation (R84Q) in cis with a pseudodeficiency allele.
+We describe three novel mutations in the human arylsulfatase A gene in three patients with MLD, an autosomal recessive lysosomal storage disorder.
+An insertion, 2590_2591insCCCC in exon 8 and a deletion, 752_758delGCCGGCC, in exon 3 will both result in frameshifts.
+A mutation in exon 8, 2566T-->C, results in a missense mutation C488R, disrupting an unusual cysteine-knot at the C-terminal end of the protein.
+All three mutations are heterozygous with previously documented mutations.
+A previously reported mutation, R84Q was identified on a pseudodeficiency allele.
+These mutations are part of a heterogeneous spectrum of mutations found in a collection of DNA samples from MLD patients from across Canada and the USA..

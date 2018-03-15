@@ -1,13 +1,12 @@
-[Germline mutations in the BRCA1 and BRCA2 genes from breast cancer families in China Han people]
-OBJECTIVE: To detect BRCA1 and BRCA2 gene germline mutation in the Chinese breast cancer families
-METHODS: Samples of peripheral blood were collected to prepare genomic DNA by conventional techniques from 15 inherited breast cancer patients from 14 breast cancer families, 76 sporadic breast cancer patients, and 100 healthy controls based on informed consent
-Exons 4, 8, 11 and 18 - 20 of BRCA1, and exons 1 - 14, 17 - 24 and 27 of BRCA2, were analyzed using DNA direct sequencing
-RESULTS: Six single nucleotide polymorphisms (SNPs) were found on the exon 11 of  BRCA1, 2 being silent changes without change of amino acid coding, and 4 with change of amino acid coding among which 2 were polymorphic amino acid alterations and 2 were pathogenic SNPs, i.e
-mutational sites
-One novel BRCA1 mutation, C1196T (Pro 359 Leu), was identified in a family breast cancer patients, who was  diagnosed at the age of 37
-Another BRCA1 mutation, Trp 372 stop was found in a breast cancer patient who was diagnosed at the age 29
-Eight SNPs were found on the exon3, 10 and 11 of BRCA2, among which 5 were silent changes and 3 were polymorphic amino acid alterations
-A1093C (Asn289His) in exon 10 and A 3199G (Asn991Asp) in exon 11 being found simultaneously in the patients of 2 families but not appearing in pool DNA sample, and Asn 371 His appearing as A/C heterozygote in pool DNA sample
-CONCLUSION: Two pathogenic SNPs have been found in BRCA1 and may be related to early-onset breast cancer
-One of them may be a novel mutation characterized of familial breast cancer in China.
-
+[Germline mutations in the BRCA1 and BRCA2 genes from breast cancer families in China Han people].
+OBJECTIVE: To detect BRCA1 and BRCA2 gene germline mutation in the Chinese breast cancer families.
+METHODS: Samples of peripheral blood were collected to prepare genomic DNA by conventional techniques from 15 inherited breast cancer patients from 14 breast cancer families, 76 sporadic breast cancer patients, and 100 healthy controls based on informed consent.
+Exons 4, 8, 11 and 18 - 20 of BRCA1, and exons 1 - 14, 17 - 24 and 27 of BRCA2, were analyzed using DNA direct sequencing.
+RESULTS: Six single nucleotide polymorphisms (SNPs) were found on the exon 11 of  BRCA1, 2 being silent changes without change of amino acid coding, and 4 with change of amino acid coding among which 2 were polymorphic amino acid alterations and 2 were pathogenic SNPs, i.e.
+mutational sites.
+One novel BRCA1 mutation, C1196T (Pro 359 Leu), was identified in a family breast cancer patients, who was  diagnosed at the age of 37.
+Another BRCA1 mutation, Trp 372 stop was found in a breast cancer patient who was diagnosed at the age 29.
+Eight SNPs were found on the exon3, 10 and 11 of BRCA2, among which 5 were silent changes and 3 were polymorphic amino acid alterations.
+A1093C (Asn289His) in exon 10 and A 3199G (Asn991Asp) in exon 11 being found simultaneously in the patients of 2 families but not appearing in pool DNA sample, and Asn 371 His appearing as A/C heterozygote in pool DNA sample.
+CONCLUSION: Two pathogenic SNPs have been found in BRCA1 and may be related to early-onset breast cancer.
+One of them may be a novel mutation characterized of familial breast cancer in China..

@@ -1,18 +1,17 @@
-Very frequent p53 mutations in metastatic prostate carcinoma and in matched primary tumors
-BACKGROUND: The frequency of mutant p53 in bone marrow metastases of patients with carcinoma of the prostate (CaP) and in matched sets of metastatic and primary lesions from the same patients was investigated
-The data were examined in relation to prior treatment with androgen ablation (AA) therapy and were compared with the frequency of mutant p53 reported for primary CaP
-METHODS: Seventeen patients with M1b (bone metastasis: TNM Stage IV) CaP had either unilateral or bilateral bone marrow biopsies taken for these studies
-Specimens were divided and the outer one-third examined histologically to confirm the presence of CaP cells
-Immunohistochemical (IHC) staining for accumulated p53 protein was performed by an antibody cocktail technique
-RNA was extracted from the remaining portion of the biopsy, and p53 transcripts were amplified by reverse transcriptase-polymerase chain reaction (RT-PCR) and screened for base sequence changes in the exon 4-11 region using nonisotopic single-strand conformation polymorphism (SSCP) analysis and direct DNA sequencing
-RESULTS: Ten of 17 metastases (59%) demonstrated accumulation of p53
-Six of 7 (86%) of the p53 IHC positive bone marrow samples contained RT-PCR-SSCP abnormalities, as did 2 of 3 IHC negative samples
-Overall, 12 of 17 metastases (71%) contained mutant p53
-Four of 7 biopsies (57%) retrieved prior to AA contained mutant p53, whereas 8 of 10 post-AA biopsies (80%) contained mutant p53
-One patient showed identical SSCP abnormalities in right and left iliac crest metastases after therapy, and in this patient DNA sequencing demonstrated a missense mutation at codon 126 (TAC --> GGC, Tyr --> Gly)
-Archival primary cancers from seven patients were retrieved
-All seven were IHC positive for p53 accumulation
-CONCLUSIONS: p53 mutations are associated with increased metastatic potential of  CaP
-Abnormalities are found at approximately twice the frequency in metastases than in unselected samples of primary CaP, whereas in matched specimens there is  a high rate of consonance
-Mutant p53 may contribute to systemic therapy resistance, due to increased association with post-AA CaP specimens.
-
+Very frequent p53 mutations in metastatic prostate carcinoma and in matched primary tumors.
+BACKGROUND: The frequency of mutant p53 in bone marrow metastases of patients with carcinoma of the prostate (CaP) and in matched sets of metastatic and primary lesions from the same patients was investigated.
+The data were examined in relation to prior treatment with androgen ablation (AA) therapy and were compared with the frequency of mutant p53 reported for primary CaP.
+METHODS: Seventeen patients with M1b (bone metastasis: TNM Stage IV) CaP had either unilateral or bilateral bone marrow biopsies taken for these studies.
+Specimens were divided and the outer one-third examined histologically to confirm the presence of CaP cells.
+Immunohistochemical (IHC) staining for accumulated p53 protein was performed by an antibody cocktail technique.
+RNA was extracted from the remaining portion of the biopsy, and p53 transcripts were amplified by reverse transcriptase-polymerase chain reaction (RT-PCR) and screened for base sequence changes in the exon 4-11 region using nonisotopic single-strand conformation polymorphism (SSCP) analysis and direct DNA sequencing.
+RESULTS: Ten of 17 metastases (59%) demonstrated accumulation of p53.
+Six of 7 (86%) of the p53 IHC positive bone marrow samples contained RT-PCR-SSCP abnormalities, as did 2 of 3 IHC negative samples.
+Overall, 12 of 17 metastases (71%) contained mutant p53.
+Four of 7 biopsies (57%) retrieved prior to AA contained mutant p53, whereas 8 of 10 post-AA biopsies (80%) contained mutant p53.
+One patient showed identical SSCP abnormalities in right and left iliac crest metastases after therapy, and in this patient DNA sequencing demonstrated a missense mutation at codon 126 (TAC --> GGC, Tyr --> Gly).
+Archival primary cancers from seven patients were retrieved.
+All seven were IHC positive for p53 accumulation.
+CONCLUSIONS: p53 mutations are associated with increased metastatic potential of  CaP.
+Abnormalities are found at approximately twice the frequency in metastases than in unselected samples of primary CaP, whereas in matched specimens there is  a high rate of consonance.
+Mutant p53 may contribute to systemic therapy resistance, due to increased association with post-AA CaP specimens..

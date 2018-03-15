@@ -1,11 +1,10 @@
-Inhibiting mutations in the transforming growth factor beta type 2 receptor in recurrent human breast cancer
-Members of the transforming growth factor beta (TGF-beta) family are potent inhibitors of the growth of many epithelial cell types
-Transmembrane signaling by TGF-beta occurs via a complex of the serine/threonine kinases TGF-beta type 1  receptor and TGF-beta type 2 receptor (TGFBR2), and inactivating mutations in the latter have recently been detected in some primary tumors and in several types of tumor-derived cell lines
-The most common mutations that have been identified in  TGFBR2 are frameshifts in a repetitive polyadenine region in replication error-positive colorectal carcinomas that result in a truncated protein and absence of receptor expression at the cell surface
-A number of point mutations in the highly conserved serine/threonine kinase domain of TGFBR2 have also been reported, some of which have been correlated with either loss of trans-phosphorylation of TGF-beta type 1 receptor or constitutive activation of trans-phosphorylation
-No TGFBR2 mutations have been reported in human breast tumors, but anomalous expression of TGF-beta in breast carcinomas suggests that TGF-beta signaling may be defective
-We have therefore systematically examined unmatched sets of 17 primary and 17 recurrent breast tumor samples for mutations  in TGFBR2, restricted to those regions of the gene in which mutations have previously been reported
-None of the previously reported mutations was detected, but four novel mutations (V387M, N435S, V447A, and L452M) were found in the kinase domain in recurrent tumors
-No mutations were detected in primary tumors
- TGF-beta signaling was significantly inhibited by each of the N435S, V447A, and L452M mutations.
-
+Inhibiting mutations in the transforming growth factor beta type 2 receptor in recurrent human breast cancer.
+Members of the transforming growth factor beta (TGF-beta) family are potent inhibitors of the growth of many epithelial cell types.
+Transmembrane signaling by TGF-beta occurs via a complex of the serine/threonine kinases TGF-beta type 1  receptor and TGF-beta type 2 receptor (TGFBR2), and inactivating mutations in the latter have recently been detected in some primary tumors and in several types of tumor-derived cell lines.
+The most common mutations that have been identified in  TGFBR2 are frameshifts in a repetitive polyadenine region in replication error-positive colorectal carcinomas that result in a truncated protein and absence of receptor expression at the cell surface.
+A number of point mutations in the highly conserved serine/threonine kinase domain of TGFBR2 have also been reported, some of which have been correlated with either loss of trans-phosphorylation of TGF-beta type 1 receptor or constitutive activation of trans-phosphorylation.
+No TGFBR2 mutations have been reported in human breast tumors, but anomalous expression of TGF-beta in breast carcinomas suggests that TGF-beta signaling may be defective.
+We have therefore systematically examined unmatched sets of 17 primary and 17 recurrent breast tumor samples for mutations  in TGFBR2, restricted to those regions of the gene in which mutations have previously been reported.
+None of the previously reported mutations was detected, but four novel mutations (V387M, N435S, V447A, and L452M) were found in the kinase domain in recurrent tumors.
+No mutations were detected in primary tumors.
+ TGF-beta signaling was significantly inhibited by each of the N435S, V447A, and L452M mutations..

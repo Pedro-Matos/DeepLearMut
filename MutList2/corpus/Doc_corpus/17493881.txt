@@ -1,9 +1,8 @@
-Thermal unfolding of human BRCA1 BRCT-domain variants
-Missense mutations at the BRCT domain of human BRCA1 protein have been associated with an elevated risk for hereditary breast/ovarian cancer
-They have been shown  to affect the binding site and they have also been proposed to affect domain stability, severely hampering the protein's tumor suppressor function
-In order to assess the impact of various such mutations upon the stability and the function of the BRCT domain, heat-induced denaturation has been employed to study the thermal unfolding of variants M1775R and R1699W, which have been linked with  the disease, as well as of V1833M, which has been reported for patients with a family history
-Calorimetric and circular dichroism results reveal that in pH 9.0, 5 mM borate buffer, 200 mM NaCl, analogously to wild type BRCT, all three variants undergo partial thermal unfolding to a denatured state, which retains most of the native's structural characteristics
-With respect to wild-type BRCT,  the mutation M1775R induces the most severe effects especially upon the thermostability, while R1699W also has a strong impact
-On the other hand, the thermal unfolding of variant V1833M is only moderately affected relative to wild-type BRCT
-Moreover, isothermal titration calorimetric measurements reveal that contrary to M1775R and R1699W variants, V1833M binds to BACH1 and CtIP phosphopeptides.
-
+Thermal unfolding of human BRCA1 BRCT-domain variants.
+Missense mutations at the BRCT domain of human BRCA1 protein have been associated with an elevated risk for hereditary breast/ovarian cancer.
+They have been shown  to affect the binding site and they have also been proposed to affect domain stability, severely hampering the protein's tumor suppressor function.
+In order to assess the impact of various such mutations upon the stability and the function of the BRCT domain, heat-induced denaturation has been employed to study the thermal unfolding of variants M1775R and R1699W, which have been linked with  the disease, as well as of V1833M, which has been reported for patients with a family history.
+Calorimetric and circular dichroism results reveal that in pH 9.0, 5 mM borate buffer, 200 mM NaCl, analogously to wild type BRCT, all three variants undergo partial thermal unfolding to a denatured state, which retains most of the native's structural characteristics.
+With respect to wild-type BRCT,  the mutation M1775R induces the most severe effects especially upon the thermostability, while R1699W also has a strong impact.
+On the other hand, the thermal unfolding of variant V1833M is only moderately affected relative to wild-type BRCT.
+Moreover, isothermal titration calorimetric measurements reveal that contrary to M1775R and R1699W variants, V1833M binds to BACH1 and CtIP phosphopeptides..
