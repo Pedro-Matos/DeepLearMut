@@ -1,0 +1,8 @@
+Activating mutation in the tyrosine kinase JAK2 in polycythemia vera, essential thrombocythemia, and myeloid metaplasia with myelofibrosis
+Polycythemia vera (PV), essential thrombocythemia (ET), and myeloid metaplasia with myelofibrosis (MMM) are clonal disorders arising from hematopoietic progenitors
+An internet-based protocol was used to collect clinical information and biological specimens from patients with these diseases
+High-throughput DNA resequencing identified a recurrent somatic missense mutation JAK2V617F in granulocyte DNA samples of 121 of 164 PV patients, of which 41 had homozygous and 80 had heterozygous mutations
+Molecular and cytogenetic analyses demonstrated that homozygous mutations were due to duplication of the mutant allele
+JAK2V617F was also identified in granulocyte DNA samples from 37 of 115 ET and 16 of 46 MMM patients, but was not observed in 269 normal individuals
+In vitro analysis demonstrated that JAK2V617F is a constitutively active tyrosine kinase.
+

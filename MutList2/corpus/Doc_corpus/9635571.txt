@@ -1,0 +1,11 @@
+Beta-catenin mutations in human prostate cancer
+Beta-catenin plays essential roles in both intercellular adhesion and signal transduction
+As a signaling molecule, beta-catenin supplies an activating domain to the T-cell factor/lymphoid enhancer-binding factor family of DNA-binding proteins and activates gene transcription
+Posttranslational stabilization of beta-catenin, leading to elevated protein levels and constitutive gene activation, has been proposed as an important step in oncogenesis
+Stabilization  of beta-catenin can occur through mutation to highly conserved amino acids encoded in exon 3 of the beta-catenin gene (CTNNB1)
+To determine whether this pathway of malignant transformation is important in prostate cancer, we analyzed  104 prostate cancer tissue specimens, 4 prostate cancer cell lines, and 3 prostate tumor xenografts for activating mutations in exon 3 of CTNNB1
+Mutations were detected in 5 of the 104 prostate cancer tissue samples
+Four of the five mutations involved serine or threonine residues implicated in the degradation of  beta-catenin
+A fifth tumor had a mutation at codon 32, changing a highly conserved aspartic acid to a tyrosine
+Mutational analysis of multiple regions from several tumor samples showed that the beta-catenin mutations were present focally and therefore may occur during tumor progression.
+

@@ -1,0 +1,12 @@
+The TREX1 exonuclease R114H mutation in Aicardi-Gouti  res syndrome and lupus reveals dimeric structure requirements for DNA degradation activity
+Mutations in the TREX1 gene cause Aicardi-Gouti  res syndrome (AGS) and are linked to the autoimmune disease systemic lupus erythematosus
+The TREX1 protein is a dimeric 3' DNA exonuclease that degrades DNA to prevent inappropriate immune activation
+One of the most common TREX1 mutations, R114H, causes AGS as a homozygous and compound heterozygous mutation and is found as a heterozygous mutation in systemic lupus erythematosus
+The TREX1 proteins containing R114H and the insertion mutations aspartate at position 201 (D201ins) and alanine at position 124 (A124ins), found in compound heterozygous AGS with R114H, were prepared and the DNA degradation activities were tested
+The homodimer TREX1(R114H/R114H) exhibits a 23-fold reduced single-stranded DNA (ssDNA) exonuclease activity relative to TREX1(WT)
+The TREX1(D201ins/D201ins) and TREX1(A124ins/A124ins) exhibit more than 10,000-fold reduced ssDNA degradation activities
+However, the TREX1(R114H/D201ins) and TREX1(R114H/A124ins) compound heterodimers exhibit activities 10-fold greater than the TREX1(R114H/R114H) homodimer during ssDNA and double-stranded DNA (dsDNA) degradation
+These higher levels of activities measured in the TREX1(R114H/D201ins) and TREX1(R114H/A124ins) compound heterodimers are attributed to Arg-114 residues of TREX1(D201ins) and TREX1(A124ins) positioned at the dimer interface contributing to the active sites of the opposing TREX1(R114H) protomer
+This interpretation is further supported by exonuclease activities measured for TREX1 enzymes containing R114A and R114K mutations
+These biochemical data provide direct evidence for TREX1 residues in one protomer contributing to DNA degradation catalyzed in the opposing protomer and help to explain the dimeric TREX1 structure required for full catalytic competency.
+

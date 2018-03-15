@@ -1,0 +1,9 @@
+A novel single-nucleotide substitution, Glu 4 Lys, in the leukotriene C4 synthase gene associated with allergic diseases
+Cysteinyl leukotrienes (cysLTs) play important roles in bronchial asthma, and can mediate bronchial smooth muscle constriction and increase mucous secretion, vascular permeability and cellular infiltration
+We identified a novel heterozygous single-nucleotide substitution 10G>A (Glu 4 Lys) in the first exon of the leukotriene C4 synthase gene (LTC4S)
+This substitution was detected in 5 of 141 allergic patients, but not in 110 nonallergic subjects
+There was a difference in the Glu 4 Lys frequency between the allergic patients and nonallergic subjects (Fisher's exact test, p=0.0460)
+The five patients with Glu 4 Lys had allergic diseases such as bronchial asthma and/or allergic dermatitis
+Furthermore, a familial analysis of Glu 4 Lys revealed a link with allergic diseases
+Thus, our results suggest that Glu 4 Lys in the LTC4S might be associated with allergic diseases.
+

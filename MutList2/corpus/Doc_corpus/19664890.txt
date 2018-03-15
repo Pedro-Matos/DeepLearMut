@@ -1,0 +1,14 @@
+Screening of the LIX1 gene in Japanese and Malaysian patients with SMA and/or SMA-like disorder
+BACKGROUND: The majority of spinal muscular atrophy (SMA) patients showed homozygous deletion or other mutations of SMN1
+However, the genetic etiology of a significant number of SMA patients has not been clarified
+Recently, mutation in the gene underlying cat SMA, limb expression 1 (LIX1), has been reported
+Similarity in clinical and pathological features of cat and human SMA may give an insight into possible similarity of the genetic etiology
+PATIENTS AND METHODS: In this study, we screened for a mutation in LIX1 using direct DNA sequencing in our SMA and/or SMA-like patients who retained SMN1
+A total of 33 patients were enrolled in this study, of which 22 were Japanese and 11 were Malaysians
+All these patients possessed at least two copies of SMN1
+RESULTS: We did not identify any pathogenic mutations in the coding regions or splice sites of LIX1 in the patients
+In addition, we described a polymorphism within LIX1 intron 3, c.387+107A>T
+We found that A-allele is significantly more frequent in SMA patients compared to normal individuals
+CONCLUSION: Molecular genetic analysis of our SMA and/or SMA-like patients suggests that LIX1 is not associated with the development of their disorders
+However, the number of patients analyzed in this study was very limited, and a larger study with bigger sample size is needed to confirm this result.
+

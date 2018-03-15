@@ -1,0 +1,7 @@
+The variant E233G of the RAD51D gene could be a low-penetrance allele in high-risk breast cancer families without BRCA1/2 mutations
+Six SNPs have been detected in the DNA repair genes RAD51C and RAD51D, not previously characterized
+The novel variant E233G in RAD51D is more highly represented in high-risk, site-specific, familial breast cancer cases that are not associated with the BRCA1/2 genes, with a frequency of 5.74% (n = 174) compared to a control population (n = 567) and another subset of breast cancer patients (n = 765) with a prevalence of around 2% only (comparison to controls, OR = 2.6, 95% CI 1.12-6.03; p < 0.021)
+We found that the immunohistochemical profile detected in available tumors from these patients differs slightly from those described in non-BRCA1/2 tumors
+Finally, the structural prediction of the  putative functional consequence of this change indicates that it can diminish protein stability and structure
+This suggests a role for E233G as a low-penetrance susceptibility gene in the specific subgroup of high-risk familial breast cancer cases that are not related to BRCA1/2.
+

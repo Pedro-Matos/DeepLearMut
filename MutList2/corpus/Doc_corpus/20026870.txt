@@ -1,0 +1,13 @@
+Angiotensin-converting enzyme insertion/deletion and angiotensin type 1 receptor A1166C polymorphisms as genetic risk factors in benign prostatic hyperplasia and prostate cancer
+INTRODUCTION: Prostate cancer is one of the most common malignant neoplasias in developed countries
+In 2003, 6,536 new cases and 4,602 related deaths were reported in Mexico
+The renin-angiotensin system has been shown to play a role in prostate cancer pathology
+Two previous studies investigated the association of prostate cancer with the insertion/deletion (I/D) polymorphism in the angiotensin-converting enzyme (ACE) gene; both studies reported an association between prostate cancer and the DD genotype
+The present study was aimed at searching for an association of prostate cancer and benign prostatic hyperplasia with the I/D polymorphism in the ACE gene and the A1166C polymorphism in the angiotensin type 1 receptor (AGT1R) gene and at comparing allele frequencies between both groups and the general population
+MATERIALS AND METHODS: DNA was extracted from 20 samples from individuals with a prostate cancer diagnosis and from 20 samples from individuals with a benign prostatic hyperplasia diagnosis
+Genotyping was performed by PCR-RFLP analysis
+Polymorphism frequency results obtained for the test groups were compared with the frequencies in 66 individuals from the general population, which were previously obtained at the same molecular medicine laboratory in the context of other studies
+RESULTS: The comparative analysis of the three groups revealed significant differences for allele frequencies in the two genes in patients groups (prostate cancer and benign prostatic hyperplasia) versus the general population
+The D allele in the ACE gene was closely associated with a significant higher risk of developing both benign prostatic hyperplasia (odds ratio [OR]=21.87; 95% confidence interval [CI]=2.314-206.479) or prostate cancer (OR=31.66; 95% CI=0.091-1.272), and the AGT1R A1166 allele in the homozygote state was identified as a risk genotype for benign prostatic hyperplasia (OR=56.07)
+CONCLUSIONS: Genotypes in ACE and AGT1R polymorphisms could be considered as genetic risk markers for benign prostatic hyperplasia or prostate cancer.
+

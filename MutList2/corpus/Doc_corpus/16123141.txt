@@ -1,0 +1,17 @@
+Molecular characterization of ring finger protein 11
+Ring finger proteins serve many vital functions within the cell
+We have identified RNF11, a novel 154-amino acid ring finger-containing protein, which is elevated in breast cancer
+Within its ring finger domain, RNF11 contains an AKT phosphorylation site (T135) that is situated within a 14-3-3 binding domain
+In WM239 cells with constitutively active AKT, RNF11 exhibits seven distinct phosphopeptides as measured using two-dimensional phosphopeptide mapping
+Upon inhibition of the AKT pathway or mutation of T135, the phosphorylation at one of  these sites is virtually eliminated, suggesting that AKT may phosphorylate RNF11  at T135
+Moreover, RNF11 is phosphorylated by AKT in vitro and is recognized by phospho-AKT substrate antibodies
+RNF11 shows enhanced binding to 14-3-3 in WM239 cells compared with that seen in the parental WM35 cells which have low AKT activity
+Furthermore, treatment of WM239 cells with LY294002 reduces RNF11/14-3-3 interactions suggesting that RNF11/14-3-3 binding is regulated by AKT
+In addition, RNF11/14-3-3 binding is enhanced by constitutively active AKT and is diminished by dominant-negative AKT
+There is also reduced 14-3-3 binding  to T135E RNF11
+RNF11 localization was altered from the cytoplasm to the nucleus  by activated AKT
+Thus, phosphorylation of RNF11 by AKT either causes its nuclear localization or induces degradation of cytoplasmic RNF11
+In addition, T135E RNF11, which does not bind 14-3-3 and is not phosphorylated by AKT, causes a greater enhancement of transforming growth factor-beta signaling than wild-type RNF11
+It is clear that RNF11 function, localization, and potentially, degradation are regulated by AKT
+Disregulation of proper RNF11 function by AKT may prove to be detrimental to patient outcomes, making RNF11 a potential target  for novel cancer therapeutics.
+

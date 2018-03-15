@@ -1,0 +1,11 @@
+Genetic heterogeneity of the GLDC gene in 28 unrelated patients with glycine encephalopathy
+Glycine encephalopathy, or nonketotic hyperglycinaemia (NKH; Mckusick 238300) is a severe autosomal recessive disease due to a defect in the glycine cleavage system (GCS), which is a complex of four subunits: P-, T-, H- and L-proteins
+A P-protein (glycine decarboxylase or GLDC) deficiency was reported in about 80% of NKH patients
+We performed mutation analysis of the complete coding sequence of the GLDC gene in 28 unrelated patients with neonatal NKH using denaturing high-performance liquid chromatography (DHPLC) and sequencing
+Forty different gene alterations were identified, confirming the large molecular heterogeneity of the GLDC gene
+Eighteen alterations were clearly disease-causing: two large deletions, four one-base deletions (c.28delC, c.1175delC, c.2186delC, c.2422delA), one 1-base insertion (c.1002_1003insT), one 4-base insertion (c.1285_1286insCAAA), one insertion/deletion (c.2153_2155delinsTCCTGGTTTA), five nonsense mutations (p.E153X, p.R236X, p.E270X, p.R337X, p.R424X) and four splice site mutations (c.861+1G > T, c.1402-1C > G, c.2316-1G > A, c.2919+1G > A)
+Additionally, we identified one intronic mutation outside the consensus splice sites (c.2838+5G > A) and 21 nucleotide substitutions leading to amino acid change (including three previously described mutations: p.T269M, p.R461Q, p.G771R), the pathogenicity of which should be confirmed by expression studies (p.S132W, p.Y138F, p.G171A, p.T187K, p.R212K, p.T269M, p.R373W, p.I440N, p.R461Q, p.N533Y, p.C644F, p.H651R, p.V705M, p.N732K, p.G771R, p.H775R, p.T830M, p.A841P, p.D880V, p.S957P and p.R966G)
+Mutation analysis allowed us to identify sequence alterations in both alleles for 19 patients and in one allele for 7 patients One patient was carrying three mutations (p.Y138F, p.T269M and p.E153X) and one patient was carrying two amino acid substitutions on the same allele (p.V705M and p.R212K) and an unidentified mutation on the other allele
+No mutation could be found in two patients, suggesting possible defects in the H-protein or gene alterations that could not be identified by our technique
+The potential use of genotype determination for prenatal diagnosis is emphasized.
+

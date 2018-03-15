@@ -1,0 +1,14 @@
+Genetics of Meesmann corneal dystrophy: a novel mutation in the keratin 3 gene in an asymptomatic family suggests genotype-phenotype correlation
+PURPOSE: Juvenile epithelial corneal dystrophy of Meesmann (MCD, OMIM 122100) is a dominantly inherited disorder characterized by fragility of the anterior corneal epithelium and intraepithelial microcyst formation
+Although the disease is generally mild and affected individuals are often asymptomatic, some suffer from recurrent erosions leading to lacrimation, photophobia, and deterioration in visual acuity
+MCD is caused by mutations in keratin 3 (KRT3) or keratin 12 (KRT12) genes, which encode cornea-specific cytoskeletal proteins
+Seventeen mutations in KRT12 and two in KRT3 have been described so far
+The purpose of this study was to investigate the genetic background of MCD in a Polish family
+METHODS: We report on a three-generation family with MCD
+Epithelial lesions characteristic for MCD were visualized with slit-lamp examination and confirmed by in vivo confocal microscopy
+Using genomic DNA as a template, all coding regions of KRT3 and KRT12 were amplified and sequenced
+Presence of the mutation was verified with restriction endonuclease digestion
+RESULTS: In the proband, direct sequencing of the polymerase chain reaction (PCR) product from amplified coding regions of KRT3 and KRT12 revealed a novel 1493A>T heterozygous missense mutation in exon 7 of KRT3, which predicts the substitution of glutamic acid for valine at codon 498 (E498V)
+Using PCR-Restriction Fragment Length Polymorphism (RFLP) analysis, the mutation was demonstrated to segregate with the disease (four affected members, three non-affected) and to be absent in 100 controls from the Polish population, indicating that it is not a common polymorphism
+CONCLUSIONS: Location of the E498V mutation emphasizes the functional relevance of the highly conserved boundary motifs at the COOH-terminus of the alpha-helical rod domain in keratin 3 (K3).
+

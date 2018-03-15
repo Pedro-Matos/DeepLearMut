@@ -1,0 +1,11 @@
+Clinical characterization and evaluation of DYT1 gene in Indian primary dystonia patients
+OBJECTIVES: Dystonia is a common movement disorder
+The purpose of this study is to examine the relative distribution of the primary dystonia subtypes and identify mutation (s) in the DYT1 gene in Indian patients
+MATERIALS AND METHODS: Primary dystonia patients (n = 178) and controls (n = 63), lacking any symptoms of the disease, were recruited for the study from eastern India
+The nucleotide variants in the DYT1 gene were identified by carrying out polymerase chain reaction, single stranded conformation polymorphism, and DNA sequencing
+RESULTS: Unlike other reports, pain and/or tremor was more common in our sporadic patients than in familial cases
+Three reported and two novel changes were identified in this gene
+The homozygous genotype (G,G) for a missense variant (c.646G > C; Asp216His) was significantly over-represented in the patients compared with controls (P < 0.05)
+However, the commonly reported 3 bp deletion (904-906delGAG) was not detected
+CONCLUSION: Our results suggest that the DYT1 gene might have a limited role in causation of dystonia in the Indian population.
+

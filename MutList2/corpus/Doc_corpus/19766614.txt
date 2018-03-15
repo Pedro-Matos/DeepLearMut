@@ -1,0 +1,12 @@
+A novel insertion mutation in the SEDL gene results in X-linked spondyloepiphyseal dysplasia tarda in a large Chinese pedigree
+BACKGROUND: Spondyloepiphyseal dysplasia tarda (SEDT) is an X-chromosome linked primary skeletal dysplasia characterized by a disproportionate short-trunked short stature, dysplasia of the large joints and flattened thoracic and lumber vertebral bodies
+The objective of this study is to describe a large Chinese SEDT family with a milder phenotype and describe the molecular and clinical findings
+METHODS: Eight affected males of the family were diagnosed with SEDT according to their clinical and radiological features
+Direct DNA sequencing of the SEDL gene was performed
+RT-PCR experiments on total RNA from blood lymphocytes were performed to confirm the defect on the SEDL gene
+A short summary of all currently known SEDL gene mutations is presented
+RESULTS: DNA sequencing revealed that all the affected males carried an insertion mutation (c.370-371insA) unreported previously, predicted to result in frameshifts and generate a premature stop codon (p.S124fsX127)
+The identical mutation was also observed in a 10-year old presymptomatic boy of the family
+Eight female carriers had the typical sequencing chromatograms of heterozygotes
+CONCLUSIONS: Identification of the novel insertion mutation (c.370-371insA) in this SEDT family enables carrier detection and presymptomatic/prenatal diagnosis, but also the detailed molecular and clinical features will be useful for extending the evidence for genetic and phenotypic heterogeneity in SEDT.
+

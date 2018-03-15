@@ -1,0 +1,7 @@
+DNA repair gene polymorphisms in relation to chromosome aberration frequencies in retired radiation workers
+Polymorphic variation in DNA repair genes was examined in a group of retired workers from the British Nuclear Fuels plc facility at Sellafield in relation to previously determined translocation frequencies in peripheral blood lymphocytes
+Variation at seven polymorphisms in four genes involved in the base excision repair (XRCC1 R194W, R399Q and a [AC]n microsatellite in the 3' UTR) and double strand break repair (XRCC3 T241M and a [AC]n microsatellite in intron 3 of XRCC3, XRCC4 I134T, and a GACTAn microsatellite located 120 kb 5' of XRCC5) pathways was determined for 291 retired radiation workers who had received cumulative occupational external radiation doses of between 0 and 1873 mSv
+When the interaction between radiation dose and each DNA repair gene polymorphism was examined in relation to translocation frequency there was no evidence for any of the polymorphisms studied influencing the response to occupational exposure
+A positive interaction observed between genotype (individuals with at least one allele > or =20 repeat units) at a microsatellite locus in the XRCC3 gene and smoking status should be interpreted cautiously because interactions were investigated for seven polymorphisms and two exposures
+Nonetheless, further research is warranted to examine whether this DNA repair gene variant might be associated with a sub-optimal repair response to smoking-induced DNA damage and hence an increased frequency of translocations.
+

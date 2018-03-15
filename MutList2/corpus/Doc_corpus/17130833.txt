@@ -1,0 +1,15 @@
+Negative regulation of chemokine receptor CXCR4 by tumor suppressor p53 in breast cancer cells: implications of p53 mutation or isoform expression on breast cancer cell invasion
+Chemokine receptor CXCR4 and its ligand CXCL12 are suggested to be involved in migration, invasion and metastasis of breast cancer cells
+Mutation of the tumor  suppressor gene p53 in breast cancer is associated with metastasis and aggressive clinical phenotype
+In this report, we demonstrate that wild type but not the dominant-negative mutant (V143A) or cancer-specific mutants (R175H or R280K) of p53 repress CXCR4 expression
+Recently described cancer-specific p53 isoform, Delta133p53, also failed to repress CXCR4 promoter activity
+Short-interfering RNA-mediated depletion of p53 increased endogenous CXCR4 expression in MCF-7 breast cancer cells that contain wild-type p53
+Basal CXCR4 promoter activity in  HCT116 colon carcinoma cells deleted of p53 [HCT116(p53KO)] was 10-fold higher compared to that in parental HCT116 cells with functional wild-type p53
+Deletion analysis of CXCR4 promoter identified a seven-base pair p53-repressor element homologous to cyclic AMP/AP-1 response (CRE/AP-1) element
+Electrophoretic mobility shift and chromatin immunoprecipitation assays revealed binding of ATF-1 and cJun to the CRE/AP-1 element
+The p53 rescue drug PRIMA-1 reduced CXCR4 mRNA  and cell surface expression in MDA-MB-231 cells, which express R280K mutant p53
+ CP-31398, another p53 rescue drug, similarly reduced cell surface levels of CXCR4
+PRIMA-1-mediated decrease in CXCR4 expression correlated with reduced invasion of MDA-MB-231 cells through matrigel
+These results suggest a mechanism  for elevated CXCR4 expression and metastasis of breast cancers with p53 mutations or isoform expression
+We propose that p53 rescue drugs either alone or in combination with chemotherapeutic drugs may be effective in reducing CXCR4-mediated metastasis.
+

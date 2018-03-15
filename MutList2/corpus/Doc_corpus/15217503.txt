@@ -1,0 +1,11 @@
+No germline mutations in the histone acetyltransferase gene EP300 in BRCA1 and BRCA2 negative families with breast cancer and gastric, pancreatic, or colorectal cancer
+INTRODUCTION: Mutations in BRCA1, BRCA2, ATM, TP53, CHK2 and PTEN account for many, but not all, multiple-case breast and ovarian cancer families
+The histone  acetyltransferase gene EP300 may function as a tumour suppressor gene because it  is sometimes somatically mutated in breast, colorectal, gastric and pancreatic cancers, and is located on a region of chromosome 22 that frequently undergoes loss of heterozygosity in many cancer types
+We hypothesized that germline mutations in EP300 may account for some breast cancer families that include cases of gastric, pancreatic and/or colorectal cancer
+METHODS: We screened the entire coding region of EP300 for mutations in the youngest affected members of 23 non-BRCA1/BRCA2 breast cancer families with at least one confirmed case of gastric, pancreatic and/or colorectal cancer
+These families were ascertained in Australia through the Kathleen Cuningham Foundation  Consortium for Research into Familial Breast Cancer
+RESULTS: Denaturing HPLC analysis identified a heterozygous alteration at codon 211, specifically a GGC to AGC (glycine to serine) alteration, in two individuals
+This conservative amino acid change was not within any known functional domains of EP300
+The frequency of the Ser211 variant did not differ significantly between a series of 352 breast cancer patients (4.0%) and 254 control individuals (2.8%; P = 0.5)
+CONCLUSION: The present study does not support a major role for EP300 mutations in breast and ovarian cancer families with a history of gastric, pancreatic and/or colorectal cancer.
+

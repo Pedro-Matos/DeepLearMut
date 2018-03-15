@@ -1,0 +1,8 @@
+Aberrations of the APC gene in primary breast carcinoma
+Aberrations of the APC gene, which plays an important role in the genesis of familial adenomatous polyposis and colorectal carcinoma, were investigated in 31  surgical specimens of primary breast carcinoma
+These studies utilized the polymerase chain reaction followed by restriction-fragment-length polymorphism and single-strand-conformation polymorphism analyses combined with tumor cell enrichment by cell sorting
+Loss of heterozygosity at the APC locus was detected  in 8 (38%) of 21 informative cases, but only 2 (6%) of 31 tumors carried a mutated APC gene
+Direct DNA sequencing analysis confirmed mutations at codon 1081 (AGC to ATC) resulting in an amino acid substitution of serine for isoleucine, and at codon 1096 (CAG to CAT) resulting in a substitution of glutamine for histidine
+There were no significant correlations between the loss  of heterozygosity or mutation at the APC locus and any clinicopathological characteristics
+Our present observations suggest that the mutations of the APC gene may play an important role in the genesis of certain breast carcinomas, and  that another tumor-suppressor gene, which is the true target of frequent loss of  heterozygosity, may exist near the APC gene.
+

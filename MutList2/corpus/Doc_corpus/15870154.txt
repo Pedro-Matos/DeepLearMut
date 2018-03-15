@@ -1,0 +1,13 @@
+Cytochrome P-450 1A1 gene polymorphisms and risk of breast cancer: a HuGE review
+Cytochrome P-450 (CYP) 1A1 plays a key role in phase I metabolism of polycyclic aromatic hydrocarbons and in estrogen metabolism
+It is expressed predominantly in extrahepatic tissues, including the breast
+Four CYP1A1 gene polymorphisms (3801T --> C, Ile462Val, 3205T --> C, and Thr461Asp) have been studied in relation to breast cancer
+The 3801C variant is more common than the Val variant
+Both variants occur more frequently in Asians than in White populations
+The 3205T --> C polymorphism has been observed in African Americans only
+Little data are available on the geographic/ethnic distribution of the Thr461Asp polymorphism
+The functional significance of the polymorphisms is unclear
+In 17  studies, no consistent association between breast cancer and CYP1A1 genotype was  found
+Meta-analysis found no significant risk for the genotypes 1) 3801C/C (relative risk (RR) = 0.97, 95% confidence interval (CI): 0.52, 1.80) or 3801T/C  (RR = 0.91, 95% CI: 0.70, 1.19) versus 3801T/T, 2) Val/Val (RR = 1.04, 95% CI: 0.63, 1.74) or Ile/Val (RR = 0.92, 95% CI: 0.76, 1.10) versus Ile/Ile, or 3) Asp/Asp (RR = 0.95, 95% CI: 0.20, 4.49) or Thr/Asp (RR = 1.12, 95% CI: 0.87, 1.43) versus Thr/Thr
+Future studies should explore possible interactions between CYP1A1 and sources of polycyclic aromatic hydrocarbons, markers of estrogen exposure, other lifestyle factors influencing hormonal levels, and other genes involved in polycyclic aromatic hydrocarbon metabolism or hormonal biosynthesis.
+

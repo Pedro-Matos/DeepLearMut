@@ -1,0 +1,12 @@
+HPRTSardinia: a new point mutation causing HPRT deficiency without Lesch-Nyhan disease
+Hypoxanthine-guanine phosphoribosyltransferase (HPRT) deficiency always causing hyperuricemia presents various degrees of neurological manifestations, the most severe which is Lesch-Nyhan syndrome
+The HPRT gene is situated in the region Xq26-q27.2 and consists of 9 exons
+At least 300 different mutations at different sites in the HPRT coding region from exon 1 to exon 9 have been identified
+A new mutation in the HPRT gene has been determined in one patient with complete deficiency of erythrocyte activity, with hyperuricemia and gout but without Lesch-Nyhan disease
+Analysis of cultured fibroblasts revealed minimal residual HPRT activity mainly when guanine was the substrate
+Genomic DNA sequencing demonstrated patient's mother heterozygosity for the mutation and no mutation in her brother
+The mutation consists in a C-->T transversion at cDNA base 463 (C463T) in exon 6, resulting in proline to serine substitution at codon 155 (P155S)
+This mutation had not been reported previously and has been designated HPRT(Sardinia)
+The mutation identified in this patient allows some expression of functional enzyme in nucleated cells such as fibroblasts, indicating that such cell type may add further information to conventional blood analysis
+A multicentre survey gathering patients with variant neurological forms could contribute to understand the pathophysiology of the neurobehavioral symptoms of HPRT deficiency.
+

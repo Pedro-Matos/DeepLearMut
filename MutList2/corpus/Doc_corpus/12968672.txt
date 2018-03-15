@@ -1,0 +1,15 @@
+Cdx-2 polymorphism in the promoter region of the human vitamin D receptor gene determines susceptibility to fracture in the elderly
+A Cdx-2 binding site polymorphism (G to A) in the promoter region of the human vitamin D receptor gene was reported
+In an ecological study in eight ethnic groups and an association study in 2848 elderly whites, we found the A-allele to be associated with decreased fracture risk
+Our findings expand previous similar findings in a Japanese study to whites and show a relationship with fracture risk of this functional polymorphism
+INTRODUCTION: A single nucleotide polymorphism (SNP) within a binding site of the intestinal-specific transcription factor Cdx-2 in the promoter region of the human vitamin D receptor (VDR) gene was previously reported
+It was found to modulate the transcription of the hVDR gene and to be associated with decreased bone mineral density in a small group of postmenopausal Japanese women
+In this study, we investigated the relationship between the VDR Cdx-2 genotype and risk of fracture
+METHODS: We first determined the location of this SNP in the VDR gene by sequencing analysis, and we developed an allele-specific multiplex polymerase chain reaction test to determine the Cdx-2 genotype
+We then performed an ecological study in eight ethnic groups and an association analysis in a large epidemiological cohort of 2848 Dutch white men and women, > or = 55 years old
+RESULTS AND CONCLUSIONS: The location of the G to A substitution was found in the promoter region of exon le (le-G-1739A) of the VDR gene
+By comparing the frequency of the A-allele in eight different ethnic groups, we observed a negative correlation between prevalence of the A-allele and published hip fracture incidence rates in these ethnic groups (p = 0.006 for men and p = 0.02 for women), suggesting a protective effect of this allele on fracture risk
+Subsequently, in the association study, the A-allele (population frequency 19%) was observed to have a protective effect on occurrence of osteoporotic fractures, especially for nonvertebral fracture in women (relative risk of AA versus GG genotype is 0.2; 95% CI, 0.05-0.8)
+This effect remained after adjustment for age, weight, and bone mineral density
+We conclude that the A-allele of the VDR Cdx-2 polymorphism is present in whites, albeit at low frequency, and show a protective effect of this allele on risk of fracture.
+

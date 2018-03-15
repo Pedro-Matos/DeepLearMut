@@ -1,0 +1,13 @@
+Effects of RNase L mutations associated with prostate cancer on apoptosis induced by 2',5'-oligoadenylates
+The RNASEL gene, a strong candidate for the hereditary prostate cancer 1 allele (HPC1), encodes a single-stranded specific endoribonuclease involved in the antiviral actions of IFNs
+RNase L is activated enzymatically after binding to unusual 5'-phosphorylated, 2',5'-linked oligoadenylates (2-5A)
+Biostable phosphorothioate analogues of 2-5A were synthesized chemically and used to study  the effects of naturally occurring mutations and polymorphisms in RNASEL
+The 2-5A analogues induced RNase L activity and caused apoptosis in cultures of late-stage, metastatic human prostate cancer cell lines DU145, PC3, and LNCaP
+However, DU145 and PC3 cells were more sensitive to 2-5A than LNCaP cells, which  are heterozygous for an inactivating deletion mutation in RNase L
+The RNase activities of missense variants of human RNase L were compared after expression in a mouse RNase L(-/-) cell line
+Several variants (G59S, I97L, I220V, G296V, S322F, Y529C, and D541E) produced similar levels of RNase L activity as wild-type enzyme
+In contrast, the R462Q variant, previously implicated in up to 13% of unselected prostate cancer cases, bound 2-5A at wild-type levels but had a 3-fold decrease in RNase activity
+The deficiency in RNase L(R462Q) activity was correlated with a reduction in its ability to dimerize into a catalytically active form
+Furthermore, RNase L(R462Q) was deficient in causing apoptosis in response to 2-5A consistent with its possible role in prostate cancer development
+Our findings support the notion that RNASEL mutations and some variants allow tumor cells to escape a potent apoptotic pathway.
+

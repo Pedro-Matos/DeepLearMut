@@ -1,0 +1,11 @@
+Contribution of germline MLH1 and MSH2 mutations to lobular carcinoma in situ of  the breast
+Lobular carcinoma in situ (LCIS) is an unusual histological pattern of non-invasive neoplastic disease of the breast occurring predominantly in women aged between 40 and 50 years
+LCIS is frequently multicentric and bilateral suggesting a genetic basis to the disease
+The high frequency of microsatellite instability in lobular breast cancers, coupled with increased risk of breast cancer associated with germline mismatch repair gene mutations raises the possibility that mutations MSH2 or MLH1 might confer susceptibility to LCIS
+To explore this possibility we have examined a series of 71 LCIS patients for germline MSH2 and MLH1 mutations
+No mutations were detected in MSH2
+Two sequence variants were identified in MLH1
+The first was a CTT-->CAT substitution, codon 607 (exon 16) changing leucine to histidine
+The other mutation detected in MLH1 was a TAC-->TAA substitution codon 750 (exon 19) creating a stop codon, predicted to generate a truncated protein
+These findings  suggest that mutations in MLH1 may underlie a subset of LCIS cases.
+

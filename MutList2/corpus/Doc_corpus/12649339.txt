@@ -1,0 +1,9 @@
+Characterization of a novel breast carcinoma xenograft and cell line derived from a BRCA1 germ-line mutation carrier
+A human tumor xenograft (L56Br-X1) was established from a breast cancer axillary  lymph node metastasis of a 53-year-old woman with a BRCA1 germ-line nonsense mutation (1806C>T; Q563X), and a cell line (L56Br-C1) was subsequently derived from the xenograft
+The xenograft carries only the mutant BRCA1 allele and expresses mutant BRCA1 mRNA but no BRCA1 protein as determined by immunoprecipitation or Western blotting
+The primary tumor, lymph node metastasis, and xenograft were hypodiploid by DNA flow cytometry, whereas the cell line displayed an aneuploidy apparently developed via polyploidization
+Cytogenetic analysis, spectral karyotyping, and comparative genomic hybridization of the cell line revealed a highly complex karyotype with numerous unbalanced translocations
+The xenograft and cell line had retained a somatic TP53 missense  mutation (S215I) originating from the primary tumors, as well as a lack of immunohistochemically detectable expression of steroid hormone receptors, epidermal growth factor receptor, human epidermal growth factor receptor 2 (HER-2), and keratin 8
+Global gene expression analysis by cDNA microarrays supported a correlation between the expression profiles of the primary tumor, lymph node metastasis, xenograft, and cell line
+We conclude that L56Br-X1 and L56Br-C1 are useful model systems for studies of the pathogenesis and new therapeutic modalities of BRCA1-induced human breast cancer.
+

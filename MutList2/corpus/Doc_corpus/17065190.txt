@@ -1,0 +1,16 @@
+Monocyte chemotactic protein-1 single nucleotide polymorphisms do not confer susceptibility for the development of adult onset polymyositis/dermatomyositis in UK Caucasians
+OBJECTIVES: Polymyositis (PM) and dermatomyositis (DM) form part of the idiopathic inflammatory myopathies (IIMs)
+The chemokine monocyte chemotactic protein-1 (MCP-1) is expressed at sites of the T cell inflammatory response in the IIMs
+We thus investigate whether genetic markers in the MCP-1 gene confer disease susceptibility for the development of PM and DM
+METHODS: DNA samples were analysed from a group of 195 UK Caucasian IIM patients, comprising 103 PM and 92 DM
+Their results were compared with those of 162 ethnically matched controls
+The polymorphic positions of three single nucleotide polymorphisms (SNPs) and one insertion-deletion sequence within regions coding for MCP-1 were tested
+The SNPs examined were located in intron 1 (rs2857657, C/G), exon 2 (rs4586, A/G) and the 3 ' untranslated region (rs13900, C/T)
+The insertion-deletion sequence was located in intron 1 (rs3917887, AGCTCCTCCTTCTC/-)
+Each SNP was tested for Hardy-Weinberg equilibrium and allelic/genotypic associations
+Haplotype frequencies were estimated using the Expectation/Maximization algorithm
+RESULTS: There was strong linkage disequilibrium present between three out of these four markers
+The majority of controls were in Hardy Weinberg equilibrium
+No allelic, genotypic or haplotypic associations were detected when comparing PM or DM cases to controls, or when PM and DM were compared with each other
+CONCLUSIONS: Genetic markers in the MCP-1 gene do not demonstrate significant genetic associations with the IIMs, and do not discriminate PM from DM in a UK Caucasian population.
+

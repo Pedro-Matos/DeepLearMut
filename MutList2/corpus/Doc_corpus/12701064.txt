@@ -1,0 +1,8 @@
+A novel compound heterozygous mutation in the CYP17 (P450 17alpha-hydroxylase) gene leading to 17alpha-hydroxylase/17,20-lyase deficiency
+Mutations in the CYP17 gene impair steroid biosynthesis in the adrenals and gonads and often cause 17alpha-hydroxylase/17,20-lyase deficiency, leading to amenorrhea, sexual infantilism, and hypokalemic low aldosterone hypertension
+Several CYP17 mutations resulting in 17alpha-hydroxylase/17,20-lyase deficiency have been reported previously
+In the present study, we found a novel CYP17 mutation from the molecular analysis of a Korean patient with primary amenorrhea with a 46,XX karyotype, and hypokalemic hypertension
+We sequenced all 8 exons of the CYP17 gene that were amplified from patient's genomic DNA using polymerase chain reaction (PCR) and found a compound heterozygous mutation in the CYP17 structural gene; a 1-base deletion and a 1-base transversion (TAC-->AA) at codon 329, leading to the production of a truncated protein (1-417 amino acids), and a 3-base deletion (TCC, either 350-351 or 351-352 codon) in the other allele
+Restriction enzyme digestion analysis of patient's and parental DNA showed that the 1-base deletion and the 3-base deletion are inherited from mother and father, respectively
+Here we conclude that these novel compound heterozygous mutations might account for the patient's clinical manifestations of 17alpha-hydroxylase/17,20-lyase deficiency.
+

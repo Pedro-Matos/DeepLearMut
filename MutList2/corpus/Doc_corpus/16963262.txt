@@ -1,0 +1,13 @@
+Identification of germline MLH1 alterations in familial prostate cancer
+Several linkage and loss of heterozygosity (LOH) analyses suggest that the region 3p21-p26, which is a chromosomal location of MLH1, could harbour a susceptibility gene for prostate cancer (PRCA)
+Furthermore, in a recent candidate single nucleotide polymorphism (SNP) analysis the I219V variation of the MLH1 gene was associated with PRCA
+Microsatellite instability (MSI) and germ-line MLH1 mutations were originally demonstrated in hereditary non-polyposis colorectal cancer (HNPCC) but MSI and loss of MLH1 function have also been detected in PRCA
+To assess the contribution of MLH1 germline mutations to the development of PRCA  in Finland different approaches were used
+First, the samples from 11 PRCA-colon  cancer patients were screened for MLH1, MSH2 and MSH6 protein expression by immunohistochemistry (IHC)
+IHC revealed one patient with a putative MLH1 aberration and sequencing of this sample revealed five sequence variants including two missense variants P434L and I219V
+Second, the samples from Finnish hereditary prostate cancer (HPC) families were used for the screening of MLH1 mutations which produced twelve MLH1 sequence variants including two missense mutations, I219V, as in the PRCA-colon cancer patient, and V647M
+P434L and V647  were both novel, rare variants
+Carrier frequencies of the I219V mutation were compared between hereditary prostate cancer (HPC) patients, unselected PRCA cases, patients with benign prostate hyperplasia and controls, but no differences between the sample groups were found
+P434L was not present in this study population and V647M was a very rare variant found only in one HPC family
+According to the present results, MLH1 does not have a major role in PRCA causation in Finland.
+

@@ -1,0 +1,12 @@
+Features of epidermolysis bullosa simplex due to mutations in the ectodomain of type XVII collagen
+BACKGROUND: Mutations in COL17A1, coding for type XVII collagen, cause junctional epidermolysis bullosa with an ultrastructural plane of cleavage through the lamina lucida of the epidermal basement membrane
+OBJECTIVES: To identify the COL17A1 mutations in a child with reduced type XVII collagen expression and intraepidermal blister formation
+PATIENT AND METHODS: Protein expression and level of tissue separation were studied by immunofluorescence and electron microscopy
+The mutations were identified by analysing the patient's DNA and mRNA
+RESULTS: Immunofluorescence microscopy performed on nonlesional skin demonstrated absence of the type XVII collagen endodomain and presence, although reduced, of the shed ectodomain
+Electron microscopy showed that the plane of cleavage was through the basal cells, not through the lamina lucida
+Two heterozygous mutations were identified in COL17A1: a new 3'-acceptor splice-site mutation in intron 21 (1877-2A-->C), and a deletion in exon 48 (3432delT)
+The splice-site mutation in intron 21 results in alternative transcripts of which two are in-frame, with deletions of the first nine codons of exon 22 and the entire exon 22, respectively
+By Western blot analysis, a type XVII collagen molecule was detected that was slightly smaller than normal
+CONCLUSIONS: Occasionally mutations in the COL17A1 gene may result in split levels suggesting epidermolysis bullosa simplex rather than junctional epidermolysis bullosa.
+

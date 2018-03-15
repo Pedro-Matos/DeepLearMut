@@ -1,0 +1,12 @@
+Molecular analysis of acute intermittent porphyria: mutation screening in 20 patients in Germany reveals 11 novel mutations
+Acute intermittent porphyria (AIP) is a very rare autosomal dominant disorder with low penetrance
+Mutations in the gene of the porphobilinogen deaminase (PBG-D), also called hydroxymethylbilane synthase (HMBS), cause a partial deficiency of this enzyme of the heme biosynthetic pathway
+Overstimulation of heme biosynthesis causes clinical symptoms
+Because of the variability of the symptoms, diagnosis is often delayed
+Using two approaches for genetic analysis, first in a stepwise manner, then sequencing extensive parts of the gene, the screening of the DNA of 20 unrelated individuals revealed 20 different mutations, 11 of which had not been reported previously
+The novel mutations affected intron 1 (33 + 2 T-->C), exon 5 (181 G-->C), intron 6 (267-61 del 8 bp), intron 7 (345-1 G-->C), intron 9 (498 + 15 G-->T and 499-13 Delta-14 bp indel TGA), intron 13 (825 + 1 G-->C and 825 + 2 T-->C), exon 15 (962 G-A, 1067 del A and 1067-1068 ins 5 bp)
+The other nine mutations detected affected intron 14, exons 6, 7, 8, 9, 10 (3x) and 12
+In the majority of AIP patients, the genotype does not predict phenotypic expression
+Since the sudden manifestation of the disease maybe prevented by early diagnosis, identification of AIP gene carriers is the best preventive measure
+This was performed in five families, revealing 10 additional AIP gene carriers.
+

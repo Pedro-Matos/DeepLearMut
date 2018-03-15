@@ -1,0 +1,12 @@
+Two novel severe mutations in the pancreatic secretory trypsin inhibitor gene (SPINK1) cause familial and/or hereditary pancreatitis
+Mutations in the serine protease inhibitor Kazal type 1 gene (SPINK1) encoding pancreatic secretory trypsin inhibitor (PSTI) have recently been found to be associated with chronic pancreatitis
+Nevertheless, knowledge of severe mutations is particularly scarce, both in terms of number and in the extent of clinical information
+The aim of this study was to expand the known spectrum of such mutations
+46 unrelated families, each including at least two pancreatitis patients and carrying neither cationic trypsinogen (PRSS1) mutations nor the frequent SPINK1 N34S mutation, participated in this study
+The four exons and their flanking sequences of the SPINK1 gene were screened by denaturing high performance liquid chromatography analysis (DHPLC); and mutations were identified by direct sequencing
+A heterozygous microdeletion mutation (c.27delC), which occurs within a symmetric element, was identified in two families
+In one family, c.27delC showed segregation with the disease across two generations, with a penetrance of up to 75%
+But in the other family, however, the same mutation manifested as a low-penetrance susceptibility factor
+In addition, a novel heterozygous splicing mutation, c.87+1G>A (G>A substitution at nucleotide +1 of intron 2) was found in one family with familial pancreatitis
+Our results also helped to resolve the sharply differing views about PSTI's role in pancreatitis.
+

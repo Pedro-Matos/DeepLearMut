@@ -1,0 +1,11 @@
+Multiple trichoepitheliomas--a novel mutation in the CYLD gene
+BACKGROUND: Trichoepitheliomas are benign neoplasms with follicular differentiation
+They may present as a solitary lesion or as multiple lesions
+Multiple trichoepitheliomas are inherited in an autosomal dominant pattern within families, with both variable penetrance and expressivity
+Recent investigations support that mutations in CYLD, the gene affected in familial cylindromatosis as well as in Brooke-Spiegler syndrome, are also responsible for multiple trichoepitheliomas
+OBJECTIVE: The authors report the case of a 9-year-old African girl with multiple facial trichoepitheliomas in whom a mutation in the CYLD gene was hypothesised
+MATERIALS AND METHODS: After genomic DNA extraction from the peripheral blood, a molecular analysis of the CYLD gene was performed by PCR, DHPLC and automated sequencing
+RESULTS: A novel heterozygous mutation in exon 18 of the CYLD gene (c.2449delT) was identified, with a deletion of one nucleotide resulting in a premature translational termination codon at amino acid position 831 on the affected allele (p.Cys817Valfs X15)
+CONCLUSIONS: The predominating tumours define the classification of these three entities
+Nevertheless, studies suggest that they can simply represent phenotypic variations of the same disease spectrum, sharing common genetic mutations.
+

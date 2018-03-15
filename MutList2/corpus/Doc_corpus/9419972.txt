@@ -1,0 +1,9 @@
+Resistance of MCF7 human breast carcinoma cells to TNF-induced cell death is associated with loss of p53 function
+We have investigated the relationship between the development of tumor resistance towards the cytotoxic action of tumor necrosis factor-alpha (TNF) and p53 function, using the TNF-sensitive MCF7 human breast adenocarcinoma cell line and  two TNF-resistant sublines, MCF7/R-A1 and MCF7/Adr
+Use of single-strand conformation polymorphism (SSCP) analysis and DNA sequencing shows that MCF7 has  a wild-type p53 gene, whereas both TNF-resistant sublines exhibit mutant p53
+This includes a point mutation R280K in MCF7/R-A1 cells, and a point mutation at  the splicing acceptor site on the upstream border of exon 5 resulting in a 21 pb  deletion in MCF7/Adr cells
+These mutations result in loss of p53 capacity to transactivate FASAY (functional assay in yeast)
+In contrast to what is observed  for parental MCF7 cells, treatment of resistant sublines with TNF or gamma-irradiation fails neither to induce the expression of the p53-regulated gene products p21waf1/CIP1 and MDM2, nor to arrest the cells in the G1 phase of the cell cycle
+Disruption of p53 wild-type function in MCF7 cells by transfection with human papillomavirus type-16 E6 gene, leads to abrogation of the cytotoxic, but not the cytostatic activity of TNF
+Altogether, our results strongly suggest that wild-type p53 is involved in cytotoxic action of TNF, and point out that loss of p53 function contributes to resistance of tumor cell to TNF-induced killing.
+

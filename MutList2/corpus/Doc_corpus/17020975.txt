@@ -1,0 +1,10 @@
+RNASEL gene polymorphisms and the risk of prostate cancer: a meta-analysis
+PURPOSE: Studies revealing conflicting results on the role of RNASEL polymorphisms Glu265X, Arg462Gln, and Asp541Glu on prostate cancer risk led us to perform a meta-analysis to investigate the association of these polymorphisms and prostate cancer risk
+EXPERIMENTAL DESIGN: Relevant studies were selected by searching PubMed from January 1996 to August 2005 using keywords "RNASEL gene AND prostate cancer." For each study, odds ratio (OR) with 95% confidence interval (95% CI) was calculated  to estimate the gene effect
+Pooled estimates of the OR were computed using the random effects model
+RESULTS: Ten studies were included in the meta-analysis
+The overall results suggested no major influence of these variants on prostate cancer risk
+However,  analysis of the Asp541Glu polymorphism by ethnic populations showed that Asp/Glu  (familial cases versus control: OR, 1.38; 95% CI, 1.04-1.82; sporadic cases versus control: OR, 1.26; 95% CI, 1.07-1.48; prostate cancer versus control: OR,  1.29; 95% CI, 1.12-1.48) and Asp/Glu + Glu/Glu (familial cases versus control: OR, 1.37; 95% CI, 1.10-1.70; sporadic cases versus control: OR, 1.24; 95% CI, 1.07-1.44; prostate cancer versus control: OR, 1.27; 95% CI, 1.13-1.44) increased prostate cancer risk in Caucasians, thus suggesting a dominant model for the Glu  variant
+CONCLUSIONS: Compared with the genotype Asp/Asp, the Glu variant at the Asp541Glu polymorphism increases prostate cancer risk by <2-fold in Caucasians, regardless  of family history of the disease
+This suggests that genuine genetic effects of this polymorphism may account for only a part of prostate cancer in the Caucasian population.
+

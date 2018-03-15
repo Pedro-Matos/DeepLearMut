@@ -1,0 +1,12 @@
+Mutations in mitochondrially encoded complex I enzyme as the second common cause in a cohort of Chinese patients with mitochondrial myopathy, encephalopathy, lactic acidosis and stroke-like episodes
+The mutation pattern of mitochondrial DNA (mtDNA) in mainland Chinese patients with mitochondrial myopathy, encephalopathy, lactic acidosis and stroke-like episodes (MELAS) has been rarely reported, though previous data suggested that the mutation pattern of MELAS could be different among geographically localized populations
+We presented the results of comprehensive mtDNA mutation analysis in 92 unrelated Chinese patients with MELAS (85 with classic MELAS and 7 with MELAS/Leigh syndrome (LS) overlap syndrome)
+The mtDNA A3243G mutation was the most common causal genotype in this patient group (79/92 and 85.9%)
+The second common gene mutation was G13513A (7/92 and 7.6%)
+Additionally, we identified T10191C (p.S45P) in ND3, A11470C (p
+K237N) in ND4, T13046C (p.M237T) in ND5 and a large-scale deletion (13025-13033:14417-14425) involving partial ND5 and ND6 subunits of complex I in one patient each
+Among them, A11470C, T13046C and the single deletion were novel mutations
+In summary, patients with mutations affecting mitochondrially encoded complex I (MTND) reached 12.0% (11/92) in this group
+It is noteworthy that all seven patients with MELAS/LS overlap syndrome were associated with MTND mutations
+Our data emphasize the important role of MTND mutations in the pathogenicity of MELAS, especially MELAS/LS overlap syndrome.
+

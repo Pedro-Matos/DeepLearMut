@@ -1,0 +1,11 @@
+Nucleotide change of codon 38 in the X gene of hepatitis B virus genotype C is associated with an increased risk of hepatocellular carcinoma
+BACKGROUND/AIMS: The hepatitis B virus (HBV) genotype C is associated with the development of hepatocellular carcinoma (HCC)
+In addition, the HBV X gene, which encodes the pleiotropic transactivator HBx, has also been associated with the development of HCC
+In this study, we investigated whether nucleotide changes in the X gene of genotype C are associated with the development of HCC
+METHODS/RESULTS: We sequenced the X gene in age- and sex-matched 39 HBV-infected patients with HCC and 36 HBV-infected patients without HCC
+A novel nucleotide change that resulted in a proline to serine substitution at codon 38 in HBx (codon-38 change) was preferentially found in patients with HCC
+Then, sera were collected from a new group of age- and sex-matched 52 patients with HCC and 51 patients without HCC
+In this cohort also, the codon-38 change was associated with HCC
+Multiple logistic regression analysis showed the prevalence of the codon-38 change was significantly associated with HCC in all patients (P=0.001, odds ratio: 4.89)
+CONCLUSION: The codon-38 change in genotype C is an independent risk factor for the development of HCC and may serve as a useful molecular marker for predicting the clinical outcomes in patients infected with HBV.
+
