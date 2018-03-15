@@ -61,6 +61,7 @@ with open('final.txt', 'w') as the_file: # the_file.write('Hello\n')
         the_file.write("|a|")
         text = split[1].rstrip()
         the_file.write(text)
+        the_file.write("\n")
         for l in value_labels:
             the_file.write(id)
             for i in l:
@@ -79,7 +80,9 @@ with open('final.txt', 'w') as the_file: # the_file.write('Hello\n')
             the_file.write("\n")
             the_file.write(id)
             the_file.write("|a|")
-            the_file.write(split[1])
+            text = split[1].rstrip()
+            the_file.write(text)
+            the_file.write("\n")
             for l in value_labels:
                 the_file.write(id)
                 for i in l:

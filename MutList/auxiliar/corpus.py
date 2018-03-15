@@ -22,9 +22,14 @@ with open(path_read) as reading:
             breaker = 1
         else:
             if breaker == 1:
+
                 split = result.split("|")
                 id = split[0]
-                text = split[2]
+
+                try:
+                    text = split[2]
+                except :
+                    print(split)
                 text = text.rstrip()
                 abstract.write(id+"\t"+text)
                 breaker = breaker + 1
