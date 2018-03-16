@@ -1,6 +1,7 @@
 import numpy as np
 from gensim.models import KeyedVectors
 import os
+from sklearn.model_selection import train_test_split
 
 class Utils:
     def __init__(self):
@@ -46,4 +47,17 @@ class Utils:
                     labels.append(r)
 
         print("Sentences and labels read!")
-        return sentences, labels
+        max = 0
+        for i in sentences:
+            words = i.split()
+            if len(words) > max:
+                max = len(words)
+
+        return sentences, labels, max
+
+    def split_data(self, data, labels):
+        # split the data to train and to test
+        train_d, test_d = train_test_split(data, test_size=0.1, shuffle=False)
+        train_lab, test_lab = train_test_split(labels, test_size=0.1, shuffle=False)
+
+        return train_d, test_d, train_lab, test_lab
