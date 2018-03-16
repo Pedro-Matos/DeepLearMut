@@ -52,6 +52,7 @@ class WordModel:
         print(ids_train.shape)
         print(ids_test.shape)
 
+        return ids_train, ids_test
 
     def main(self):
         utils = wordUtils.Utils()
@@ -63,7 +64,10 @@ class WordModel:
         print(len(test_d))
         print("-----\n")
 
-        self.create_matrix(train_d, test_d)
+        #ids_train, ids_test = self.create_matrix(train_d, test_d)
+
+        # pad all labels to the max sequence length
+        # verificar se as sequencias e as labels tÊm o mesmo comprimento
 
 
 

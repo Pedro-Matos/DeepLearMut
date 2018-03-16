@@ -46,6 +46,7 @@ class Utils:
                 for r in results:
                     labels.append(r)
 
+
         print("Sentences and labels read!")
         max = 0
         for i in sentences:
