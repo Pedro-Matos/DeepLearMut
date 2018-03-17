@@ -25,11 +25,11 @@ class Utils:
 
         return words_list, embedding_matrix
 
-    def load_seq(self):
+    def load_seq_string(self):
         all_corpus = os.listdir(self.corpus_dir)
         sentences = []
         labels = []
-
+        words_set = []
         for file in all_corpus:
 
             # abrir o ficheiro do corpus
@@ -38,12 +38,16 @@ class Utils:
                 results = reading.readlines()
                 for r in results:
                     sentences.append(r)
+                    words = r.split()
+                    for w in words:
+                        words_set.append(w)
 
             # abrir o ficheiro das labels
             labels_path = self.labels_dir + file
             with open(labels_path) as reading:
                 results = reading.readlines()
                 for r in results:
+                    r = r.rstrip()
                     labels.append(r)
 
 
@@ -54,7 +58,7 @@ class Utils:
             if len(words) > max:
                 max = len(words)
 
-        return sentences, labels, max
+        return sentences, labels, max, words_set
 
     def split_data(self, data, labels):
         # split the data to train and to test
@@ -62,3 +66,45 @@ class Utils:
         train_lab, test_lab = train_test_split(labels, test_size=0.1, shuffle=False)
 
         return train_d, test_d, train_lab, test_lab
+
+    def parse_labels(self, labels):
+        l_tmp = []
+
+        for i in labels:
+            l = i.split(",")
+            l_tmp.append(l)
+
+        return l_tmp
+
+    def load_seq(self):
+        all_corpus = os.listdir(self.corpus_dir)
+        sentences = []
+        labels = []
+        words_set = []
+        for file in all_corpus:
+
+            # abrir o ficheiro do corpus
+            corpus_path = self.corpus_dir + file
+            with open(corpus_path) as reading:
+                results = reading.readlines()
+                for r in results:
+                    words = r.split()
+                    sentences.append(words)
+                    for w in words:
+                        words_set.append(w)
+
+            # abrir o ficheiro das labels
+            labels_path = self.labels_dir + file
+            with open(labels_path) as reading:
+                results = reading.readlines()
+                for r in results:
+                    labs = r.split(",")
+                    labels.append(labs)
+
+        print("Sentences and labels read!")
+        max = 0
+        for words in sentences:
+            if len(words) > max:
+                max = len(words)
+
+        return sentences, labels, max, words_set

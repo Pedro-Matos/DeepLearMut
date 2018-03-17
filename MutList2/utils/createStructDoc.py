@@ -1,6 +1,6 @@
 import os
 from collections import defaultdict
-
+from keras.preprocessing.text import text_to_word_sequence
 
 docs_path = '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList2/corpus/Documents'
 corpus_path = '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList2/corpus/Doc_corpus'
@@ -72,7 +72,8 @@ for idx, sentences in dic_corpus.items():
 
     # ir frase a frase; em cada frase fazer o split por whitespace
     for sent in sentences:
-        word = sent.split()
+        #word = sent.split()
+        word = text_to_word_sequence(sent,filters='',split=" ")
         arr = []
         for w in word:
             if w in tokens:
