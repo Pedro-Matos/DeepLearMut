@@ -12,7 +12,7 @@ from keras.preprocessing.text import Tokenizer
 
 class WordModel:
     def __init__(self):
-        self.maxSeqLength = 150  # Maximum length of sentence
+        self.maxSeqLength = -1  # Maximum length of sentence
         self.numDimensions = 200  # Dimensions for each word vector
         self.words_list = None
         self.embedding_matrix = None
@@ -65,15 +65,22 @@ class WordModel:
     def main(self):
         utils = wordUtils.Utils()
         self.words_list, self.embedding_matrix = utils.load_word2vec()
-        sentences, labels, maxSeqLength, words_set = utils.load_seq_string()
-        #print(len(words_set))
+        sentences, labels = utils.load_seq_string()
 
         t = Tokenizer(filters='',split=" ")
         t.fit_on_texts(sentences)
         sequences_1 = t.texts_to_sequences(sentences)
+
+        for seq in sequences_1:
+            dim = len(seq)
+            if dim > self.maxSeqLength:
+                self.maxSeqLength = dim
+
         data = pad_sequences(sequences_1, maxlen=self.maxSeqLength, padding='post')
+        labs = pad_sequences(labels, maxlen=self.maxSeqLength, padding='post')
 
-
+        word_index = t.word_index
+        print('Found %s unique tokens' % len(word_index))
 
         #ids_train = self.create_matrix_words(words_set)
 
