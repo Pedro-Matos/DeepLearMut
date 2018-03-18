@@ -1,14 +1,14 @@
 from utils import wordUtils
 import numpy as np
+import pandas as pd
 from keras.preprocessing.sequence import pad_sequences
-from keras.models import Sequential
-from keras.layers import Dense, Flatten
-from keras.layers.convolutional import Conv1D, MaxPooling1D
-from keras.layers.embeddings import Embedding
-from sklearn.model_selection import KFold
-from keras.layers.embeddings import Embedding
-from keras.models import Sequential
+from sklearn.model_selection import train_test_split
 from keras.preprocessing.text import Tokenizer
+from keras.utils import to_categorical
+from keras.models import Model, Input
+from keras.layers import LSTM, Embedding, Dense, TimeDistributed, Dropout, Bidirectional
+from keras_contrib.layers import CRF
+
 
 class WordModel:
     def __init__(self):
@@ -16,6 +16,9 @@ class WordModel:
         self.numDimensions = 200  # Dimensions for each word vector
         self.words_list = None
         self.embedding_matrix = None
+        self.seed = 42
+        self.k = 5  # for Kfold
+        self.tags = ['O', 'Mut']
 
     def create_matrix(self, train, test):
         num_train = len(train)  # number of sentences
@@ -44,27 +47,24 @@ class WordModel:
 
         return ids_train
 
-    def create_matrix_words(self, words_set):
+    def create_matrix_words(self, t, vocab_size):
         # create a weight matrix for words in training docs
-        vocab_size = len(words_set)
 
         embedding_matrix = np.zeros((vocab_size, self.numDimensions))
-        i = 0
-        for word in words_set:
+        for word, i in t.word_index.items():
             try:
                 id = self.words_list.index(word)
                 embedding_vector = self.embedding_matrix[id]
             except ValueError:
                 embedding_vector = self.embedding_matrix[499999]  # full of zeros
-            embedding_matrix[i] = embedding_vector
 
-            i = i + 1
+            embedding_matrix[i] = embedding_vector
 
         return embedding_matrix
 
     def main(self):
         utils = wordUtils.Utils()
-        self.words_list, self.embedding_matrix = utils.load_word2vec()
+        #self.words_list, self.embedding_matrix = utils.load_word2vec()
         sentences, labels = utils.load_seq_string()
 
         t = Tokenizer(filters='',split=" ")
@@ -76,21 +76,66 @@ class WordModel:
             if dim > self.maxSeqLength:
                 self.maxSeqLength = dim
 
-        data = pad_sequences(sequences_1, maxlen=self.maxSeqLength, padding='post')
+        words = []
+        for word, i in t.word_index.items():
+            words.append(word)
+
+
+        X = pad_sequences(sequences_1, maxlen=self.maxSeqLength, padding='post')
         labs = pad_sequences(labels, maxlen=self.maxSeqLength, padding='post')
+        n_tags = len(self.tags)
+        y = [to_categorical(i, num_classes=n_tags) for i in labs]
 
-        word_index = t.word_index
-        print('Found %s unique tokens' % len(word_index))
+        X_tr, X_te, y_tr, y_te = train_test_split(X, y, test_size=0.1)
 
-        #ids_train = self.create_matrix_words(words_set)
+        input = Input(shape=(self.maxSeqLength,))
+        model = Embedding(input_dim=len(t.word_index) + 1, output_dim=20,
+                          input_length=self.maxSeqLength, mask_zero=True)(input)  # 20-dim embedding
+        model = Bidirectional(LSTM(units=50, return_sequences=True,
+                                   recurrent_dropout=0.1))(model)  # variational biLSTM
+        model = TimeDistributed(Dense(50, activation="relu"))(model)  # a dense layer as suggested by neuralNer
+        crf = CRF(n_tags)  # CRF layer
+        out = crf(model)  # output
 
-        # define the model
-        #model = Sequential()
-        #model.add(Embedding(len(words_set), self.numDimensions, weights=[ids_train], input_length=self.maxSeqLength,
-        #                   trainable=False))
+        model = Model(input, out)
+        model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
+        model.summary()
+        history = model.fit(X_tr, np.array(y_tr), batch_size=32, epochs=5, validation_split=0.1, verbose=1)
+
+        hist = pd.DataFrame(history.history)
+
+        file = open("test_pred.txt", "w")
+
+        for i in range(len(X_te)):
+            p = model.predict(np.array([X_te[i]]))
+            p = np.argmax(p, axis=-1)
+            true = np.argmax(y_te[i], -1)
+            file.write("{:15}||{:5}||{}".format("Word", "True", "Pred"))
+            file.write("\n")
+            #print("{:15}||{:5}||{}".format("Word", "True", "Pred"))
+            file.write(30 * "=")
+            file.write("\n")
+            #print(30 * "=")
+            for w, t, pred in zip(X_te[i], true, p[0]):
+                if w != 0:
+                    #print("{:15}: {:5} {}".format(words[w - 1], self.tags[t], self.tags[pred]))
+                    file.write("{:15}: {:5} {}".format(words[w - 1], self.tags[t], self.tags[pred]))
+                    file.write("\n")
 
 
+
+
+       
 
 if __name__ == "__main__":
     model = WordModel()
     model.main()
+
+# vocab_size = len(t.word_index) + 1
+# print('Found %s unique tokens' % vocab_size)
+# ids_train = self.create_matrix_words(t, vocab_size)
+
+# define the model
+# model = Sequential()
+# model.add(Embedding(vocab_size, self.numDimensions, weights=[ids_train], input_length=self.maxSeqLength,
+#                     trainable=False))

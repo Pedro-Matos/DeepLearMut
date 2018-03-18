@@ -36,6 +36,7 @@ class Utils:
             with open(corpus_path) as reading:
                 results = reading.readlines()
                 for r in results:
+                    r = r.rstrip()
                     sentences.append(r)
 
             # abrir o ficheiro das labels
