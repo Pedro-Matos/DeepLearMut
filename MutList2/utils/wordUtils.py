@@ -8,6 +8,7 @@ class Utils:
         # Load GLOVE vectors
         self.corpus_dir = '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList2/corpus/Doc_corpus/'
         self.labels_dir = '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList2/corpus/Doc_label/'
+        self.corpus_all = '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList2/utils/corpus_test/'
         self.word2vec_path = '/Users/pmatos9/Desktop/pedrinho/tese/glove/wikipedia-pubmed-and-PMC-w2v.bin'
 
     # function to load pre-processed words in word2vec from a combination of PubMed and PMC texts
@@ -72,3 +73,33 @@ class Utils:
             l_tmp.append(l)
 
         return l_tmp
+
+    def load_seq_all(self):
+
+        sentences = []
+        labels = []
+
+        # abrir o ficheiro do corpus
+        corpus_path = self.corpus_all + "data.txt"
+        with open(corpus_path) as reading:
+            results = reading.readlines()
+            for r in results:
+                r = r.rstrip()
+                sentences.append(r)
+
+        # abrir o ficheiro das labels
+        labels_path = self.corpus_all + "labels.txt"
+        with open(labels_path) as reading:
+            results = reading.readlines()
+            for r in results:
+                r = r.rstrip()
+                rs = r.split(",")
+                arr = []
+                for i in rs:
+                    arr.append(int(i))
+
+                labels.append(arr)
+
+        print("Sentences and labels read!")
+
+        return sentences, labels

@@ -59,7 +59,7 @@ for idx, label in dic_labels.items():
 # now the hardest part. split each sentence from corpus by whitespaces to get all the words
 # then see if that word is one of the tokens
 # create the file with the labels
-
+count = 0
 for idx, sentences in dic_corpus.items():
     # ir buscar o os tokens
     idx = int(idx)
@@ -72,12 +72,13 @@ for idx, sentences in dic_corpus.items():
 
     # ir frase a frase; em cada frase fazer o split por whitespace
     for sent in sentences:
-        #word = sent.split()
-        word = text_to_word_sequence(sent,filters='',split=" ")
+        word = sent.split()
+        #word = text_to_word_sequence(sent,filters='',split=" ")
         arr = []
         for w in word:
             if w in tokens:
                 arr.append(1)
+                count = count + 1
             else:
                 arr.append(0)
 
@@ -95,6 +96,6 @@ for idx, sentences in dic_corpus.items():
 
 
 
-
+print(count)
 
 
