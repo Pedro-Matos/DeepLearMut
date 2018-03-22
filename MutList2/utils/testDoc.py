@@ -2,9 +2,9 @@ import os
 from collections import defaultdict
 from keras.preprocessing.text import text_to_word_sequence
 
-corpus_path = '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList2/corpus/Doc_corpus'
-labels_path = '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList2/corpus/Doc_label'
-write_path = '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList2/utils/corpus_test'
+corpus_path = '../corpus/Doc_corpus'
+labels_path = '../corpus/Doc_label'
+write_path = 'corpus_test'
 
 # array of files
 all_files = os.listdir(corpus_path)
@@ -44,6 +44,17 @@ for i in range(len(corpus)):
     if len(s) != len(l):
         print("error")
 
+m_classes = []
+# get all the classes
+for i in range(len(labels)):
+    l = labels[i].split(",")
+    for idx in l:
+        m_classes.append(idx)
+
+m_classes = list(set(m_classes))
+
+print(m_classes)
+
 # criar o ficheiro para ter as labels
 X = write_path + "/" + "data.txt"
 y = write_path + "/" + "labels.txt"
@@ -57,15 +68,17 @@ for i in range(len(corpus)):
 
     # split com das labels por ","
     labels[i] = labels[i].rstrip()
-    if '1' in labels[i]:
+    l = labels[i].split(",")
+    check = False
+    for tmp in l:
+        if tmp != '0':
+            check = True
+
+
+
+    if check:
         count = count + 1
         l = labels[i].split(",")
         data.write(corpus[i] + "\n")
-        lab.write(labels[i]+ "\n")
+        lab.write(labels[i] + "\n")
 
-
-
-
-
-
-print(count)

@@ -2,9 +2,9 @@ import os
 from collections import defaultdict
 from keras.preprocessing.text import text_to_word_sequence
 
-docs_path = '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList2/corpus/Documents'
-corpus_path = '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList2/corpus/Doc_corpus'
-labels_path = '/Users/pmatos9/Desktop/pedrinho/tese/DeepLearMut/MutList2/corpus/Doc_label'
+docs_path = '../corpus/Documents'
+corpus_path = '../corpus/Doc_corpus'
+labels_path = '../corpus/Doc_label'
 
 all_files = os.listdir(docs_path)
 
@@ -28,7 +28,7 @@ for file in all_files:
                     id = corpus[0]
                     text = corpus[1]+" "+corpus[2]
 
-                    # dividi by sentence
+                    # divide by sentence
                     sentences = text.split(". ")
 
                     # create the file
@@ -49,12 +49,16 @@ for file in all_files:
                 count_line = count_line + 1
 
 dic_token = defaultdict(list)
+dic_mut_class = {}
 # ir documento a documento e obter a lista dos tokens que são mutações
 for idx, label in dic_labels.items():
     # ir token a token
     for l in label:
         split_l = l.split("\t")
+
         dic_token[idx].append(split_l[3])
+        mut_val = {split_l[3]: split_l[5]}
+        dic_mut_class.update(mut_val)
 
 # now the hardest part. split each sentence from corpus by whitespaces to get all the words
 # then see if that word is one of the tokens
@@ -77,10 +81,11 @@ for idx, sentences in dic_corpus.items():
         arr = []
         for w in word:
             if w in tokens:
-                arr.append(1)
+                m_class = dic_mut_class.get(w)
+                arr.append(m_class)
                 count = count + 1
             else:
-                arr.append(0)
+                arr.append('0')
 
 
         # escrever no ficheiro
