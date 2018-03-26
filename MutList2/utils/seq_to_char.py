@@ -1,109 +1,164 @@
 from collections import defaultdict
 
 
-corpus_path = '../corpus_char/train_small.txt'
-labels_file = '../corpus_char/mut_small.tsv'
-
-ids = []
-
-dic_corpus = {}
-
-with open(corpus_path) as reading:
-    sentences = reading.readlines()
-    for sent in sentences:
-        sp = sent.split("\t")
-        id = int(sp[0])
-        dic = {id: sent}
-        dic_corpus.update(dic)
-        ids.append(id)
-
-ids = list(set(ids))
 
 
-dic_labels = defaultdict(list)
-with open(labels_file) as reading:
-    sentences = reading.readlines()
-    for sent in sentences:
-        sp = sent.split("\t")
-        id = int(sp[0])
-        dic_labels[id].append(sent)
+
 '''
-dic_chars = defaultdict(list)
-for i in ids:
-    all_labels = dic_labels[i]
-    for lab in all_labels:
-        # get offsets
-        s = lab.split("\t")
-        off_s = int(s[1])
-        off_e = int(s[2])
-        r = lab.split("\t")
+for i in dic_chars:
+    print(dic_chars.get(i)[0])
+'''
 
-        # get the corpus
-        corp = dic_corpus.get(i)
-        corp = corp.rstrip()
-        corp_split = corp.split("\t")
-        id = int(corp_split[0])
-        corp_split = corp_split[1:]
-        corp = corp_split[0] + " " + corp_split[1]
+class CorpusReader:
+    def __init__(self):
+        self.corpus_path = '../corpus_char/train_small.txt'
+        self.labels_file = '../corpus_char/mut_small.tsv'
 
-        # create array of characters and their respective classification
-        c = list(corp)
-        class_chars = []
-        count = 0
+        self.ids = []
+        self.dic_corpus = {}
+        self.dic_labels = defaultdict(list)
+        self.dic_chars = defaultdict(list)
 
-        for count in range(len(c)-1):
-            if count == off_s:
-                class_chars.append('B')
-            elif count > off_s and count <=off_e:
-                class_chars.append('I')
+    def readcorpus(self):
+        with open(self.corpus_path) as reading:
+            sentences = reading.readlines()
+            for sent in sentences:
+                sp = sent.split("\t")
+                id = int(sp[0])
+                dic = {id: sent}
+                self.dic_corpus.update(dic)
+                self.ids.append(id)
+
+        self.ids = list(set(self.ids))
+
+    def readlabels(self):
+        with open(self.labels_file) as reading:
+            sentences = reading.readlines()
+            for sent in sentences:
+                sp = sent.split("\t")
+                id = int(sp[0])
+                self.dic_labels[id].append(sent)
+
+    def create_char_seqs(self):
+        for id in self.ids:
+            corp = self.dic_corpus[id]
+            arr_off_start = []
+            arr_off_end = []
+            result = []
+
+            # get all labels for a corpus
+            labels = self.dic_labels.get(id)
+            if labels != None:
+                for lab in labels:
+                    # get offset
+                    s = lab.split("\t")
+                    arr_off_start.append(int(s[1]))
+                    arr_off_end.append(int(s[2]))
+                    result.append(s[3])
+
+                # get the corpus
+                corp_split = corp.split("\t")
+                corp_split = corp_split[1:]
+                corp = corp_split[0] + " " + corp_split[1]
+                # print(corp)
+
+                c = list(corp)
+                class_chars = []
+
+                # inicializar com tudo a 'O'
+                for count in range(len(c) - 1):
+                    class_chars.append('O')
+
+                # meter 'B' e 'I' nos sitios corretos. Assim o resto já está preenchido
+                for i in range(len(arr_off_start)):
+                    start = arr_off_start[i]
+                    end = arr_off_end[i]
+
+                    for counter in range(start, end + 1):
+                        if counter == start:
+                            class_chars.insert(counter, 'B')
+                        elif counter > start and counter <= end:
+                            class_chars.insert(counter, 'I')
+
+                    # print(result[i])
+                    # print(corp[start:end])
+                    # print(c[start:end])
+                    # print(class_chars[start:end])
+                    # print("------")
+
+                self.dic_chars[id].append(class_chars)
+
             else:
-                class_chars.append('O')
+                # get the corpus
+                corp_split = corp.split("\t")
+                corp_split = corp_split[1:]
+                corp = corp_split[0] + " " + corp_split[1]
 
-        dic_chars[id].append(class_chars)
+                # corpus não tem exemplos de mutações, é tudo characteres a '0'
+                c = list(corp)
+                class_chars = []
 
-        # divide by sentences
-        # sent = []
-        # dot = False
-        # split_off = []
-        # count = 0
-        # for char in c:
-        #     if char == ".":
-        #         dot = True
-        #
-        #     elif char == " " and dot:
-        #         dot = False
-        #         split_off.append(count)
-        #     count = count + 1
-'''
+                for count in range(len(c) - 1):
+                    class_chars.append('O')
 
-dic_chars = defaultdict(list)
-for i in ids:
-    corp = dic_corpus[i]
-    arr_off_start = []
-    arr_off_end = []
+                self.dic_chars[id].append(class_chars)
 
-    # get all labels for a corpus
-    labels = dic_labels.get(i)
-    for lab in labels:
-        # get offset
-        s = lab.split("\t")
-        arr_off_start.append(int(s[1]))
-        arr_off_end.append(int(s[2]))
+    def split_seqs(self):
+        for id in self.ids:
+            # get the corpus
+            corp = self.dic_corpus[id]
+            corp_split = corp.split("\t")
+            corp_split = corp_split[1:]
+            corp = corp_split[0] + " " + corp_split[1]
+            c = list(corp)
 
-    # get the corpus
-    corp_split = corp.split("\t")
-    corp_split = corp_split[1:]
-    corp = corp_split[0] + " " + corp_split[1]
-    #print(corp)
+            # divide by sentences
+            dot = False
+            split_off = []
+            count = 0
+            for char in c:
+                if char == ".":
+                    dot = True
 
-    # corpus não tem exemplos de mutações, é tudo characteres a '0'
-    if arr_off_start == []:
-       print("sem exemplos")
+                elif char == " " and dot:
+                    dot = False
+                    split_off.append(count)
+                count = count + 1
+            print(split_off)
+            print(corp)
+            first = c[:split_off[0]]
+            i = len(split_off)-1
+            last = c[split_off[i]:]
 
-    else:
-        print("com exemplos")
-        # inicializar com tudo a 'O'
+            for idx in split_off:
+                tmp_a = [(split_off[i],split_off[i+1] )for i in range(len(split_off)-1)]
+            middle= []
 
-        #print(corp[arr_off_start[0]:arr_off_end[0]])
+            for tup in tmp_a:
+                b=tup[0]
+                e=tup[1]
+                middle.append(c[b:e])
 
-        # meter 'B' e 'I' nos sitios corretos. Assim o resto já está preenchido
+
+            print(first)
+            for i in middle:
+                print(i)
+            print(last)
+            print("-----")
+
+            # splitting the corpus but need to split the character labels now
+
+
+
+    def read(self):
+        self.readcorpus()
+        self.readlabels()
+        self.create_char_seqs()
+        self.split_seqs()
+
+
+
+
+if __name__ == "__main__":
+    reader = CorpusReader()
+    reader.read()
