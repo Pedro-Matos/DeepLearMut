@@ -18,6 +18,7 @@ class CorpusReader:
         self.dic_corpus = {}
         self.dic_labels = defaultdict(list)
         self.dic_chars = defaultdict(list)
+        self.dic_corpus_char = defaultdict(list)
 
     def readcorpus(self):
         with open(self.corpus_path) as reading:
@@ -151,6 +152,28 @@ class CorpusReader:
             for chars in all_chars:
                 self.dic_chars[id].append(chars)
 
+            # splitting the corpus by character
+            first = c[:split_off[0]]
+            i = len(split_off) - 1
+            last = c[split_off[i]:]
+
+            for idx in split_off:
+                tmp_a = [(split_off[i], split_off[i + 1]) for i in range(len(split_off) - 1)]
+            middle = []
+
+            for tup in tmp_a:
+                b = tup[0]
+                e = tup[1]
+                middle.append(c[b:e])
+
+            all_chars = []
+            all_chars.append(first)
+            for i in middle:
+                all_chars.append(i)
+            all_chars.append(last)
+
+            for chars in all_chars:
+                self.dic_corpus_char[id].append(chars)
 
 
     def read(self):
@@ -158,7 +181,8 @@ class CorpusReader:
         self.readlabels()
         self.create_char_seqs()
         self.split_seqs()
-        return self.dic_chars
+
+        return self.dic_corpus_char, self.dic_chars
 
 
 
