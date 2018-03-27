@@ -124,29 +124,32 @@ class CorpusReader:
                     dot = False
                     split_off.append(count)
                 count = count + 1
-            print(split_off)
-            print(corp)
-            first = c[:split_off[0]]
-            i = len(split_off)-1
-            last = c[split_off[i]:]
+
+            # splitting the character labels
+            class_chars = self.dic_chars[id][0]
+
+            first = class_chars[:split_off[0]]
+            i = len(split_off) - 1
+            last = class_chars[split_off[i]:]
 
             for idx in split_off:
-                tmp_a = [(split_off[i],split_off[i+1] )for i in range(len(split_off)-1)]
-            middle= []
+                tmp_a = [(split_off[i], split_off[i + 1]) for i in range(len(split_off) - 1)]
+            middle = []
 
             for tup in tmp_a:
-                b=tup[0]
-                e=tup[1]
-                middle.append(c[b:e])
+                b = tup[0]
+                e = tup[1]
+                middle.append(class_chars[b:e])
 
-
-            print(first)
+            all_chars = []
+            all_chars.append(first)
             for i in middle:
-                print(i)
-            print(last)
-            print("-----")
+                all_chars.append(i)
+            all_chars.append(last)
 
-            # splitting the corpus but need to split the character labels now
+            del self.dic_chars[id]
+            for chars in all_chars:
+                self.dic_chars[id].append(chars)
 
 
 
@@ -155,7 +158,7 @@ class CorpusReader:
         self.readlabels()
         self.create_char_seqs()
         self.split_seqs()
-
+        return self.dic_chars
 
 
 
