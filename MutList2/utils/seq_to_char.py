@@ -17,7 +17,7 @@ class CorpusReader:
         self.ids = []
         self.dic_corpus = {}
         self.dic_labels = defaultdict(list)
-        self.dic_chars = defaultdict(list)
+        self.dic_labels_chars = defaultdict(list)
         self.dic_corpus_char = defaultdict(list)
 
     def readcorpus(self):
@@ -61,13 +61,12 @@ class CorpusReader:
                 corp_split = corp.split("\t")
                 corp_split = corp_split[1:]
                 corp = corp_split[0] + " " + corp_split[1]
-                # print(corp)
 
                 c = list(corp)
                 class_chars = []
 
                 # inicializar com tudo a 'O'
-                for count in range(len(c) - 1):
+                for count in range(len(c)):
                     class_chars.append('O')
 
                 # meter 'B' e 'I' nos sitios corretos. Assim o resto já está preenchido
@@ -77,17 +76,30 @@ class CorpusReader:
 
                     for counter in range(start, end + 1):
                         if counter == start:
-                            class_chars.insert(counter, 'B')
+                            #class_chars.insert(counter, 'B')
+
+                            arr1 = class_chars[:counter]
+                            arr1.append('B')
+                            arr1 = arr1 + class_chars[counter + 1:]
+
+                            class_chars = arr1
+
                         elif counter > start and counter <= end:
-                            class_chars.insert(counter, 'I')
+                            #class_chars.insert(counter, 'I')
+
+                            arr1 = class_chars[:counter]
+                            arr1.append('I')
+                            arr1 = arr1 + class_chars[counter + 1:]
+
+                            class_chars = arr1
 
                     # print(result[i])
                     # print(corp[start:end])
                     # print(c[start:end])
                     # print(class_chars[start:end])
-                    # print("------")
 
-                self.dic_chars[id].append(class_chars)
+                #print(len(c) == len(class_chars))
+                self.dic_labels_chars[id].append(class_chars)
 
             else:
                 # get the corpus
@@ -99,20 +111,21 @@ class CorpusReader:
                 c = list(corp)
                 class_chars = []
 
-                for count in range(len(c) - 1):
+                for count in range(len(c)):
                     class_chars.append('O')
 
-                self.dic_chars[id].append(class_chars)
+                self.dic_labels_chars[id].append(class_chars)
 
     def split_seqs(self):
         for id in self.ids:
+            #print("------")
             # get the corpus
             corp = self.dic_corpus[id]
             corp_split = corp.split("\t")
             corp_split = corp_split[1:]
             corp = corp_split[0] + " " + corp_split[1]
             c = list(corp)
-
+            #print("corpus:" + str(len(c)))
             # divide by sentences
             dot = False
             split_off = []
@@ -127,8 +140,8 @@ class CorpusReader:
                 count = count + 1
 
             # splitting the character labels
-            class_chars = self.dic_chars[id][0]
-
+            class_chars = self.dic_labels_chars[id][0]
+            #print("labels: " + str(len(class_chars)))
             first = class_chars[:split_off[0]]
             i = len(split_off) - 1
             last = class_chars[split_off[i]:]
@@ -148,18 +161,18 @@ class CorpusReader:
                 all_chars.append(i)
             all_chars.append(last)
 
-            del self.dic_chars[id]
+            del self.dic_labels_chars[id]
             for chars in all_chars:
-                self.dic_chars[id].append(chars)
+                self.dic_labels_chars[id].append(chars)
 
             # splitting the corpus by character
             first = c[:split_off[0]]
             i = len(split_off) - 1
             last = c[split_off[i]:]
 
-            for idx in split_off:
-                tmp_a = [(split_off[i], split_off[i + 1]) for i in range(len(split_off) - 1)]
+            tmp_a = [(split_off[i], split_off[i + 1]) for i in range(len(split_off) - 1)]
             middle = []
+
 
             for tup in tmp_a:
                 b = tup[0]
@@ -175,14 +188,32 @@ class CorpusReader:
             for chars in all_chars:
                 self.dic_corpus_char[id].append(chars)
 
+    def merged_data(self):
+        merged = []
+        count = 0
+
+        for id in self.dic_corpus_char:
+            corpus = self.dic_corpus_char[id]
+            labels = self.dic_labels_chars[id]
+            for idx in range(len(corpus)):
+                if len(corpus[idx]) == len(labels[idx]):
+                    new_dic = {"corpus":corpus[idx], "labels":labels[idx]}
+                    merged.append(new_dic)
+
+                count = count + 1
+
+        print("\n\n\n")
+        print(count)
+        print(len(merged))
+
 
     def read(self):
         self.readcorpus()
         self.readlabels()
         self.create_char_seqs()
         self.split_seqs()
-
-        return self.dic_corpus_char, self.dic_chars
+        self.merged_data()
+        return self.dic_corpus_char, self.dic_labels_chars
 
 
 
