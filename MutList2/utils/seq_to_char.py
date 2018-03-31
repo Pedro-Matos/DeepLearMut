@@ -202,19 +202,25 @@ class CorpusReader:
 
                 count = count + 1
 
-        print("\n\n\n")
-        print(count)
-        print(len(merged))
+        return merged
 
+    def get_length(self, data):
+        max = 0
+
+        for idx in range(len(data)):
+            l = len(data[idx]['corpus'])
+            if l > max:
+                max = l
+
+        return max
 
     def read(self):
         self.readcorpus()
         self.readlabels()
         self.create_char_seqs()
         self.split_seqs()
-        self.merged_data()
-        return self.dic_corpus_char, self.dic_labels_chars
-
+        merged = self.merged_data()
+        return merged
 
 
 if __name__ == "__main__":
