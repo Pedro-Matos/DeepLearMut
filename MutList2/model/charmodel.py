@@ -62,7 +62,10 @@ class CharModel:
 
         return sequences, labels
 
-    def model_with_padding(self, sequences, labels, n_char):
+    def model_with_padding(self, DICT, n_char):
+
+        # get sequences and labels separated
+        sequences, labels = self.get_seq(DICT)
 
         X = pad_sequences(sequences, maxlen=self.maxSeqLength, padding='post')
         y_pad = pad_sequences(labels, maxlen=self.maxSeqLength, padding='post')
@@ -89,6 +92,70 @@ class CharModel:
         model.summary()
         history = model.fit(tr_x, np.array(tr_y), batch_size=32, epochs=self.epochsN, validation_split=0.1, verbose=1)
 
+    def model_no_padding(self, DICT, n_char):
+
+        for i in range(len(self.data)):
+            corp = self.data[i]['corpus']
+            labs = self.data[i]['labels']
+
+            corp_num = []
+            for c in corp:
+                corp_num.append(DICT.get(c))
+            self.data[i]['corpus'] = corp_num
+
+        # get all sizes from the sequences with training data
+        train_l_d = {}
+        train_l_labels = {}
+        for seq in self.data:
+            # corpus
+            l = len(seq['corpus'])
+            if l not in train_l_d: train_l_d[l] = []
+            train_l_d[l].append(seq['corpus'])
+
+            # labels
+            l1 = len(seq['bion'])
+            if l1 not in train_l_labels: train_l_labels[l1] = []
+            train_l_labels[l1].append(seq['bion'])
+
+
+        sizes = list(train_l_d.keys())
+
+        # Set up the keras model
+        input = Input(shape=(None,), dtype='int32')
+        el = Embedding(n_char + 1, 200, name="embed")(input)
+        bl1 = Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
+                            name="lstm1")(el)
+        bl2 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
+                            name="lstm2")(bl1)
+        bl3 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
+                            name="lstm3")(bl2)
+        model = TimeDistributed(Dense(50, activation="relu"))(bl3)  # a dense layer as suggested by neuralNer
+        crf = CRF(self.lab_len)  # CRF layer
+        out = crf(model)  # output
+
+        model = Model(input, out)
+        model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
+        model.summary()
+
+        # OK, start actually training
+        for epoch in range(10):
+            print("Epoch", epoch, "start at", datetime.now(), file=sys.stderr)
+            # Train in batches of different sizes - randomize the order of sizes
+            # Except for the first few epochs - train on the smallest examples first
+            if epoch >3 : random.shuffle(sizes)  # For unknown reasons we can't train on a single token (i.e. character)
+            for size in sizes:
+                if size == 1: continue
+                batch = train_l_d[size]
+                labs = train_l_labels[size]
+                for i in range(len(batch)):
+                    print(len(batch[i]) == len(labs[i]))
+                    print("\n\n")
+
+
+
+            print("Trained at", datetime.now(), file=sys.stderr)
+
+
     def main(self):
         reader = seq_to_char.CorpusReader()
         self.data = reader.read()
@@ -103,14 +170,11 @@ class CharModel:
         # convert BIO tags to numbers
         self.convert_tags()
 
-        # get sequences and labels separated
-        sequences, labels = self.get_seq(DICT)
-
         # model with padding on the sequences
-        # self.model_with_padding(sequences, labels, n_char)
+        # self.model_with_padding(DICT, n_char)
 
         # model without padding - similar to chemlistem
-        
+        self.model_no_padding(DICT, n_char)
 
 
 
