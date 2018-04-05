@@ -137,15 +137,15 @@ class CharModel:
                             name="lstm3")(bl2)
         dl = TimeDistributed(Dense(self.num_labs, activation="softmax"), name="output")(bl3)
         model = Model(inputs=il, outputs=dl)
-        model.compile(loss='categorical_crossentropy', optimizer='rmsprop')
+        model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['acc'])
         model.summary()
 
         # OK, start actually training
-        for epoch in range(10):
-            print("Epoch", epoch, "start at", datetime.now(), file=sys.stderr)
+        for epoch in range(5):
+            print("Epoch", epoch, "start at", datetime.now())
             # Train in batches of different sizes - randomize the order of sizes
             # Except for the first few epochs - train on the smallest examples first
-            if epoch > 3:
+            if epoch > 2:
                 random.shuffle(sizes)  # For unknown reasons we can't train on a single token (i.e. character)
             for size in sizes:
                 if size == 1: continue
@@ -157,7 +157,7 @@ class CharModel:
 
                 # This trains in mini-batches
                 model.fit(tx, ty, verbose=0, epochs=1)
-            print("Trained at", datetime.now(), file=sys.stderr)
+            print("Trained at", datetime.now())
 
     def seqs_distribution(self):
         dimensions = {}
