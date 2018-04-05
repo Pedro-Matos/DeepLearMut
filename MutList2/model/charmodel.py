@@ -15,22 +15,26 @@ import time
 import random
 import collections
 import matplotlib.pyplot as plt
-
+import click
 
 
 class CharModel:
-    def __init__(self):
+    def __init__(self, model):
         self.maxSeqLength = -1  # Maximum length of sentence
         self.w_arit_mean = -1
         self.dic_corpus_char = defaultdict(list)
         self.dic_chars = defaultdict(list)
         self.data = []
         self.alphabet = []
-        # self.labdict = {'O': 1, 'B': 2, 'I': 3, 'X': 0}
-        # self.lab_len = 4
+        self.labdict = {'O': 1, 'B': 2, 'I': 3, 'X': 0}
+        self.lab_len = 4
         self.dict_labs_nopad = {'O': 0, 'B': 1, 'I': 2}
         self.num_labs = 3
         self.epochsN = 5
+
+        self.model = model  # choose between padding or no padding
+                            # 1 for padding
+                            # 0 for no padding
 
     def creat_alphabet(self):
         # every character in corpus will count
@@ -64,14 +68,15 @@ class CharModel:
             # pass labels to its numeric value
             labs_num = []
             for l in labs:
-                labs_num.append(self.dict_labs_nopad.get(l))
+                labs_num.append(self.labdict.get(l))
             labels.append(labs_num)
 
         return sequences, labels
 
     def model_with_padding(self, DICT, n_char):
 
-        # get sequences and labels separated
+        # get sequences and labels separated.
+        # convert BIO tags to numbers
         sequences, labels = self.get_seq(DICT)
 
         X = pad_sequences(sequences, maxlen=self.maxSeqLength, padding='post')
@@ -90,7 +95,7 @@ class CharModel:
                             name="lstm2")(bl1)
         bl3 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
                             name="lstm3")(bl2)
-        model = TimeDistributed(Dense(50, activation="relu"))(bl3)  # a dense layer as suggested by neuralNer
+        model = TimeDistributed(Dense(50, activation="relu"))(bl3)
         crf = CRF(self.lab_len)  # CRF layer
         out = crf(model)  # output
 
@@ -100,6 +105,9 @@ class CharModel:
         history = model.fit(tr_x, np.array(tr_y), batch_size=32, epochs=self.epochsN, validation_split=0.1, verbose=1)
 
     def model_no_padding(self, DICT, n_char):
+
+        # convert BIO tags to numbers
+        self.convert_tags()
 
         for i in range(len(self.data)):
             corp = self.data[i]['corpus']
@@ -191,28 +199,27 @@ class CharModel:
         reader = seq_to_char.CorpusReader()
         self.data = reader.read()
         self.creat_alphabet()
-        self.maxSeqLength = reader.get_length(self.data)
-
-        # sequences length distribution
-        # self.w_arit_mean = self.seqs_distribution()
-
 
         # we associate every character in our alphabet to a number:
         # e.g. b => 1 d => 3 etc.
-        DICT = {ch: ix+1 for ix, ch in enumerate(self.alphabet)}
+        DICT = {ch: ix + 1 for ix, ch in enumerate(self.alphabet)}
         n_char = len(self.alphabet)
 
-        # convert BIO tags to numbers
-        self.convert_tags()
+        # model with padding
+        if self.model == 1:
+            # biggest sequence
+            self.maxSeqLength = reader.get_length(self.data)
+            # sequences length distribution
+            self.w_arit_mean = self.seqs_distribution()
 
-        # model with padding on the sequences
-        # self.model_with_padding(DICT, n_char)
+            # model with padding on the sequences
+            self.model_with_padding(DICT, n_char)
 
         # model without padding - similar to chemlistem
-        self.model_no_padding(DICT, n_char)
-
+        else:
+            self.model_no_padding(DICT, n_char)
 
 
 if __name__ == "__main__":
-    model = CharModel()
+    model = CharModel(0)
     model.main()
