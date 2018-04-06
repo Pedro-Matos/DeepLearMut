@@ -1,18 +1,9 @@
 from collections import defaultdict
 
-
-
-
-
-'''
-for i in dic_chars:
-    print(dic_chars.get(i)[0])
-'''
-
 class CorpusReader:
     def __init__(self):
-        self.corpus_path = '../corpus_char/train_small.txt'
-        self.labels_file = '../corpus_char/mut_small.tsv'
+        self.corpus_path = ''
+        self.labels_file = ''
 
         self.ids = []
         self.dic_corpus = {}
@@ -214,13 +205,41 @@ class CorpusReader:
 
         return max
 
-    def read(self):
-        self.readcorpus()
-        self.readlabels()
-        self.create_char_seqs()
-        self.split_seqs()
-        merged = self.merged_data()
-        return merged
+    def reset_var(self):
+        self.corpus_path = ''
+        self.labels_file = ''
+
+        self.ids = []
+        self.dic_corpus = {}
+        self.dic_labels = defaultdict(list)
+        self.dic_labels_chars = defaultdict(list)
+        self.dic_corpus_char = defaultdict(list)
+
+    def read(self, train):
+        self.reset_var()
+        # train dataset
+        if train == 1:
+            self.corpus_path = '../corpus_char/train_answers.txt'
+            self.labels_file = '../corpus_char/train_abstracts.tsv'
+
+            self.readcorpus()
+            self.readlabels()
+            self.create_char_seqs()
+            self.split_seqs()
+            merged = self.merged_data()
+            return merged
+
+        # test dataset
+        else:
+            self.corpus_path = '../corpus_char/test_answers.txt'
+            self.labels_file = '../corpus_char/test_abstracts.tsv'
+
+            self.readcorpus()
+            self.readlabels()
+            self.create_char_seqs()
+            self.split_seqs()
+            merged = self.merged_data()
+            return merged
 
 
 if __name__ == "__main__":

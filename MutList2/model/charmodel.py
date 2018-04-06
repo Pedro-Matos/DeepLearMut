@@ -24,7 +24,8 @@ class CharModel:
         self.w_arit_mean = -1
         self.dic_corpus_char = defaultdict(list)
         self.dic_chars = defaultdict(list)
-        self.data = []
+        self.train_data = []
+        self.test_data = []
         self.alphabet = []
         self.labdict = {'O': 1, 'B': 2, 'I': 3, 'X': 0}
         self.lab_len = 4
@@ -40,25 +41,25 @@ class CharModel:
         # every character in corpus will count
 
         chars = []
-        for idx in range(len(self.data)):
-            corp = self.data[idx]['corpus']
+        for idx in range(len(self.train_data)):
+            corp = self.train_data[idx]['corpus']
             [chars.append(c) for c in corp]
 
         self.alphabet = list(set(chars))
 
     def convert_tags(self):
-        for idx in range(len(self.data)):
-            labs = self.data[idx]['labels']
+        for idx in range(len(self.train_data)):
+            labs = self.train_data[idx]['labels']
             # convert SOBIE tags to numbers
-            self.data[idx]["bion"] = [self.dict_labs_nopad[i] for i in labs]
+            self.train_data[idx]["bion"] = [self.dict_labs_nopad[i] for i in labs]
 
     def get_seq(self, DICT):
         sequences = []
         labels = []
 
-        for i in range(len(self.data)):
-            corp = self.data[i]['corpus']
-            labs = self.data[i]['labels']
+        for i in range(len(self.train_data)):
+            corp = self.train_data[i]['corpus']
+            labs = self.train_data[i]['labels']
 
             corp_num = []
             for c in corp:
@@ -95,7 +96,7 @@ class CharModel:
                             name="lstm2")(bl1)
         bl3 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
                             name="lstm3")(bl2)
-        model = TimeDistributed(Dense(50, activation="relu"))(bl3)
+        model = TimeDistributed(Dense(self.lab_len, activation="relu"))(bl3)
         crf = CRF(self.lab_len)  # CRF layer
         out = crf(model)  # output
 
@@ -109,19 +110,19 @@ class CharModel:
         # convert BIO tags to numbers
         self.convert_tags()
 
-        for i in range(len(self.data)):
-            corp = self.data[i]['corpus']
-            labs = self.data[i]['labels']
+        for i in range(len(self.train_data)):
+            corp = self.train_data[i]['corpus']
+            labs = self.train_data[i]['labels']
 
             corp_num = []
             for c in corp:
                 corp_num.append(DICT.get(c))
-            self.data[i]['corpus'] = corp_num
+            self.train_data[i]['corpus'] = corp_num
 
         # get all sizes from the sequences with training data
         train_l_d = {}
         train_l_labels = {}
-        for seq in self.data:
+        for seq in self.train_data:
             # corpus
             l = len(seq['corpus'])
             if l not in train_l_d: train_l_d[l] = []
@@ -143,9 +144,12 @@ class CharModel:
                             name="lstm2")(bl1)
         bl3 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
                             name="lstm3")(bl2)
-        dl = TimeDistributed(Dense(self.num_labs, activation="softmax"), name="output")(bl3)
-        model = Model(inputs=il, outputs=dl)
-        model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['acc'])
+        model = TimeDistributed(Dense(self.num_labs, activation="relu"))(bl3)
+        crf = CRF(self.num_labs)  # CRF layer
+        out = crf(model)  # output
+
+        model = Model(il, out)
+        model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
         model.summary()
 
         # OK, start actually training
@@ -164,12 +168,12 @@ class CharModel:
                 ty = np.array([[to_categorical(i, num_classes=self.num_labs) for i in seq] for seq in labs])
 
                 # This trains in mini-batches
-                model.fit(tx, ty, verbose=0, epochs=1)
+                model.fit(tx, ty, verbose=1, epochs=1)
             print("Trained at", datetime.now())
 
     def seqs_distribution(self):
         dimensions = {}
-        for seq in self.data:
+        for seq in self.train_data:
             l = len(seq['corpus'])
 
             if l not in dimensions: dimensions[l] = 0
@@ -197,7 +201,9 @@ class CharModel:
 
     def main(self):
         reader = seq_to_char.CorpusReader()
-        self.data = reader.read()
+        self.train_data = reader.read(1)
+        self.test_data = reader.read(0)
+
         self.creat_alphabet()
 
         # we associate every character in our alphabet to a number:
@@ -208,7 +214,7 @@ class CharModel:
         # model with padding
         if self.model == 1:
             # biggest sequence
-            self.maxSeqLength = reader.get_length(self.data)
+            self.maxSeqLength = reader.get_length(self.train_data)
             # sequences length distribution
             self.w_arit_mean = self.seqs_distribution()
 
