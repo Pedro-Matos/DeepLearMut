@@ -31,7 +31,7 @@ class CharModel:
         self.lab_len = 4
         self.dict_labs_nopad = {'O': 0, 'B': 1, 'I': 2}
         self.num_labs = 3
-        self.epochsN = 5
+        self.epochsN = 7
 
         self.model = model  # choose between padding or no padding
                             # 1 for padding
@@ -80,15 +80,16 @@ class CharModel:
         # convert BIO tags to numbers
         sequences, labels = self.get_seq(DICT)
 
-        X = pad_sequences(sequences, maxlen=self.maxSeqLength, padding='post')
-        y_pad = pad_sequences(labels, maxlen=self.maxSeqLength, padding='post')
+        # X = pad_sequences(sequences, maxlen=self.maxSeqLength, padding='post')
+        # y_pad = pad_sequences(labels, maxlen=self.maxSeqLength, padding='post')
+
+        X = pad_sequences(sequences, maxlen=self.w_arit_mean, padding='post', truncating='post')
+        y_pad = pad_sequences(labels, maxlen=self.w_arit_mean, padding='post', truncating='post')
 
         y = [to_categorical(i, num_classes=self.lab_len) for i in y_pad]
 
-        tr_x, te_x, tr_y, te_y = train_test_split(X, y, test_size=0.3)
-
         # Set up the keras model
-        input = Input(shape=(self.maxSeqLength,))
+        input = Input(shape=(self.w_arit_mean,))
         el = Embedding(n_char + 1, 200, name="embed")(input)
         bl1 = Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
                             name="lstm1")(el)
@@ -103,7 +104,9 @@ class CharModel:
         model = Model(input, out)
         model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
         model.summary()
-        history = model.fit(tr_x, np.array(tr_y), batch_size=32, epochs=self.epochsN, validation_split=0.1, verbose=1)
+        history = model.fit(X, np.array(y), batch_size=32, epochs=self.epochsN, validation_split=0.1, verbose=0)
+        #model.save("char_with_padd_WEIGHTED ARITHMETIC MEAN.h5")
+        # Evaluate
 
     def model_no_padding(self, DICT, n_char):
 
@@ -216,7 +219,7 @@ class CharModel:
             # biggest sequence
             self.maxSeqLength = reader.get_length(self.train_data)
             # sequences length distribution
-            self.w_arit_mean = self.seqs_distribution()
+            self.w_arit_mean = int(self.seqs_distribution())
 
             # model with padding on the sequences
             self.model_with_padding(DICT, n_char)
@@ -227,5 +230,5 @@ class CharModel:
 
 
 if __name__ == "__main__":
-    model = CharModel(0)
+    model = CharModel(1)
     model.main()
