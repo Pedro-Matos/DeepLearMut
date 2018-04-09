@@ -5,8 +5,10 @@ from keras.preprocessing.sequence import pad_sequences
 from sklearn.model_selection import train_test_split
 from keras.preprocessing.text import Tokenizer
 from keras.utils import to_categorical
-from keras.models import Model, Input
-from keras.layers import LSTM, Embedding, Dense, TimeDistributed, Dropout, Bidirectional
+from keras.models import Model, Input, Sequential
+from keras.models import load_model
+from keras_contrib.utils import save_load_utils
+from keras.layers import LSTM, Embedding, Dense, TimeDistributed, Dropout, Bidirectional, Masking
 from keras_contrib.layers import CRF
 from collections import defaultdict
 from datetime import datetime
@@ -16,6 +18,17 @@ import random
 import collections
 import matplotlib.pyplot as plt
 import click
+
+from keras.layers import Dense, Masking
+from keras.layers import Dropout
+from keras.layers import Bidirectional
+from keras.layers import LSTM
+from keras.models import Sequential
+from keras.optimizers import Adam
+from keras_contrib.layers import CRF
+
+from keras.models import load_model
+from keras_contrib.layers.advanced_activations import PELU
 
 
 class CharModel:
@@ -31,7 +44,7 @@ class CharModel:
         self.lab_len = 4
         self.dict_labs_nopad = {'O': 0, 'B': 1, 'I': 2}
         self.num_labs = 3
-        self.epochsN = 7
+        self.epochsN = 8
 
         self.model = model  # choose between padding or no padding
                             # 1 for padding
@@ -80,16 +93,19 @@ class CharModel:
         # convert BIO tags to numbers
         sequences, labels = self.get_seq(DICT)
 
-        # X = pad_sequences(sequences, maxlen=self.maxSeqLength, padding='post')
-        # y_pad = pad_sequences(labels, maxlen=self.maxSeqLength, padding='post')
+        #sequences = sequences[:100]
+        #labels = labels[:100]
 
-        X = pad_sequences(sequences, maxlen=self.w_arit_mean, padding='post', truncating='post')
-        y_pad = pad_sequences(labels, maxlen=self.w_arit_mean, padding='post', truncating='post')
+        X = pad_sequences(sequences, maxlen=self.maxSeqLength, padding='post')
+        y_pad = pad_sequences(labels, maxlen=self.maxSeqLength, padding='post')
+
+        #X = pad_sequences(sequences, maxlen=self.w_arit_mean, padding='post', truncating='post')
+        #y_pad = pad_sequences(labels, maxlen=self.w_arit_mean, padding='post', truncating='post')
 
         y = [to_categorical(i, num_classes=self.lab_len) for i in y_pad]
 
         # Set up the keras model
-        input = Input(shape=(self.w_arit_mean,))
+        input = Input(shape=(self.maxSeqLength,))
         el = Embedding(n_char + 1, 200, name="embed")(input)
         bl1 = Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
                             name="lstm1")(el)
@@ -105,8 +121,8 @@ class CharModel:
         model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
         model.summary()
         history = model.fit(X, np.array(y), batch_size=32, epochs=self.epochsN, validation_split=0.1, verbose=0)
-        #model.save("char_with_padd_WEIGHTED ARITHMETIC MEAN.h5")
-        # Evaluate
+
+        save_load_utils.save_all_weights(model, 'char_max_seq.h5')
 
     def model_no_padding(self, DICT, n_char):
 
@@ -156,7 +172,7 @@ class CharModel:
         model.summary()
 
         # OK, start actually training
-        for epoch in range(5):
+        for epoch in range(self.epochsN):
             print("Epoch", epoch, "start at", datetime.now())
             # Train in batches of different sizes - randomize the order of sizes
             # Except for the first few epochs - train on the smallest examples first
@@ -171,8 +187,10 @@ class CharModel:
                 ty = np.array([[to_categorical(i, num_classes=self.num_labs) for i in seq] for seq in labs])
 
                 # This trains in mini-batches
-                model.fit(tx, ty, verbose=1, epochs=1)
+                model.fit(tx, ty, verbose=0, epochs=1)
             print("Trained at", datetime.now())
+
+        save_load_utils.save_all_weights(model, 'char_no_pad.h5')
 
     def seqs_distribution(self):
         dimensions = {}
@@ -188,7 +206,7 @@ class CharModel:
 
         df = pd.DataFrame.from_dict(od, orient='index')
         df.plot(kind='bar', figsize=(50,10))
-        plt.show()
+        #plt.show()
 
         # WEIGHTED ARITHMETIC MEAN
         numerator = 0
@@ -225,10 +243,40 @@ class CharModel:
             self.model_with_padding(DICT, n_char)
 
         # model without padding - similar to chemlistem
-        else:
+        elif self.model == 0:
             self.model_no_padding(DICT, n_char)
 
+        elif self.model == 2:
+            # biggest sequence
+            self.maxSeqLength = reader.get_length(self.train_data)
+            # sequences length distribution
+            self.w_arit_mean = int(self.seqs_distribution())
+
+            model.load_model(n_char)
+
+    def load_model(self, n_char):
+        char_max_seq_path = 'char_max_seq.h5'
+
+        #save_load_utils.load_all_weights(model, char_max_seq_path)
+        # Set up the keras model
+        input = Input(shape=(self.w_arit_mean,))
+        el = Embedding(n_char + 1, 200, name="embed")(input)
+        bl1 = Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
+                            name="lstm1")(el)
+        bl2 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
+                            name="lstm2")(bl1)
+        bl3 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
+                            name="lstm3")(bl2)
+        model = TimeDistributed(Dense(self.lab_len, activation="relu"))(bl3)
+        crf = CRF(self.lab_len)  # CRF layer
+        out = crf(model)  # output
+
+        model = Model(input, out)
+        model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
+
+        save_load_utils.load_all_weights(model, 'ex.h5')
 
 if __name__ == "__main__":
-    model = CharModel(1)
+    model = CharModel(0)
     model.main()
+
