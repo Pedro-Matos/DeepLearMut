@@ -128,9 +128,14 @@ class CharModel:
         # convert BIO tags to numbers
         self.convert_tags()
 
+        '''
+        check if bion contains 'B' and 'I'
+        for i in self.train_data:
+            print(i['bion'])
+        '''
+
         for i in range(len(self.train_data)):
             corp = self.train_data[i]['corpus']
-            labs = self.train_data[i]['labels']
 
             corp_num = []
             for c in corp:
@@ -150,7 +155,21 @@ class CharModel:
             l1 = len(seq['bion'])
             if l1 not in train_l_labels: train_l_labels[l1] = []
             train_l_labels[l1].append(seq['bion'])
+        '''
+        for i in range(len(train_l_d[110])):
+            print(len(train_l_d[110][i]) == len(train_l_labels[110][i]))
+            print()
+        print("\n\n")
 
+        for i in range(len(train_l_d[31])):
+            print(len(train_l_d[31][i]) == len(train_l_labels[31][i]))
+        print("\n\n")
+
+        for i in range(len(train_l_d[103])):
+            print(len(train_l_d[103][i]) == len(train_l_labels[103][i]))
+        print("\n\n")
+        exit()
+        '''
         sizes = list(train_l_d.keys())
 
         # Set up the keras model
@@ -174,19 +193,20 @@ class CharModel:
         for epoch in range(self.epochsN):
             print("Epoch", epoch, "start at", datetime.now())
             # Train in batches of different sizes - randomize the order of sizes
-            # Except for the first few epochs - train on the smallest examples first
+            # Except for the first few epochs
             if epoch > 2:
-                random.shuffle(sizes)  # For unknown reasons we can't train on a single token (i.e. character)
+                random.shuffle(sizes)
             for size in sizes:
-                if size == 1: continue
                 batch = train_l_d[size]
                 labs = train_l_labels[size]
 
                 tx = np.array([seq for seq in batch])
-                ty = np.array([[to_categorical(i, num_classes=self.num_labs) for i in seq] for seq in labs])
+                y = [seq for seq in labs]
+
+                ty = [to_categorical(i, num_classes=self.num_labs) for i in y]
 
                 # This trains in mini-batches
-                model.fit(tx, ty, verbose=0, epochs=1)
+                model.fit(tx, np.array(ty), verbose=0, epochs=1)
             print("Trained at", datetime.now())
 
         save_load_utils.save_all_weights(model, 'char_no_pad.h5')
@@ -297,8 +317,8 @@ class CharModel:
                 p = model.predict(np.array([test[i]]))
                 p = np.argmax(p, axis=-1)
                 true = test_labels[i]
-                print(len(p[0]))
-                print(len(true))
+                print(p[0])
+                #print(true)
                 print("\n\n")
 
         elif type == "max_seq":
