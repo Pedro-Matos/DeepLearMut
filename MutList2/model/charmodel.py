@@ -17,7 +17,6 @@ import time
 import random
 import collections
 import matplotlib.pyplot as plt
-import click
 
 from keras.layers import Dense, Masking
 from keras.layers import Dropout
@@ -252,31 +251,155 @@ class CharModel:
             # sequences length distribution
             self.w_arit_mean = int(self.seqs_distribution())
 
-            model.load_model(n_char)
+            model.load_model(DICT, n_char, "normal")
 
-    def load_model(self, n_char):
-        char_max_seq_path = 'char_max_seq.h5'
+    def load_model(self, DICT, n_char, type):
 
-        #save_load_utils.load_all_weights(model, char_max_seq_path)
-        # Set up the keras model
-        input = Input(shape=(self.w_arit_mean,))
-        el = Embedding(n_char + 1, 200, name="embed")(input)
-        bl1 = Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
-                            name="lstm1")(el)
-        bl2 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
-                            name="lstm2")(bl1)
-        bl3 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
-                            name="lstm3")(bl2)
-        model = TimeDistributed(Dense(self.lab_len, activation="relu"))(bl3)
-        crf = CRF(self.lab_len)  # CRF layer
-        out = crf(model)  # output
+        if type == "normal":
+            # Load Character Model without padding
+            il = Input(shape=(None,), dtype='int32')
+            el = Embedding(n_char + 1, 200, name="embed")(il)
+            bl1 = Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
+                                name="lstm1")(el)
+            bl2 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
+                                name="lstm2")(bl1)
+            bl3 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5), merge_mode="concat",
+                                name="lstm3")(bl2)
+            model = TimeDistributed(Dense(self.num_labs, activation="relu"))(bl3)
+            crf = CRF(self.num_labs)  # CRF layer
+            out = crf(model)  # output
+            model = Model(il, out)
+            model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
 
-        model = Model(input, out)
-        model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
+            save_load_utils.load_all_weights(model, 'char_no_pad.h5')
 
-        save_load_utils.load_all_weights(model, 'ex.h5')
+
+            # get sequences and labels separated.
+            # convert BIO tags to numbers
+            test = []
+            test_labels = []
+            for i in range(len(self.test_data)):
+                corp = self.test_data[i]['corpus']
+                labs = self.test_data[i]['labels']
+
+                corp_num = []
+                for c in corp:
+                    corp_num.append(DICT.get(c))
+                test.append(corp_num)
+
+                # pass labels to its numeric value
+                labs_num = []
+                for l in labs:
+                    labs_num.append(self.dict_labs_nopad.get(l))
+                test_labels.append(labs_num)
+
+            for i in range(len(test)):
+                p = model.predict(np.array([test[i]]))
+                p = np.argmax(p, axis=-1)
+                true = test_labels[i]
+                print(len(p[0]))
+                print(len(true))
+                print("\n\n")
+
+        elif type == "max_seq":
+            # Set up the keras model
+            input = Input(shape=(self.maxSeqLength,))
+            el = Embedding(n_char + 1, 200, name="embed")(input)
+            bl1 = Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                                merge_mode="concat",
+                                name="lstm1")(el)
+            bl2 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                                merge_mode="concat",
+                                name="lstm2")(bl1)
+            bl3 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                                merge_mode="concat",
+                                name="lstm3")(bl2)
+            model = TimeDistributed(Dense(self.lab_len, activation="relu"))(bl3)
+            crf = CRF(self.lab_len)  # CRF layer
+            out = crf(model)  # output
+
+            model = Model(input, out)
+            model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
+            save_load_utils.load_all_weights(model, 'char_max_seq.h5')
+
+            test = []
+            test_labels = []
+            for i in range(len(self.test_data)):
+                corp = self.test_data[i]['corpus']
+                labs = self.test_data[i]['labels']
+
+                corp_num = []
+                for c in corp:
+                    corp_num.append(DICT.get(c))
+                test.append(corp_num)
+
+                # pass labels to its numeric value
+                labs_num = []
+                for l in labs:
+                    labs_num.append(self.labdict.get(l))
+                test_labels.append(labs_num)
+
+            test = pad_sequences(test, maxlen=self.maxSeqLength, padding='post')
+
+            for i in range(len(test)):
+                p = model.predict(np.array([test[i]]))
+                p = np.argmax(p, axis=-1)
+                true = test_labels[i]
+                print(p[0])
+                #print(true)
+                print("\n\n")
+
+        elif type == "w_arit_mean":
+            # Set up the keras model
+            input = Input(shape=(self.w_arit_mean,))
+            el = Embedding(n_char + 1, 200, name="embed")(input)
+            bl1 = Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                                merge_mode="concat",
+                                name="lstm1")(el)
+            bl2 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                                merge_mode="concat",
+                                name="lstm2")(bl1)
+            bl3 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                                merge_mode="concat",
+                                name="lstm3")(bl2)
+            model = TimeDistributed(Dense(self.lab_len, activation="relu"))(bl3)
+            crf = CRF(self.lab_len)  # CRF layer
+            out = crf(model)  # output
+
+            model = Model(input, out)
+            model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
+
+            save_load_utils.load_all_weights(model, 'char_w_arit_mean.h5')
+
+            test = []
+            test_labels = []
+            for i in range(len(self.test_data)):
+                corp = self.test_data[i]['corpus']
+                labs = self.test_data[i]['labels']
+
+                corp_num = []
+                for c in corp:
+                    corp_num.append(DICT.get(c))
+                test.append(corp_num)
+
+                # pass labels to its numeric value
+                labs_num = []
+                for l in labs:
+                    labs_num.append(self.labdict.get(l))
+                test_labels.append(labs_num)
+
+            test = pad_sequences(test, maxlen=self.w_arit_mean, padding='post', truncating='post')
+
+            for i in range(len(test)):
+                p = model.predict(np.array([test[i]]))
+                p = np.argmax(p, axis=-1)
+                true = test_labels[i]
+                print(p[0])
+                #print(true)
+                print("\n\n")
+
 
 if __name__ == "__main__":
-    model = CharModel(0)
+    model = CharModel(2)
     model.main()
 
