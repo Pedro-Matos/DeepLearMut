@@ -1,9 +1,0 @@
-Missense mutations in disease genes: a Bayesian approach to evaluate causality.
-The problem of interpreting missense mutations of disease-causing genes is an increasingly important one.
-Because these point mutations result in alteration of only a single amino acid of the protein product, it is often unclear whether this change alone is sufficient to cause disease.
-We propose a Bayesian approach that  utilizes genetic information on affected relatives in families ascertained through known missense-mutation carriers.
-This method is useful in evaluating known disease genes for common disease phenotypes, such as breast cancer or colorectal cancer.
-The posterior probability that a missense mutation is disease  causing is conditioned on the relationship of the relatives to the proband, the population frequency of the mutation, and the phenocopy rate of the disease.
-The  approach is demonstrated in two cancer data sets: BRCA1 R841W and APC I1307K.
-In  both examples, this method helps establish that these mutations are likely to be  disease causing, with Bayes factors in favor of causality of 5.09 and 66.97, respectively, and posterior probabilities of .836 and .985.
-We also develop a simple approximation for rare alleles and consider the case of unknown penetrance and allele frequency..

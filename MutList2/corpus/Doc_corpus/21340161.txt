@@ -1,9 +1,0 @@
-Monoallelic thyroid peroxidase gene mutation in a patient with congenital hypothyroidism with total iodide organification defect.
-The aim of this study was to identify the genetic defect of a patient with dyshormonogenetic congenital hypothyroidisms (CH) with total iodide organification defect (TIOD).
-A male child diagnosed with CH during neonatal screening.
-Laboratory tests confirmed the permanent and severe CH with TIOD (99% perchlorate release).
-The coding sequence of TPO, DUOX2, and DUOXA2 genes and 2957 base pairs (bp) of the TPO promoter were sequenced.
-Molecular analysis of patient's DNA identified the heterozygous duplication GGCC (c.1186_1187insGGCC) in exon 8 of the TPO gene.
-No additional mutation was detected either in the TPO gene, TPO promoter, DUOX2 or DUOXA2 genes.
-We have described a patient with a clear TIOD causing severe goitrous CH due to a monoallelic TPO mutation.
-A plausible explanation for the association between an autosomal recessive disorder with a single TPO-mutated allele is the presence of monoallelic TPO expression..

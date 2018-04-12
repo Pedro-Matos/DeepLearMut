@@ -271,7 +271,7 @@ class CharModel:
             # sequences length distribution
             self.w_arit_mean = int(self.seqs_distribution())
 
-            model.load_model(DICT, n_char, "normal")
+            model.load_model(DICT, n_char, "max_seq")
 
     def load_model(self, DICT, n_char, type):
 
@@ -313,13 +313,12 @@ class CharModel:
                     labs_num.append(self.dict_labs_nopad.get(l))
                 test_labels.append(labs_num)
 
+
             for i in range(len(test)):
                 p = model.predict(np.array([test[i]]))
                 p = np.argmax(p, axis=-1)
                 true = test_labels[i]
-                print(p[0])
-                #print(true)
-                print("\n\n")
+
 
         elif type == "max_seq":
             # Set up the keras model
@@ -361,13 +360,36 @@ class CharModel:
 
             test = pad_sequences(test, maxlen=self.maxSeqLength, padding='post')
 
+            total = 0
+            right = 0
+            total_b = 0
+            right_b = 0
+            total_i = 0
+            right_i = 0
             for i in range(len(test)):
                 p = model.predict(np.array([test[i]]))
                 p = np.argmax(p, axis=-1)
                 true = test_labels[i]
-                print(p[0])
-                #print(true)
-                print("\n\n")
+
+                for i in range(len(true)):
+                    total = total + 1
+                    if p[0][i] == true[i]:
+                        right = right + 1
+                    if true[i] == 2:
+                        total_b = total_b + 1
+                        if p[0][i] == true[i]:
+                            right_b = right_b + 1
+                    if true[i] == 3:
+                        total_i = total_i + 1
+                        if p[0][i] == true[i]:
+                            right_i = right_i + 1
+
+            acc = (right / total) * 100
+            acc_b = (right_b / total_b) * 100
+            acc_i = (right_i / total_i) * 100
+            print(acc)
+            print(acc_b)
+            print(acc_i)
 
         elif type == "w_arit_mean":
             # Set up the keras model
@@ -409,17 +431,30 @@ class CharModel:
                 test_labels.append(labs_num)
 
             test = pad_sequences(test, maxlen=self.w_arit_mean, padding='post', truncating='post')
+            test_labels = pad_sequences(test_labels, maxlen=self.w_arit_mean, padding='post', truncating='post')
 
+
+            total = 0
+            right = 0
             for i in range(len(test)):
                 p = model.predict(np.array([test[i]]))
                 p = np.argmax(p, axis=-1)
                 true = test_labels[i]
-                print(p[0])
-                #print(true)
-                print("\n\n")
 
+                for i in range(len(p[0])):
+                    total = total + 1
+                    if p[0][i] == true[i]:
+                        right = right + 1
+
+            acc = (right / total) * 100
+            print(acc)
 
 if __name__ == "__main__":
     model = CharModel(2)
     model.main()
+
+# acc no padding = 96.69053530027288
+# acc com padding em max sequencia = 96.44432589917726
+# acc com padding em w_arit = 95.72553897180764
+
 

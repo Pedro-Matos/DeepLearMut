@@ -1,9 +1,0 @@
-The molecular basis for the thalassaemias in Sri Lanka.
-The beta-globin gene mutations and the alpha-globin genes of 620 patients with the phenotype of severe to moderate thalassaemia from seven centres in Sri Lanka were analysed.
-Twenty-four beta-globin gene mutations were identified, three accounting for 84.5% of the 1240 alleles studied: IVSI-5 (G-->C) 56.2%; IVSI-1 (G-->A) 15.2%; and haemoglobin E (codon (CD)26 GAG-->GAA) 13.1%.
-Three new mutations were found; a 13-bp deletion removing the last nucleotide in CD6 to CD10 inclusively, IVSI-129 (A-->C) in the consensus splice site, and a frame shift, CD55 (-A).
-The allele frequency of alpha+ thalassaemia was 6.5% and 1.1% for -alpha3.7 and -alpha4.2 deletions respectively.
-Non-deletion alpha-thalassaemia was not observed.
-Triplicate or quadruplicate alpha-globin genes were unusually common.
-In 1.5% of cases it was impossible to identify beta-thalassaemia alleles, but in Kurunegala detailed family studies led to an explanation for the severe thalassaemia phenotype in every case, including a previously unreported instance of homozygosity for a quadruplicated alpha-globin gene together with beta-thalassaemia trait.
-These findings have implications for the control of thalassaemia in high-frequency populations with complex ethnic histories..

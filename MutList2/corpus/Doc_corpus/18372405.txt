@@ -1,7 +1,0 @@
-Mutation analysis and characterization of HSD17B2 sequence variants in breast cancer cases from French Canadian families with high risk of breast and ovarian cancer.
-Estrogen exposure is a risk factor for breast cancer.
-Given that HSD17B2 gene encodes an enzyme that catalyses estradiol inactivation, it appears as a good candidate breast cancer susceptibility gene.
-This study was designed to screen for HSD17B2 germline mutations potentially involved in breast cancer predisposition.
-Our re-sequencing analysis did not identify any deleterious germline mutations, and therefore mutations in HSD17B2 do not explain the clustering of breast cancer cases in non-BRCA1/2 high-risk French Canadian families.
-However, six sequence variants were identified, including two novel missense variants.
-Expression assays revealed that p.Ala111Asp and p.Gly160Arg did not alter the catalytic properties of 17beta-hydroxysteroid dehydrogenase type 2 enzyme, although p.Ala111Asp appears to affect protein stability resulting in significant decreases in the protein levels, providing valuable information on structure-function relationship..

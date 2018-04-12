@@ -1,8 +1,0 @@
-19144556	Identification of newly polymorphic intron 40 markers of the von Willebrand factor gene in a Japanese population.	We investigated a region of repetitive DNA located in intron 40 of the von Willebrand factor (vWF) gene (nucleotides [nt] 1639-2404; i.e., F8VWF). We identified 13 alleles and 33 genotypes in 49 unrelated Japanese individuals. The heterozygosity of the region was 0.897. Direct sequence analyses revealed five single-base substitutions, one tetranucleotide (TTAT) insertion, and seven short tandem repeats (STRs) in the intron; four of the STRs and one single-base substitution had been reported previously. The four new base substitutions we identified were 1849T>A, 2122C>T, 2180C>T, and 2192C>T. The novel TTAT tetranucleotide was inserted between nt 2057 and 2058. The three newly identified STRs were 1978(TATC)(1-2), 2193(ATCT)(5-13), and 2234(TGTA)(5-7). The five single-base substitutions and the TTAT insertion were identified only with 3' downstream of vWA allele 14.
-19144556	673	680	1849T>A	DNA	SUB	T|1849|A
-19144556	682	689	2122C>T	DNA	SUB	C|2122|T
-19144556	691	698	2180C>T	DNA	SUB	C|2180|T
-19144556	704	711	2192C>T	DNA	SUB	C|2192|T
-19144556	820	835	1978(TATC)(1-2)	DNA	DUP	|1978|TATC|1-2
-19144556	837	853	2193(ATCT)(5-13)	DNA	DUP	|2193|ATCT|5-13
-19144556	859	874	2234(TGTA)(5-7)	DNA	DUP	|2234|TGTA|5-7

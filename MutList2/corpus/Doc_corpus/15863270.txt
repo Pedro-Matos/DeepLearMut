@@ -1,6 +1,0 @@
-The missense mutations in the candidate prostate cancer gene ELAC2 do not alter enzymatic properties of its product.
-The candidate prostate cancer gene ELAC2 encodes tRNA 3' processing endoribonuclease (tRNase ZL).
-We produced recombinant human tRNase ZL's, which contain one to three amino-acid substitutions from three missense mutations (Ser217Leu, Ala541Thr, and Arg781His) that are associated with the occurrence of  prostate cancer.
-These enzymes were examined for the pre-tRNA cleavage and the RNase 65 activity.
-We did not observe any differences in enzymatic properties such as Km and k(cat) values between the wild-type tRNase ZL and its variants.
-We conclude that there is no causality between the enzymatic properties of tRNase ZL and the prostate cancer..

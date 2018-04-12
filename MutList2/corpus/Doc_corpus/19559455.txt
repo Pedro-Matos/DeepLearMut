@@ -1,9 +1,0 @@
-A combination of defective DNA and protective host factors are found in a set of HIV-1 ancestral LTNPs.
-We studied viral evolution in three HIV-1 ancestral patients from a group of LTNPs; although some minor sequences showing viral evolution were detected in all patients, the extremely low viral evolution of their viruses was shown by the phylogenetic analysis of the env sequences.
-Complete nucleotide sequencing of viral DNA showed the major presence of deletions.
-In two patients, deletions of 1088 and 228 nucleotides mapped to 5' LTR-gag region; in the other, a 247 nucleotide deletion was positioned in pol gene up to the vif ORF.
-These deleted genomes became dominant during follow up.
-Patient's viruses displayed 13 common mutations in conserved residues, from the 5' LTR to the nef gene.
-These mutations provided evidence of a common origin.
-Regarding host characteristics, one patient had HLA B2705/B5801; another B1402/B5701; whereas a third showed B3901/B4402 and was Delta32-CCR5 heterozygous.
-These HIV controllers presented a combination of deleted viral genomes and host protective factors..

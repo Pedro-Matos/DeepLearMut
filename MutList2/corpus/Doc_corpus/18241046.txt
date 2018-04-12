@@ -1,8 +1,0 @@
-A human phospholamban promoter polymorphism in dilated cardiomyopathy alters transcriptional regulation by glucocorticoids.
-Depressed calcium handling by the sarcoplasmic reticulum (SR) Ca-ATPase and its regulator phospholamban (PLN) is a key characteristic of human and experimental heart failure.
-Accumulating evidence indicates that increases in the relative levels of PLN to Ca-ATPase in failing hearts and resulting inhibition of Ca sequestration during diastole, impairs contractility.
-Here, we identified a genetic variant in the PLN promoter region, which increases its expression and may serve as a genetic modifier in dilated cardiomyopathy (DCM).
-The variant AF177763.1:g.203A>C (at position -36 bp relative to the PLN transcriptional start site) was found only in the heterozygous form in 1 out of 296 normal subjects and in 22 out of 381 cardiomyopathy patients (heart failure at age of 18-44 years, ejection fraction=22+/-9%).
-In vitro analysis, using luciferase as a reporter gene in rat neonatal cardiomyocytes, indicated that the PLN-variant increased activity by 24% compared to the wild type.
-Furthermore, the g.203A>C substitution altered the specific sequence of the steroid receptor for the glucocorticoid nuclear receptor (GR)/transcription factor in the PLN promoter, resulting in enhanced binding to the mutated DNA site.
-These findings suggest that the g.203A>C genetic variant in the human PLN promoter may contribute to depressed contractility and accelerate functional deterioration in heart failure..

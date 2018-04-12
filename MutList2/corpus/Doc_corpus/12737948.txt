@@ -1,7 +1,0 @@
-A "null allele" mutation is responsible for erythropoietic protoporphyria in an Israeli patient who underwent liver transplantation: relationships among biochemical, clinical, and genetic parameters.
-Mutations in the human ferrochelatase gene (FECH) are the primary cause of the inborn disorder erythropoietic protoporphyria (EPP).
-While the majority of the EPP patients exhibit only photosensitivity, a small percentage of patients (approximately 2%) develop liver complications in addition to the cutaneous symptoms.
-In this study, the FECH gene of an Israeli EPP patient who suffered from EPP-related liver complications was sequenced.
-A splicing defect IVS10+1, g-->t, which is known to cause the deletion of exon 10, was identified in the index patient as well as in his symptomatic older sister and his asymptomatic mother.
-Like the other 12 known FECH mutations associated with liver complications, IVS10+1, g-->t is a "null-allele" mutation.
-Although the two siblings with overt EPP share an identical genotype with respect to both the mutation on one FECH allele and three intragenic single nucleotide polymorphisms, -251G, IVS1-23T, and IVS3-48C on the other allele, the sister of the index patient has so far shown no signs of liver involvement, suggesting that additional factors might account for the liver disease in EPP..

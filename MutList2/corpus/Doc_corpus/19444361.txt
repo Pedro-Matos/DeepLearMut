@@ -1,9 +1,0 @@
-COL3A1 2209G>A is a predictor of pelvic organ prolapse.
-INTRODUCTION AND HYPOTHESIS: A familial tendency has been demonstrated in the etiology of pelvic organ prolapse (POP), but the specific genetic defects have not been identified.
-Type III collagen is an important factor in the repair of connective tissue, and gene polymorphisms may impair the tensile strength.
-We hypothesized that polymorphisms in the alpha I chain of the type III collagen protein-encoding gene (COL3A1) pose women at risk for POP.
-METHODS: In this case-control study, the prevalence of type III collagen polymorphisms was compared in women with and without signs and symptoms of POP.
-RESULTS: Two hundred and two POP patients and 102 normal parous controls were included.
-A homozygous single-nucleotide substitution in the coding region of type III collagen (COL3A1 2209G>A, rs1800255) was identified in 27 (13%) POP patients and three (3%) controls (odds ratio, 5.0; 95% confidence interval, 1.4-17.1).
-CONCLUSIONS: The probability of POP was higher in women with COL3A1 2209G>A.
-This polymorphism showed to be a relevant risk factor for POP..

@@ -1,8 +1,0 @@
-Cowden's disease: clinical and molecular genetic findings in a patient with a novel PTEN germline mutation.
-We report a 54-year-old woman with Cowden's disease (CD) who was found to carry a novel germline mutation in the PTEN gene.
-The mutation (c.334C-->G) introduced a  splice donor site within exon 5 that caused the expression of an aberrant transcript lacking 159 nucleotides corresponding to codons 112-164.
-Clinically, the patient showed multiple benign hamartomatous lesions of the skin, papillomatosis of the lips and oral mucosa, polyposis coli and bilateral fibrocystic disease of the breast.
-In addition, she developed different types of  malignant neoplasms, including bilateral carcinomas of the breast and malignant melanomas of the skin.
-Molecular genetic analysis of a benign skin hamartoma and  an invasive ductal breast carcinoma revealed loss of heterozygosity (LOH) at microsatellite markers on chromosome 10 in the carcinoma but not in the hamartoma.
-The breast carcinoma additionally carried a somatic TP53 point mutation (c.466C-->G; R156G) that was associated with LOH on 17p and nuclear p53  protein accumulation.
-Taken together, our findings indicate that benign hamartomas in CD may develop without loss of the second (wild-type) PTEN allele,  whereas the pathogenesis of malignant tumours, such as breast carcinomas, appears to require the complete inactivation of Pten as well as further alterations such  as the loss of p53-dependent growth control..

@@ -1,9 +1,0 @@
-19476483	The role of the CCR5 Delta32 polymorphism in abdominal aortic aneurysms.	BACKGROUND: C-C chemokine receptor 5 (CCR5) is involved in the regulation of the inflammatory response. Abdominal aortic aneurysms (AAA) may arise as the result of a chronic inflammatory process which is influenced by genetic predisposition. The CCR5 gene is associated with a 32 base pair deletion (the Delta32 polymorphism). The aim of this study was to investigate the role of the CCR5 Delta32 polymorphism in the development of AAA. METHODS: A case-control study was conducted including 285 patients with AAA and 273 control subjects. A blood sample was taken from each individual and DNA was extracted. CCR5 genotype was determined using the polymerase chain reaction (PCR). Flow cytometry was used to investigate the biological activity of the Delta32 polymorphism. RESULTS: There was no significant difference between the AAA and the control group in relation to the Delta32 allele frequency (AAA group 10%, control group = 12%, P = 0.82, chi-squared analysis). Genotype analysis revealed no significant difference between the groups (AAA vs. controls, wild-type homozygotes = 82% vs. 77%, heterozygotes = 16% vs. 21%, vs. Delta32 homozygotes = 2% and 2%, respectively, P = 0.33, chi-squared analysis). The polymorphism was shown to be biologically active with the number of Delta32 alleles correlating with cell expression of ccr5 as detected with flow cytometry (P < or = 0.05). CONCLUSION: This study demonstrates that the ccr5 Delta32 is a biologically active genetic polymorphism; however, there is no association between this polymorphism and AAA.
-19476483	1203	1210	Delta32	DNA	DEL	||32
-19476483	1355	1362	Delta32	DNA	DEL	||32
-19476483	1511	1518	Delta32	DNA	DEL	||32
-19476483	21	28	Delta32	DNA	DEL	||32
-19476483	377	384	Delta32	DNA	DEL	||32
-19476483	462	469	Delta32	DNA	DEL	||32
-19476483	823	830	Delta32	DNA	DEL	||32
-19476483	947	954	Delta32	DNA	DEL	||32

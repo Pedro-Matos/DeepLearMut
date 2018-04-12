@@ -1,9 +1,0 @@
-Haplotypes extending across ACE are associated with Alzheimer's disease.
-Numerous genes have been implicated in Alzheimer's disease (AD), but, with the exception of a demonstrated association with the epsilon 4 allele of APOE, findings have not been consistently replicated across populations.
-One of the most widely studied is the gene for angiotensin I converting enzyme (ACE ).
-A meta-analysis of published data on a common Alu indel polymorphism in ACE was performed which indicated highly significant association of the insertion allele with AD (OR 1.30; 95% CI 1.19 - 1.41; P=4 x 10(-8)).
-To further explore the influence of ACE on AD, several single-nucleotide polymorphisms (SNPs) were genotyped in five independent populations represented by over 3100 individuals.
-Analyses based upon single markers and haplotypes revealed strong evidence of association in case-control models and also in a model examining the influence of variation in ACE upon cerebrospinal fluid levels of amyloid beta42 peptide (Abeta42).
-The most significant evidence for association with AD was found for an SNP, A-262T, located in the ACE promoter (OR 1.64; 95% CI 1.33 -1.94; P=2 x 10(-5)).
-Estimates of population attributable risk for the common allele of this SNP suggest that it, or an allele in tight linkage disequilibrium (LD) with it, may contribute to as much as 35% of AD in the general population.
-Results support a model whereby decreased ACE activity may influence AD susceptibility by a mechanism involving beta-amyloid metabolism..

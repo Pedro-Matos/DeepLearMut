@@ -1,9 +1,0 @@
-Histamine-N-methyl transferase polymorphism and risk for migraine.
-BACKGROUND/OBJECTIVES: Histamine has been implicated in the pathogenesis of migraine.
-In the CNS, histamine is almost exclusively metabolized by the polymorphic enzyme histamine N-methyltransferase (HNMT).
-The HNMT gene (chromosome 2q22.1), shows diverse single nucleotide polymorphisms.
-One of these, located in exon 4 C314T, causes the amino acid substitution Thr105Ile, related to decreased enzyme activity.
-The aim of this study was to investigate the possible association between HNMT polymorphism and the risk for migraine.
-METHODS: We studied the frequency of the HNMT genotypes and allelic variantes in 197 patients with migraine and 245 healthy controls using a PCR-RLFP method.
-RESULTS: The frequencies of the HNMT genotypes and allelic variants did not differ significantly between migraine patients and controls, and were unrelated with the age of onset of migraine attacks, gender, personal history of allergic diseases, family history of migraine, or presence of aura.
-CONCLUSION: The results of the present study suggest that HNMT polymorphism in not related with the risk for migraine..

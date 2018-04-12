@@ -1,8 +1,0 @@
-Risk of cancer by ATM missense mutations in the general population.
-PURPOSE: Truncating and missense mutations in the ATM gene, which cause insufficient DNA damage surveillance, allow damaged cells to proceed into mitosis, which eventually results in increased cancer susceptibility.
-We tested the hypotheses that ATM Ser49Cys and ATM Ser707Pro heterozygosity increase the risk of cancer overall, of breast cancer, and of 26 other cancer subtypes in the  general population.
-PATIENTS AND METHODS: We genotyped 10,324 individuals from the Danish general population who were observed prospectively for 36 years, during which 2,056 developed cancer.
-RESULTS: Multifactorially adjusted hazard ratios for ATM Ser49Cys heterozygotes versus noncarriers were 1.2 (95% CI, 0.9 to 1.5) for cancer overall, 0.8 (95% CI, 0.3 to 2.0) for breast cancer, 4.8 (95% CI, 2.2 to 11) for melanoma, 2.3 (95% CI, 1.1 to 5.0) for prostate cancer, and 3.4 (95% CI, 1.1 to 11) for cancer of the oral cavity/pharynx.
-Multifactorially adjusted hazard ratios for ATM Ser707Pro heterozygotes versus noncarriers were 0.8 (95% CI, 0.6 to 1.2) for cancer overall, 0.6 (95% CI, 0.2 to 1.6) for breast cancer, 10 (95% CI, 1.1 to 93) for thyroid/other endocrine tumors, and 2.7 (95% CI, 1.0 to 7.6) for cancer of corpus uteri.
-CONCLUSION: ATM missense mutations do not increase the risk of cancer overall or  of breast cancer in the general population; however, we observed in exploratory analyses that ATM missense mutations may be associated with an increased risk of  other cancer subtypes.
-As we did multiple comparisons, some of these findings could represent chance findings rather than real phenomena..
