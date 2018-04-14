@@ -2,14 +2,16 @@ from collections import defaultdict
 
 class CorpusReader:
     def __init__(self):
-        self.corpus_path = ''
-        self.labels_file = ''
+        self.corpus_path = '../corpus_char/tmVarCorpus/treated/train_data.txt'
+        self.labels_file = '../corpus_char/tmVarCorpus/treated/train_labels.tsv'
 
         self.ids = []
         self.dic_corpus = {}
         self.dic_labels = defaultdict(list)
         self.dic_labels_chars = defaultdict(list)
         self.dic_corpus_char = defaultdict(list)
+
+        self.num_char = 0
 
     def readcorpus(self):
         with open(self.corpus_path) as reading:
@@ -54,6 +56,7 @@ class CorpusReader:
                 corp = corp_split[0] + " " + corp_split[1]
 
                 c = list(corp)
+                self.num_char = self.num_char + len(c)
                 class_chars = []
 
                 # inicializar com tudo a 'O'
@@ -75,7 +78,7 @@ class CorpusReader:
 
                             class_chars = arr1
 
-                        elif counter > start and counter <= end:
+                        elif counter > start and counter < end:
                             #class_chars.insert(counter, 'I')
 
                             arr1 = class_chars[:counter]
@@ -84,10 +87,15 @@ class CorpusReader:
 
                             class_chars = arr1
 
-                    # print(result[i])
-                    # print(corp[start:end])
-                    # print(c[start:end])
-                    # print(class_chars[start:end])
+
+                    #print(result[i])
+                    #print(corp[start:end])
+                    #print(c[start:end])
+                    #print(class_chars[start:end])
+                #print("all: ")
+                #print(class_chars)
+                #print("----")
+
 
                 #print(len(c) == len(class_chars))
                 self.dic_labels_chars[id].append(class_chars)
@@ -100,6 +108,7 @@ class CorpusReader:
 
                 # corpus não tem exemplos de mutações, é tudo characteres a '0'
                 c = list(corp)
+                self.num_char = self.num_char + len(c)
                 class_chars = []
 
                 for count in range(len(c)):
@@ -116,7 +125,10 @@ class CorpusReader:
             corp_split = corp_split[1:]
             corp = corp_split[0] + " " + corp_split[1]
             c = list(corp)
-            #print("corpus:" + str(len(c)))
+
+            #size_doc = len(c)
+            #print(corp)
+
             # divide by sentences
             dot = False
             split_off = []
@@ -128,8 +140,12 @@ class CorpusReader:
                 elif char == " " and dot:
                     dot = False
                     split_off.append(count)
+                else:
+                    dot = False
+
                 count = count + 1
 
+            #print(split_off)
             # splitting the character labels
             class_chars = self.dic_labels_chars[id][0]
             #print("labels: " + str(len(class_chars)))
@@ -179,20 +195,29 @@ class CorpusReader:
             for chars in all_chars:
                 self.dic_corpus_char[id].append(chars)
 
+            #print(size_doc)
+            # size_doc_struct = 0
+            # for i in range(len(self.dic_corpus_char[id])):
+            #     size_doc_struct = size_doc_struct + len(self.dic_corpus_char[id][i])
+            #
+
     def merged_data(self):
         merged = []
         count = 0
 
+        #print(self.num_char)
+        all_char = 0
         for id in self.dic_corpus_char:
             corpus = self.dic_corpus_char[id]
             labels = self.dic_labels_chars[id]
             for idx in range(len(corpus)):
                 if len(corpus[idx]) == len(labels[idx]):
                     new_dic = {"corpus":corpus[idx], "labels":labels[idx]}
+                    all_char = all_char + len(corpus[idx])
                     merged.append(new_dic)
 
                 count = count + 1
-
+        #print(all_char)
         return merged
 
     def get_length(self, data):
@@ -205,41 +230,15 @@ class CorpusReader:
 
         return max
 
-    def reset_var(self):
-        self.corpus_path = ''
-        self.labels_file = ''
+    def read(self):
+        # get train dataset
 
-        self.ids = []
-        self.dic_corpus = {}
-        self.dic_labels = defaultdict(list)
-        self.dic_labels_chars = defaultdict(list)
-        self.dic_corpus_char = defaultdict(list)
-
-    def read(self, train):
-        self.reset_var()
-        # train dataset
-        if train == 1:
-            self.corpus_path = '../corpus_char/train_answers.txt'
-            self.labels_file = '../corpus_char/train_abstracts.tsv'
-
-            self.readcorpus()
-            self.readlabels()
-            self.create_char_seqs()
-            self.split_seqs()
-            merged = self.merged_data()
-            return merged
-
-        # test dataset
-        else:
-            self.corpus_path = '../corpus_char/test_answers.txt'
-            self.labels_file = '../corpus_char/test_abstracts.tsv'
-
-            self.readcorpus()
-            self.readlabels()
-            self.create_char_seqs()
-            self.split_seqs()
-            merged = self.merged_data()
-            return merged
+        self.readcorpus()
+        self.readlabels()
+        self.create_char_seqs()
+        self.split_seqs()
+        merged = self.merged_data()
+        return merged
 
 
 if __name__ == "__main__":
