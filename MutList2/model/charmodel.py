@@ -1,4 +1,5 @@
 from utils import seq_to_char
+from utils import test_to_char
 import numpy as np
 import pandas as pd
 from keras.preprocessing.sequence import pad_sequences
@@ -37,7 +38,7 @@ class CharModel:
         self.dic_corpus_char = defaultdict(list)
         self.dic_chars = defaultdict(list)
         self.train_data = []
-        self.test_data = []
+        self.test_data = defaultdict(list)
         self.alphabet = ['~', 'Z', 'l', 'u', 'c', '\n', '2', 'k', '{', ']', 'R', '%', '+', '.', 'B', 'g', '\\', 'a', 'p', '3', ';',
                          '}', 'r', 'Q', '>', 'J', 'V', 'D', '-', '0', 'i', 'F', '6', '#', 'x', '<', 'Y', ',', "'", 'y', '[', 'U', '8',
                          'd', 'T', '"', ' ', 'O', 't', 'N', 'C', 'K', 'o', 'X', '1', 'f', 'v', 'h', 'n', '9', '4', 'G', 'L', 'e', 'A',
@@ -235,6 +236,7 @@ class CharModel:
 
     def main(self):
         reader = seq_to_char.CorpusReader()
+        test_data = test_to_char.DataToTest()
         self.train_data = reader.read()
 
         # we associate every character in our alphabet to a number:
@@ -257,12 +259,13 @@ class CharModel:
             self.model_no_padding(DICT, n_char)
 
         elif self.model == 2:
+            self.test_data = test_data.get_testset()
             # biggest sequence
             self.maxSeqLength = reader.get_length(self.train_data)
             # sequences length distribution
             self.w_arit_mean = int(self.seqs_distribution())
 
-            model.load_model(DICT, n_char, "max_seq")
+            model.load_model(DICT, n_char, "normal")
 
     def load_model(self, DICT, n_char, type):
 
@@ -287,28 +290,17 @@ class CharModel:
 
             # get sequences and labels separated.
             # convert BIO tags to numbers
-            test = []
-            test_labels = []
-            for i in range(len(self.test_data)):
-                corp = self.test_data[i]['corpus']
-                labs = self.test_data[i]['labels']
+            keys = self.test_data.keys()
+            
+            for key in keys:
+                # getting all sequences from a document/corpus
+                seqs = self.test_data.get(key)
+                for seq in seqs:
+                    # pass to the number representation
+                    char_seq = []
+                    for c in seq:
+                        char_seq.append(DICT.get(c))
 
-                corp_num = []
-                for c in corp:
-                    corp_num.append(DICT.get(c))
-                test.append(corp_num)
-
-                # pass labels to its numeric value
-                labs_num = []
-                for l in labs:
-                    labs_num.append(self.dict_labs_nopad.get(l))
-                test_labels.append(labs_num)
-
-
-            for i in range(len(test)):
-                p = model.predict(np.array([test[i]]))
-                p = np.argmax(p, axis=-1)
-                true = test_labels[i]
 
 
         elif type == "max_seq":
@@ -441,6 +433,6 @@ class CharModel:
             print(acc)
 
 if __name__ == "__main__":
-    model = CharModel(0)
+    model = CharModel(2)
     model.main()
 
