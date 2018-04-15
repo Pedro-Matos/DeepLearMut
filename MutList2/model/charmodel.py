@@ -38,7 +38,11 @@ class CharModel:
         self.dic_chars = defaultdict(list)
         self.train_data = []
         self.test_data = []
-        self.alphabet = []
+        self.alphabet = ['~', 'Z', 'l', 'u', 'c', '\n', '2', 'k', '{', ']', 'R', '%', '+', '.', 'B', 'g', '\\', 'a', 'p', '3', ';',
+                         '}', 'r', 'Q', '>', 'J', 'V', 'D', '-', '0', 'i', 'F', '6', '#', 'x', '<', 'Y', ',', "'", 'y', '[', 'U', '8',
+                         'd', 'T', '"', ' ', 'O', 't', 'N', 'C', 'K', 'o', 'X', '1', 'f', 'v', 'h', 'n', '9', '4', 'G', 'L', 'e', 'A',
+                         '=', '(', 'E', 'S', 'P', 'W', ')', '?', 'm', '/', 'j', '5', 's', 'I', ':', 'w', 'b', 'q', '7', 'M', '_', 'z', 'H', '*']
+
         self.labdict = {'O': 1, 'B': 2, 'I': 3, 'X': 0}
         self.lab_len = 4
         self.dict_labs_nopad = {'O': 0, 'B': 1, 'I': 2}
@@ -48,16 +52,6 @@ class CharModel:
         self.model = model  # choose between padding or no padding
                             # 1 for padding
                             # 0 for no padding
-
-    def creat_alphabet(self):
-        # every character in corpus will count
-
-        chars = []
-        for idx in range(len(self.train_data)):
-            corp = self.train_data[idx]['corpus']
-            [chars.append(c) for c in corp]
-
-        self.alphabet = list(set(chars))
 
     def convert_tags(self):
         for idx in range(len(self.train_data)):
@@ -241,10 +235,7 @@ class CharModel:
 
     def main(self):
         reader = seq_to_char.CorpusReader()
-        self.train_data = reader.read(1)
-        self.test_data = reader.read(0)
-
-        self.creat_alphabet()
+        self.train_data = reader.read()
 
         # we associate every character in our alphabet to a number:
         # e.g. b => 1 d => 3 etc.
@@ -450,11 +441,6 @@ class CharModel:
             print(acc)
 
 if __name__ == "__main__":
-    model = CharModel(2)
+    model = CharModel(0)
     model.main()
-
-# acc no padding = 96.69053530027288
-# acc com padding em max sequencia = 96.44432589917726
-# acc com padding em w_arit = 95.72553897180764
-
 
