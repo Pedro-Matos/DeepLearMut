@@ -3,7 +3,7 @@ from collections import defaultdict
 
 class DataToTest:
     def __init__(self):
-        self.path_corpus = '../corpus_char/tmVarCorpus/treated/test_data/'
+        self.path_corpus = '../corpus_char/tmVarCorpus/treated/test_data2/'
         self.dic_corpus = defaultdict(list)
 
     def split_seqs(self, sentence):

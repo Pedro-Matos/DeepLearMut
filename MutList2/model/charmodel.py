@@ -48,7 +48,7 @@ class CharModel:
         self.lab_len = 4
         self.dict_labs_nopad = {'O': 0, 'B': 1, 'I': 2}
         self.num_labs = 3
-        self.epochsN = 8
+        self.epochsN = 10
 
         self.model = model  # choose between padding or no padding
                             # 1 for padding
@@ -150,6 +150,7 @@ class CharModel:
             l1 = len(seq['bion'])
             if l1 not in train_l_labels: train_l_labels[l1] = []
             train_l_labels[l1].append(seq['bion'])
+
         '''
         for i in range(len(train_l_d[110])):
             print(len(train_l_d[110][i]) == len(train_l_labels[110][i]))
@@ -204,7 +205,7 @@ class CharModel:
                 model.fit(tx, np.array(ty), verbose=0, epochs=1)
             print("Trained at", datetime.now())
 
-        save_load_utils.save_all_weights(model, 'char_no_pad.h5')
+        save_load_utils.save_all_weights(model, 'char_all_sizes.h5')
 
     def seqs_distribution(self):
         dimensions = {}
@@ -285,7 +286,7 @@ class CharModel:
             model = Model(il, out)
             model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
 
-            save_load_utils.load_all_weights(model, 'char_no_pad.h5')
+            save_load_utils.load_all_weights(model, 'char_all_sizes.h5')
 
 
             # get sequences and labels separated.
@@ -295,11 +296,44 @@ class CharModel:
             for key in keys:
                 # getting all sequences from a document/corpus
                 seqs = self.test_data.get(key)
+                #print(key)
+                abstract = open("silver/"+key+".a1", 'w')
+                position = 0
+                offsets = defaultdict(list)
+                counter = 0
                 for seq in seqs:
                     # pass to the number representation
                     char_seq = []
                     for c in seq:
                         char_seq.append(DICT.get(c))
+
+                    p = model.predict(np.array([char_seq]))
+                    p = np.argmax(p, axis=-1)
+
+                    # check if there are any mutations identified
+                    B = False
+                    for idx in p[0]:
+                        if idx == 1:
+                            B = True
+                            offsets[counter].append(position)
+                            abstract.write(str(position) + "\n")
+                        elif idx == 2 and B:
+                            offsets[counter].append(position)
+                            abstract.write(str(position) + "\n")
+                        elif idx == 0 and B:
+                            B = False
+                            abstract.write("." + "\n")
+                            counter = counter + 1
+                        else:
+                            B = False
+
+                        position = position + 1
+
+                    #print(p[0])
+
+                print(offsets)
+
+
 
 
 
