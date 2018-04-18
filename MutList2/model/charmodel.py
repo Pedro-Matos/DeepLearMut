@@ -39,6 +39,7 @@ class CharModel:
         self.dic_chars = defaultdict(list)
         self.train_data = []
         self.test_data = defaultdict(list)
+        self.test_all = defaultdict(list)
         self.alphabet = ['~', 'Z', 'l', 'u', 'c', '\n', '2', 'k', '{', ']', 'R', '%', '+', '.', 'B', 'g', '\\', 'a', 'p', '3', ';',
                          '}', 'r', 'Q', '>', 'J', 'V', 'D', '-', '0', 'i', 'F', '6', '#', 'x', '<', 'Y', ',', "'", 'y', '[', 'U', '8',
                          'd', 'T', '"', ' ', 'O', 't', 'N', 'C', 'K', 'o', 'X', '1', 'f', 'v', 'h', 'n', '9', '4', 'G', 'L', 'e', 'A',
@@ -260,7 +261,7 @@ class CharModel:
             self.model_no_padding(DICT, n_char)
 
         elif self.model == 2:
-            self.test_data = test_data.get_testset()
+            self.test_data, self.test_all = test_data.get_testset()
             # biggest sequence
             self.maxSeqLength = reader.get_length(self.train_data)
             # sequences length distribution
@@ -316,13 +317,10 @@ class CharModel:
                         if idx == 1:
                             B = True
                             offsets[counter].append(position)
-                            abstract.write(str(position) + "\n")
                         elif idx == 2 and B:
                             offsets[counter].append(position)
-                            abstract.write(str(position) + "\n")
                         elif idx == 0 and B:
                             B = False
-                            abstract.write("." + "\n")
                             counter = counter + 1
                         else:
                             B = False
@@ -331,7 +329,23 @@ class CharModel:
 
                     #print(p[0])
 
-                print(offsets)
+                corpus = self.test_all.get(key)
+                all_words = []
+                for i in offsets:
+                    chunk = ""
+                    word = offsets.get(i)
+                    for c in word:
+                        chunk = chunk + corpus[c]
+                    all_words.append(chunk)
+
+                for i in range(len(all_words)):
+                    abstract.write(str(offsets.get(i)[0]) + "\t")
+                    abstract.write(str(offsets.get(i)[-1]) + "\t")
+                    abstract.write(str(all_words[i]) + "\n")
+
+
+
+
 
 
 

@@ -3,8 +3,9 @@ from collections import defaultdict
 
 class DataToTest:
     def __init__(self):
-        self.path_corpus = '../corpus_char/tmVarCorpus/treated/test_data2/'
+        self.path_corpus = '../corpus_char/tmVarCorpus/treated/test_data/'
         self.dic_corpus = defaultdict(list)
+        self.dic_all = defaultdict(list)
 
     def split_seqs(self, sentence):
             seqs = []
@@ -65,11 +66,11 @@ class DataToTest:
                 id = id.split(".")[0]
                 seqs = self.split_seqs(sentences)
                 self.dic_corpus[id] = seqs
-
+                self.dic_all[id] = sentences
 
     def get_testset(self):
         self.get_content()
-        return self.dic_corpus
+        return self.dic_corpus, self.dic_all
 
 if __name__ == "__main__":
     reader = DataToTest()
