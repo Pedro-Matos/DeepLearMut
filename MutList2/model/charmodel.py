@@ -49,7 +49,7 @@ class CharModel:
         self.lab_len = 4
         self.dict_labs_nopad = {'O': 0, 'B': 1, 'I': 2}
         self.num_labs = 3
-        self.epochsN = 10
+        self.epochsN = 20
 
         self.model = model  # choose between padding or no padding
                             # 1 for padding
@@ -117,7 +117,7 @@ class CharModel:
         model.summary()
         history = model.fit(X, np.array(y), batch_size=32, epochs=self.epochsN, verbose=0)
 
-        save_load_utils.save_all_weights(model, 'char_max_seq_10epochs.h5')
+        save_load_utils.save_all_weights(model, '../trained/char_max_seq_20epochs.h5')
 
     def model_no_padding(self, DICT, n_char):
 
