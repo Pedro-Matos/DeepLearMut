@@ -115,9 +115,9 @@ class CharModel:
         model = Model(input, out)
         model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
         model.summary()
-        history = model.fit(X, np.array(y), batch_size=32, epochs=self.epochsN, validation_split=0.1, verbose=0)
+        history = model.fit(X, np.array(y), batch_size=32, epochs=self.epochsN, verbose=0)
 
-        save_load_utils.save_all_weights(model, 'char_max_seq.h5')
+        save_load_utils.save_all_weights(model, 'char_max_seq_10epochs.h5')
 
     def model_no_padding(self, DICT, n_char):
 
@@ -206,7 +206,7 @@ class CharModel:
                 model.fit(tx, np.array(ty), verbose=0, epochs=1)
             print("Trained at", datetime.now())
 
-        save_load_utils.save_all_weights(model, 'char_all_sizes.h5')
+        save_load_utils.save_all_weights(model, 'char_all_sizes_20epochs.h5')
 
     def seqs_distribution(self):
         dimensions = {}
@@ -298,7 +298,7 @@ class CharModel:
                 # getting all sequences from a document/corpus
                 seqs = self.test_data.get(key)
                 #print(key)
-                abstract = open("silver/"+key+".a1", 'w')
+                abstract = open("silver_minibatch_10epoch/"+key+".a1", 'w')
                 position = 0
                 offsets = defaultdict(list)
                 counter = 0
@@ -340,15 +340,8 @@ class CharModel:
 
                 for i in range(len(all_words)):
                     abstract.write(str(offsets.get(i)[0]) + "\t")
-                    abstract.write(str(offsets.get(i)[-1]) + "\t")
+                    abstract.write(str(offsets.get(i)[-1]+1) + "\t")
                     abstract.write(str(all_words[i]) + "\n")
-
-
-
-
-
-
-
 
 
         elif type == "max_seq":
@@ -481,6 +474,6 @@ class CharModel:
             print(acc)
 
 if __name__ == "__main__":
-    model = CharModel(2)
+    model = CharModel(1)
     model.main()
 
