@@ -287,7 +287,7 @@ class CharModel:
             model = Model(il, out)
             model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
 
-            save_load_utils.load_all_weights(model, '../trained/char_minibatch_10epochs.h5')
+            save_load_utils.load_all_weights(model, '../test_trained/minibatch_24.h5')
 
 
             # get sequences and labels separated.
@@ -298,7 +298,7 @@ class CharModel:
                 # getting all sequences from a document/corpus
                 seqs = self.test_data.get(key)
                 #print(key)
-                abstract = open("silver_minibatch_10epoch/"+key+".a1", 'w')
+                abstract = open("silvers_batches/25/"+key+".a1", 'w')
                 position = 0
                 offsets = defaultdict(list)
                 counter = 0
@@ -343,7 +343,6 @@ class CharModel:
                     abstract.write(str(offsets.get(i)[-1]+1) + "\t")
                     abstract.write(str(all_words[i]) + "\n")
 
-
         elif type == "max_seq":
             # Set up the keras model
             input = Input(shape=(self.maxSeqLength,))
@@ -363,57 +362,64 @@ class CharModel:
 
             model = Model(input, out)
             model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
-            save_load_utils.load_all_weights(model, 'char_max_seq.h5')
+            save_load_utils.load_all_weights(model, '../trained/char_max_seq_20epochs.h5')
 
-            test = []
-            test_labels = []
-            for i in range(len(self.test_data)):
-                corp = self.test_data[i]['corpus']
-                labs = self.test_data[i]['labels']
 
-                corp_num = []
-                for c in corp:
-                    corp_num.append(DICT.get(c))
-                test.append(corp_num)
+            # get sequences and labels separated.
+            # convert BIO tags to numbers
+            keys = self.test_data.keys()
 
-                # pass labels to its numeric value
-                labs_num = []
-                for l in labs:
-                    labs_num.append(self.labdict.get(l))
-                test_labels.append(labs_num)
+            for key in keys:
+                # getting all sequences from a document/corpus
+                seqs = self.test_data.get(key)
+                # print(key)
+                abstract = open("silver_maxseq_20epoch/" + key + ".a1", 'w')
+                position = 0
+                offsets = defaultdict(list)
+                counter = 0
+                for seq in seqs:
+                    # pass to the number representation
+                    char_seq = []
+                    for c in seq:
+                        char_seq.append(DICT.get(c))
 
-            test = pad_sequences(test, maxlen=self.maxSeqLength, padding='post')
+                    real_len = len(char_seq)
+                    char_seq = np.array([char_seq])
+                    test = pad_sequences(char_seq, maxlen=self.maxSeqLength, padding='post', truncating='post')
+                    p = model.predict(test)
+                    p = np.argmax(p, axis=-1)
 
-            total = 0
-            right = 0
-            total_b = 0
-            right_b = 0
-            total_i = 0
-            right_i = 0
-            for i in range(len(test)):
-                p = model.predict(np.array([test[i]]))
-                p = np.argmax(p, axis=-1)
-                true = test_labels[i]
+                    # check if there are any mutations identified
+                    B = False
+                    for idx in p[0][:real_len]:
+                        if idx == 2:
+                            B = True
+                            offsets[counter].append(position)
+                        elif idx == 3 and B:
+                            offsets[counter].append(position)
+                        elif idx == 1 and B:
+                            B = False
+                            counter = counter + 1
+                        else:
+                            B = False
 
-                for i in range(len(true)):
-                    total = total + 1
-                    if p[0][i] == true[i]:
-                        right = right + 1
-                    if true[i] == 2:
-                        total_b = total_b + 1
-                        if p[0][i] == true[i]:
-                            right_b = right_b + 1
-                    if true[i] == 3:
-                        total_i = total_i + 1
-                        if p[0][i] == true[i]:
-                            right_i = right_i + 1
+                        position = position + 1
 
-            acc = (right / total) * 100
-            acc_b = (right_b / total_b) * 100
-            acc_i = (right_i / total_i) * 100
-            print(acc)
-            print(acc_b)
-            print(acc_i)
+                    # print(p[0])
+
+                corpus = self.test_all.get(key)
+                all_words = []
+                for i in offsets:
+                    chunk = ""
+                    word = offsets.get(i)
+                    for c in word:
+                        chunk = chunk + corpus[c]
+                    all_words.append(chunk)
+
+                for i in range(len(all_words)):
+                    abstract.write(str(offsets.get(i)[0]) + "\t")
+                    abstract.write(str(offsets.get(i)[-1] + 1) + "\t")
+                    abstract.write(str(all_words[i]) + "\n")
 
         elif type == "w_arit_mean":
             # Set up the keras model

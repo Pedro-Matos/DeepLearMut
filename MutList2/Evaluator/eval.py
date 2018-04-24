@@ -12,7 +12,7 @@ class Eval:
         path_gold = '../corpus_char/tmVarCorpus/treated/test_a1_gold/'
         docs = glob.glob(path_gold + "*.a1")
 
-        path_silver = '../model/silver_minibatch_10epoch/'
+        path_silver = '../model/silver_minibatch_20epoch/'
         docs_silver = glob.glob(path_silver + "*.a1")
 
         if len(docs) != len(docs_silver):
@@ -76,13 +76,17 @@ class Eval:
             fn_all += fn
 
         f = (2 * tp_all / (tp_all + tp_all + fp_all + fn_all))
+        if tp_all == 0:
+            precision = 0
+        else:
+            precision = tp_all / (tp_all + fp_all)
+
         print("TP: " + str(tp_all))
         print("FP: " + str(fp_all))
         print("FN: " + str(fn_all))
         print("F: " + str(f))
-        print("Precision: " + str(tp_all / (tp_all + fp_all)))
+        print("Precision: " + str(precision))
         print("Recal: " + str(tp_all / (tp_all + fn_all)))
-
 
 
 
@@ -90,4 +94,3 @@ if __name__ == "__main__":
     eval = Eval()
     eval.read()
     eval.evaluate()
-
