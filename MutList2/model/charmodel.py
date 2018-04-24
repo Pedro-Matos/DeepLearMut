@@ -287,7 +287,7 @@ class CharModel:
             model = Model(il, out)
             model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
 
-            save_load_utils.load_all_weights(model, 'char_all_sizes.h5')
+            save_load_utils.load_all_weights(model, '../trained/char_minibatch_10epochs.h5')
 
 
             # get sequences and labels separated.
@@ -474,6 +474,6 @@ class CharModel:
             print(acc)
 
 if __name__ == "__main__":
-    model = CharModel(1)
+    model = CharModel(2)
     model.main()
 
