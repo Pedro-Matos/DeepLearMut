@@ -91,11 +91,11 @@ class CharModel:
         #sequences = sequences[:100]
         #labels = labels[:100]
 
+        # X = pad_sequences(sequences, maxlen=self.w_arit_mean, padding='post', truncating='post')
+        # y_pad = pad_sequences(labels, maxlen=self.w_arit_mean, padding='post', truncating='post')
+
         X = pad_sequences(sequences, maxlen=self.maxSeqLength, padding='post')
         y_pad = pad_sequences(labels, maxlen=self.maxSeqLength, padding='post')
-
-        #X = pad_sequences(sequences, maxlen=self.w_arit_mean, padding='post', truncating='post')
-        #y_pad = pad_sequences(labels, maxlen=self.w_arit_mean, padding='post', truncating='post')
 
         y = [to_categorical(i, num_classes=self.lab_len) for i in y_pad]
 
@@ -115,6 +115,7 @@ class CharModel:
         model = Model(input, out)
         model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
         model.summary()
+
         history = model.fit(X, np.array(y), batch_size=32, epochs=self.epochsN, verbose=0)
 
         save_load_utils.save_all_weights(model, '../trained/char_max_seq_20epochs.h5')

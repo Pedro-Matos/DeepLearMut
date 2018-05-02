@@ -54,7 +54,7 @@ from collections import defaultdict
 
 path_read = 'test.PubTator.txt'
 path_write = 'treated/test_data/'
-path_write_tsv = 'treated/test_a1_gold/'
+path_write_tsv = 'treated/gold_results/'
 
 
 days_file = open(path_read, 'r')

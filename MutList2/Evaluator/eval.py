@@ -9,7 +9,7 @@ class Eval:
         self.silver = defaultdict(list)
 
     def read(self):
-        path_gold = '../corpus_char/tmVarCorpus/treated/test_a1_gold/'
+        path_gold = '../corpus_char/tmVarCorpus/treated/gold_results/'
         docs = glob.glob(path_gold + "*.a1")
 
         path_silver = '../model/silver_minibatch_20epoch/'
