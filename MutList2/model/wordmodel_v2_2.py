@@ -130,7 +130,7 @@ class WordModel:
                 model.fit(tx, np.array(ty), verbose=0, epochs=1)
             print("Trained at", datetime.now())
 
-        save_load_utils.save_all_weights(model, 'words_10_2.h5')
+        save_load_utils.save_all_weights(model, 'words_10.h5')
 
     def test_model(self, test_data, test_labels):
         # get word embeddings
@@ -151,7 +151,7 @@ class WordModel:
         model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
         model.summary()
 
-        save_load_utils.load_all_weights(model, 'words_10_2.h5')
+        save_load_utils.load_all_weights(model, 'words_10.h5')
 
         # get the training corpus
         cr = corpusreader.CorpusReader(test_data, test_labels)
@@ -188,19 +188,28 @@ class WordModel:
             # check if there are any mutations identified
             # {'O': 0, 'B-E': 1, 'I-E': 2, 'E-E': 3, 'S-E': 4}
             B = False
+            last = 0
             for idx in p[0]:
-                if idx == 1:
+                if idx == 1 and last == 1:
+                    counter = counter + 1
+                    offsets[counter].append(position)
+                    B = True
+                elif idx == 1:
                     B = True
                     offsets[counter].append(position)
+                    last = 1
                 elif idx == 2 and B:
                     offsets[counter].append(position)
+                    last = 2
                 elif idx == 3 and B:
                     offsets[counter].append(position)
+                    last = 3
                     B = False
                     counter = counter + 1
                 elif idx == 4:
                     offsets[counter].append(position)
                     counter = counter + 1
+                    last = 4
                 else:
                     B = False
 
@@ -208,20 +217,58 @@ class WordModel:
 
             print(p)
             print(doc)
-            print(offsets)
+            # open file to write
+            textid = str(doc['textid'])
+            abstract = open("silver_words_10epoch/" + textid + ".a1", 'w')
             for i in offsets:
                 word = offsets.get(i)
-                for c in word:
-                    print(doc['tokstart'][c])
-                    print(doc['tokend'][c])
-                    print(doc['tokens'][c])
+                print(len(word))
+                print(word)
+                size = len(word)
+                if size == 1:
+                    s = word[0]     # just one; singleton
 
-            exit()
+                    abstract.write(str(doc['tokstart'][s]) + "\t")
+                    abstract.write(str(doc['tokend'][s]) + "\t")
+                    abstract.write(str(doc['tokens'][s]) + "\n")
+
+
+                    print(doc['tokstart'][s])
+                    print(doc['tokend'][s])
+                    print(doc['tokens'][s])
+
+                elif size > 1:
+                    s = word[0]     # start of token
+                    e = word[-1]    # end of token
+
+                    abstract.write(str(doc['tokstart'][s]) + "\t")
+                    abstract.write(str(doc['tokend'][e]) + "\t")
+
+
+                    print(doc['tokstart'][s])
+                    print(doc['tokend'][e])
+                    print("just test:")
+
+                    token = ""
+                    for c in word:
+                        token = token + doc['tokens'][c]
+
+                        print(doc['tokstart'][c])
+                        print(doc['tokend'][c])
+
+
+                    print("test ended:")
+                    print(token)
+
+                    abstract.write(str(token) + "\n")
+
+                print("---")
+            print("\n\n---\n\n")
 
 
 if __name__ == "__main__":
     model = WordModel()
-    #model.main()
+    model.main()
     test_data = '../corpus_char/tmVarCorpus/treated/test_data.txt'
     test_labels = '../corpus_char/tmVarCorpus/treated/test_labels.tsv'
     model.test_model(test_data, test_labels)
