@@ -30,7 +30,7 @@ class WordModel:
         self.lablist = {'O': 0, 'B-E': 1, 'I-E': 2, 'E-E': 3, 'S-E': 4}
         self.lab_len = 5
 
-        self.epochsN = 10
+        self.epochsN = 20
 
     def main(self):
         # get word embeddings
@@ -130,7 +130,7 @@ class WordModel:
                 model.fit(tx, np.array(ty), verbose=0, epochs=1)
             print("Trained at", datetime.now())
 
-        save_load_utils.save_all_weights(model, 'words_10.h5')
+        save_load_utils.save_all_weights(model, 'words_20.h5')
 
     def test_model(self, test_data, test_labels):
         # get word embeddings
@@ -151,7 +151,7 @@ class WordModel:
         model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
         model.summary()
 
-        save_load_utils.load_all_weights(model, 'words_10.h5')
+        save_load_utils.load_all_weights(model, 'words_20.h5')
 
         # get the training corpus
         cr = corpusreader.CorpusReader(test_data, test_labels)
@@ -219,7 +219,7 @@ class WordModel:
             print(doc)
             # open file to write
             textid = str(doc['textid'])
-            abstract = open("silver_words_10epoch/" + textid + ".a1", 'w')
+            abstract = open("silver_words_20epoch/" + textid + ".a1", 'w')
             for i in offsets:
                 word = offsets.get(i)
                 print(len(word))
@@ -268,7 +268,7 @@ class WordModel:
 
 if __name__ == "__main__":
     model = WordModel()
-    model.main()
+    #model.main()
     test_data = '../corpus_char/tmVarCorpus/treated/test_data.txt'
     test_labels = '../corpus_char/tmVarCorpus/treated/test_labels.tsv'
     model.test_model(test_data, test_labels)
