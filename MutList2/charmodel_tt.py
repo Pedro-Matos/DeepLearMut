@@ -54,7 +54,7 @@ class CharModel:
         self.lab_len = 4
         self.dict_labs_nopad = {'O': 0, 'B': 1, 'I': 2}
         self.num_labs = 3
-        self.epochsN = 6
+        self.epochsN = 20
 
         self.model = model  # choose between padding or no padding
         # 1 for padding
@@ -227,7 +227,7 @@ class CharModel:
 
         # Pick the best model, and save it with a useful name
         print("Choosing the best epoch")
-        shutil.copyfile("epoch_%s.h5" % f_index, "minibatch_%s.h5" % f_index)
+        shutil.copyfile("mini-batch-results/epoch_%s.h5" % f_index, "minibatch_%s.h5" % f_index)
 
 
     def main(self):
@@ -313,10 +313,10 @@ class CharModel:
         gold = defaultdict(list)
         silver = defaultdict(list)
 
-        path_gold = '../corpus_char/tmVarCorpus/treated/gold_results/'
+        path_gold = 'corpus_char/tmVarCorpus/treated/gold_results/'
         docs = glob.glob(path_gold + "*.a1")
 
-        path_silver = '../model/test_minibatch/'
+        path_silver = 'mini-batch-silver/'
         docs_silver = glob.glob(path_silver + "*.a1")
 
         if len(docs) != len(docs_silver):
