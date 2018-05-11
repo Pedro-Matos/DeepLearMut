@@ -12,7 +12,7 @@ class Eval:
         path_gold = '../corpus_char/tmVarCorpus/treated/gold_results/'
         docs = glob.glob(path_gold + "*.a1")
 
-        path_silver = '../model/silver_words_20epoch/'
+        path_silver = '../model/test_minibatch/'
         docs_silver = glob.glob(path_silver + "*.a1")
 
         if len(docs) != len(docs_silver):

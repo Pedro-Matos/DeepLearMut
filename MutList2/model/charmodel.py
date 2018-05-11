@@ -288,7 +288,7 @@ class CharModel:
             model = Model(il, out)
             model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
 
-            save_load_utils.load_all_weights(model, '../test_trained/minibatch_24.h5')
+            save_load_utils.load_all_weights(model, '../new_models/char_all_sizes_30epochs.h5')
 
 
             # get sequences and labels separated.
@@ -299,7 +299,7 @@ class CharModel:
                 # getting all sequences from a document/corpus
                 seqs = self.test_data.get(key)
                 #print(key)
-                abstract = open("silvers_batches/25/"+key+".a1", 'w')
+                abstract = open("test_minibatch/"+key+".a1", 'w')
                 position = 0
                 offsets = defaultdict(list)
                 counter = 0
