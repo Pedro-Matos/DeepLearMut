@@ -1,6 +1,9 @@
 import glob
 import shutil
 
+import keras
+from keras.callbacks import ModelCheckpoint
+
 from utils import seq_to_char
 from utils import test_to_char
 import numpy as np
@@ -54,7 +57,7 @@ class CharModel:
         self.lab_len = 4
         self.dict_labs_nopad = {'O': 0, 'B': 1, 'I': 2}
         self.num_labs = 3
-        self.epochsN = 20
+        self.epochsN = 15
 
         self.model = model  # choose between padding or no padding
         # 1 for padding
@@ -104,6 +107,13 @@ class CharModel:
 
         y = [to_categorical(i, num_classes=self.lab_len) for i in y_pad]
 
+
+        # early stopping and best epoch
+        early_stop = keras.callbacks.EarlyStopping(monitor='val_loss', patience=2, verbose=0, mode='auto')
+        filepath = "words.h5"
+        checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True, mode='max')
+        callbacks_list = [checkpoint, early_stop]
+
         # Set up the keras model
         input = Input(shape=(self.maxSeqLength,))
         el = Embedding(n_char + 1, 200, name="embed")(input)
@@ -121,7 +131,8 @@ class CharModel:
         model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
         model.summary()
 
-        history = model.fit(X, np.array(y), batch_size=32, epochs=self.epochsN, verbose=0)
+        history = model.fit(X, np.array(y), batch_size=32, epochs=self.epochsN, callbacks=callbacks_list,
+                            validation_split=0.0, verbose=0)
 
         #
 
@@ -412,5 +423,5 @@ class CharModel:
 
 
 if __name__ == "__main__":
-    model = CharModel(0)
+    model = CharModel(1)
     model.main()

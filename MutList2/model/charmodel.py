@@ -288,14 +288,14 @@ class CharModel:
             model = Model(il, out)
             model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
 
-            save_load_utils.load_all_weights(model, '../new_models/char_all_sizes_30epochs.h5')
-
+            save_load_utils.load_all_weights(model, '../new_models/minibatch_37.h5')
 
             # get sequences and labels separated.
             # convert BIO tags to numbers
             keys = self.test_data.keys()
-            
+
             for key in keys:
+
                 # getting all sequences from a document/corpus
                 seqs = self.test_data.get(key)
                 #print(key)
