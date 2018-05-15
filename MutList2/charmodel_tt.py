@@ -109,10 +109,10 @@ class CharModel:
 
 
         # early stopping and best epoch
-        early_stop = keras.callbacks.EarlyStopping(monitor='val_loss', patience=2, verbose=0, mode='auto')
-        filepath = "words.h5"
-        checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True, mode='max')
-        callbacks_list = [checkpoint, early_stop]
+        #early_stop = keras.callbacks.EarlyStopping(monitor='loss', patience=2, verbose=0, mode='auto')
+        #filepath = "max-seq.h5"
+        #checkpoint = ModelCheckpoint(filepath, monitor='loss', verbose=1, save_best_only=True, mode='max')
+        #callbacks_list = [checkpoint, early_stop]
 
         # Set up the keras model
         input = Input(shape=(self.maxSeqLength,))
@@ -131,8 +131,10 @@ class CharModel:
         model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
         model.summary()
 
-        history = model.fit(X, np.array(y), batch_size=32, epochs=self.epochsN, callbacks=callbacks_list,
-                            validation_split=0.0, verbose=0)
+        #treinar com 32, 147, 245, 735
+        history = model.fit(X, np.array(y), batch_size=32, epochs=self.epochsN, validation_split=0.0, verbose=1)
+        # save all epochs
+        save_load_utils.save_all_weights(model, 'max_seq_%s_32b.h5' % self.epochsN)
 
         #
 

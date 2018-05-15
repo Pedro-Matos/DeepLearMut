@@ -268,7 +268,7 @@ class CharModel:
             # sequences length distribution
             self.w_arit_mean = int(self.seqs_distribution())
 
-            model.load_model(DICT, n_char, "normal")
+            model.load_model(DICT, n_char, "max_seq")
 
     def load_model(self, DICT, n_char, type):
 
@@ -363,7 +363,7 @@ class CharModel:
 
             model = Model(input, out)
             model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
-            save_load_utils.load_all_weights(model, '../trained/char_max_seq_20epochs.h5')
+            save_load_utils.load_all_weights(model, '../words.h5')
 
 
             # get sequences and labels separated.
@@ -374,7 +374,7 @@ class CharModel:
                 # getting all sequences from a document/corpus
                 seqs = self.test_data.get(key)
                 # print(key)
-                abstract = open("silver_maxseq_20epoch/" + key + ".a1", 'w')
+                abstract = open("../max-seq-silver/" + key + ".a1", 'w')
                 position = 0
                 offsets = defaultdict(list)
                 counter = 0
