@@ -47,7 +47,6 @@ class WordModel:
         for doc in corpus:
             tmp_dic = {}
 
-            print(doc)
             tmp_dic['tokens'] = doc['tokens']
 
             # convert SOBIE tags to numbers
@@ -56,7 +55,6 @@ class WordModel:
             tmp_dic['bion'] = tags
             train.append(tmp_dic)
 
-        exit()
         # get the number of the embedding
         for idx in range(len(train)):
             words = train[idx]['tokens']
@@ -137,7 +135,7 @@ class WordModel:
             # test the results
             test_data = 'corpus_char/tmVarCorpus/treated/test_data.txt'
             test_labels = 'corpus_char/tmVarCorpus/treated/test_labels.tsv'
-            self.test_model(test_data, test_labels)
+            self.test_model(test_data, test_labels, model)
             f = self.eval()
 
             if f > f_best:
