@@ -108,10 +108,17 @@ class WordModel:
                     print("XXX")
 
         input = Input(shape=(None,))
-        model = Embedding(len(self.words_list) + 1, 200, weights=[self.embedding_matrix], trainable=False)(input)
-        model = Bidirectional(LSTM(units=50, return_sequences=True,
-                                   recurrent_dropout=0.1))(model)  # variational biLSTM
-        model = TimeDistributed(Dense(50, activation="relu"))(model)  # a dense layer as suggested by neuralNer
+        el = Embedding(len(self.words_list) + 1, 200, weights=[self.embedding_matrix], trainable=False)(input)
+        bl1 = Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                            merge_mode="concat",
+                            name="lstm1")(el)
+        bl2 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                            merge_mode="concat",
+                            name="lstm2")(bl1)
+        bl3 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                            merge_mode="concat",
+                            name="lstm3")(bl2)
+        model = TimeDistributed(Dense(50, activation="relu"))(bl3)  # a dense layer as suggested by neuralNer
         crf = CRF(self.lab_len)  # CRF layer
         out = crf(model)  # output
 

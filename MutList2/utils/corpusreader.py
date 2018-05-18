@@ -104,6 +104,7 @@ class CorpusReader(object):
         ends = [tok.end for tok in ct.tokens]
         seq = {"tokens": [i.value for i in ct.tokens], "tokstart": starts, "tokend": ends, "bio": labels, "textid": textid}
 
+
         if textid in self.items_by_text:
             items = self.items_by_text[textid]
             etype = "E" if self.alle else i[5]

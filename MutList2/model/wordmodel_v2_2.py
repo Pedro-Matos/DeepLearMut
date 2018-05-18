@@ -24,8 +24,8 @@ class WordModel:
         self.words_list = None
         self.embedding_matrix = None
 
-        self.textfile = 'corpus_char/tmVarCorpus/treated/train_data.txt'
-        self.annotfile = 'corpus_char/tmVarCorpus/treated/train_labels.tsv'
+        self.textfile = '../corpus_char/tmVarCorpus/treated/train_data.txt'
+        self.annotfile = '../corpus_char/tmVarCorpus/treated/train_labels.tsv'
 
         self.lablist = {'O': 0, 'B-E': 1, 'I-E': 2, 'E-E': 3, 'S-E': 4}
         self.lab_len = 5
@@ -34,13 +34,16 @@ class WordModel:
 
     def main(self):
         # get word embeddings
+        '''
         utils = wordUtils.Utils()
         self.words_list, self.embedding_matrix = utils.load_word2vec()
         unword_n = len(self.words_list)
-
+        '''
         # get the training corpus
         cr = corpusreader.CorpusReader(self.textfile, self.annotfile)
         corpus = cr.trainseqs
+
+        exit()
 
         train = []
         print("Processing training data", datetime.now())
@@ -56,7 +59,7 @@ class WordModel:
             tmp_dic['bion'] = tags
             train.append(tmp_dic)
 
-        exit()
+
         # get the number of the embedding
         for idx in range(len(train)):
             words = train[idx]['tokens']
@@ -354,6 +357,7 @@ class WordModel:
         # get the training corpus
         cr = corpusreader.CorpusReader(test_data, test_labels)
         corpus = cr.trainseqs
+        exit()
 
         # get the number of the embedding
         for idx in range(len(corpus)):
@@ -453,7 +457,7 @@ class WordModel:
 
 if __name__ == "__main__":
     model = WordModel()
-    #model.main()
-    test_data = '../corpus_char/tmVarCorpus/treated/test_data.txt'
-    test_labels = '../corpus_char/tmVarCorpus/treated/test_labels.tsv'
-    model.test_model_2(test_data, test_labels)
+    model.main()
+    #test_data = '../corpus_char/tmVarCorpus/treated/test_data.txt'
+    #test_labels = '../corpus_char/tmVarCorpus/treated/test_labels.tsv'
+    #model.test_model_2(test_data, test_labels)

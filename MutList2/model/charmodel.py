@@ -363,7 +363,7 @@ class CharModel:
 
             model = Model(input, out)
             model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
-            save_load_utils.load_all_weights(model, '../char_models/max_seq/max_seq_40_147b.h5')
+            save_load_utils.load_all_weights(model, '../char_models/max_seq/max_seq_25_147b.h5')
 
 
             # get sequences and labels separated.
