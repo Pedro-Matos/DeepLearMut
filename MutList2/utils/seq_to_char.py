@@ -2,8 +2,8 @@ from collections import defaultdict
 
 class CorpusReader:
     def __init__(self):
-        self.corpus_path = 'corpus_char/tmVarCorpus/treated/train_data.txt'
-        self.labels_file = 'corpus_char/tmVarCorpus/treated/train_labels.tsv'
+        self.corpus_path = '../corpus_char/tmVarCorpus/treated/train_data.txt'
+        self.labels_file = '../corpus_char/tmVarCorpus/treated/train_labels.tsv'
 
         self.ids = []
         self.dic_corpus = {}

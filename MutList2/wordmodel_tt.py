@@ -55,6 +55,10 @@ class WordModel:
             tmp_dic['bion'] = tags
             train.append(tmp_dic)
 
+
+        n_emb = 0
+        n_unk = 0
+
         # get the number of the embedding
         for idx in range(len(train)):
             words = train[idx]['tokens']
@@ -64,14 +68,21 @@ class WordModel:
                 try:
                     # the index of the word in the embedding matrix
                     index = self.words_list.index(i)
+                    n_emb = n_emb + 1
                 except ValueError:
                     # use the embedding full of zeros to identify an unknown word
+                    n_unk = n_unk + 1
                     index = unword_n
 
                 # the index of the word in the embedding matrix
                 words_id.append(index)
 
             train[idx]['tokens'] = words_id
+
+
+        print(n_emb)
+        print(n_unk)
+        exit()
 
         # get all sizes from the sequences with training data
         train_l_d = {}

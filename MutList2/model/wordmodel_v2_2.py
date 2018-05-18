@@ -344,8 +344,116 @@ class WordModel:
 
         return f
 
+    def test_model_2(self, test_data, test_labels):
+
+        # get word embeddings
+        utils = wordUtils.Utils()
+        self.words_list, self.embedding_matrix = utils.load_word2vec()
+        unword_n = len(self.words_list)
+
+        # get the training corpus
+        cr = corpusreader.CorpusReader(test_data, test_labels)
+        corpus = cr.trainseqs
+
+        # get the number of the embedding
+        for idx in range(len(corpus)):
+            words = corpus[idx]['tokens']
+            words_id = []
+            for i in words:
+
+                # get the number of the embedding
+                try:
+                    # the index of the word in the embedding matrix
+                    index = self.words_list.index(i)
+                except ValueError:
+                    # use the embedding full of zeros to identify an unknown word
+                    index = unword_n
+
+                # the index of the word in the embedding matrix
+                words_id.append(index)
+
+            corpus[idx]['embs'] = words_id
+
+        input = Input(shape=(None,))
+        model = Embedding(len(self.words_list) + 1, 200, weights=[self.embedding_matrix], trainable=False)(input)
+        model = Bidirectional(LSTM(units=50, return_sequences=True,
+                                   recurrent_dropout=0.1))(model)  # variational biLSTM
+        model = TimeDistributed(Dense(50, activation="relu"))(model)  # a dense layer as suggested by neuralNer
+        crf = CRF(self.lab_len)  # CRF layer
+        out = crf(model)  # output
+
+        model = Model(input, out)
+        model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
+        model.summary()
+        save_load_utils.load_all_weights(model, '../word_models/words19.h5')
+
+        for doc in corpus:
+            doc_arr = doc['embs']
+            p = model.predict(np.array([doc_arr]))
+            p = np.argmax(p, axis=-1)
+
+            position = 0
+            offsets = defaultdict(list)
+            counter = 0
+            # check if there are any mutations identified
+            # {'O': 0, 'B-E': 1, 'I-E': 2, 'E-E': 3, 'S-E': 4}
+            B = False
+            last = 0
+            for idx in p[0]:
+                if idx == 1 and last == 1:
+                    counter = counter + 1
+                    offsets[counter].append(position)
+                    B = True
+                elif idx == 1:
+                    B = True
+                    offsets[counter].append(position)
+                    last = 1
+                elif idx == 2 and B:
+                    offsets[counter].append(position)
+                    last = 2
+                elif idx == 3 and B:
+                    offsets[counter].append(position)
+                    last = 3
+                    B = False
+                    counter = counter + 1
+                elif idx == 4:
+                    offsets[counter].append(position)
+                    counter = counter + 1
+                    last = 4
+                else:
+                    B = False
+
+                position = position + 1
+
+            # open file to write
+            textid = str(doc['textid'])
+            abstract = open("../words-silver/" + textid + ".a1", 'w')
+            for i in offsets:
+                word = offsets.get(i)
+                size = len(word)
+                if size == 1:
+                    s = word[0]  # just one; singleton
+
+                    abstract.write(str(doc['tokstart'][s]) + "\t")
+                    abstract.write(str(doc['tokend'][s]) + "\t")
+                    abstract.write(str(doc['tokens'][s]) + "\n")
+
+
+                elif size > 1:
+                    s = word[0]  # start of token
+                    e = word[-1]  # end of token
+
+                    abstract.write(str(doc['tokstart'][s]) + "\t")
+                    abstract.write(str(doc['tokend'][e]) + "\t")
+                    token = ""
+                    for c in word:
+                        token = token + doc['tokens'][c]
+
+                    abstract.write(str(token) + "\n")
+
 if __name__ == "__main__":
     model = WordModel()
-    model.main()
-
-    #model.test_model(test_data, test_labels)
+    #model.main()
+    test_data = '../corpus_char/tmVarCorpus/treated/test_data.txt'
+    test_labels = '../corpus_char/tmVarCorpus/treated/test_labels.tsv'
+    model.test_model_2(test_data, test_labels)
