@@ -30,13 +30,20 @@ class WordModel:
         self.lablist = {'O': 0, 'B-E': 1, 'I-E': 2, 'E-E': 3, 'S-E': 4}
         self.lab_len = 5
 
-        self.epochsN = 5
+        self.epochsN = 40
 
-    def main(self):
+    def main(self, glove):
         # get word embeddings
         utils = wordUtils.Utils()
-        self.words_list, self.embedding_matrix = utils.load_word2vec()
-        unword_n = len(self.words_list)
+
+        if glove:
+            # use glove
+            self.words_list, self.embedding_matrix = utils.load_glove()
+            unword_n = len(self.words_list)
+
+        else:
+            self.words_list, self.embedding_matrix = utils.load_word2vec()
+            unword_n = len(self.words_list)
 
         # get the training corpus
         cr = corpusreader.CorpusReader(self.textfile, self.annotfile)
@@ -79,10 +86,6 @@ class WordModel:
 
             train[idx]['tokens'] = words_id
 
-
-        print(n_emb)
-        print(n_unk)
-        exit()
 
         # get all sizes from the sequences with training data
         train_l_d = {}
@@ -153,7 +156,7 @@ class WordModel:
             # test the results
             test_data = 'corpus_char/tmVarCorpus/treated/test_data.txt'
             test_labels = 'corpus_char/tmVarCorpus/treated/test_labels.tsv'
-            self.test_model(test_data, test_labels, model)
+            self.test_model(test_data, test_labels, model, glove)
             f = self.eval()
 
             if f > f_best:
@@ -163,15 +166,22 @@ class WordModel:
 
         # Pick the best model, and save it with a useful name
         print("Choosing the best epoch")
-        shutil.copyfile("words-results/epoch_%s.h5" % f_index, "words%s.h5" % f_index)
+        shutil.copyfile("words-results/epoch_%s.h5" % f_index, "words_glove_multiLSTM%s.h5" % f_index)
 
 
 
-    def test_model(self, test_data, test_labels, model):
+    def test_model(self, test_data, test_labels, model, glove):
         # get word embeddings
         utils = wordUtils.Utils()
-        self.words_list, self.embedding_matrix = utils.load_word2vec()
-        unword_n = len(self.words_list)
+
+        if glove:
+            # use glove
+            self.words_list, self.embedding_matrix = utils.load_glove()
+            unword_n = len(self.words_list)
+
+        else:
+            self.words_list, self.embedding_matrix = utils.load_word2vec()
+            unword_n = len(self.words_list)
 
         # get the training corpus
         cr = corpusreader.CorpusReader(test_data, test_labels)
@@ -362,6 +372,6 @@ class WordModel:
 
 if __name__ == "__main__":
     model = WordModel()
-    model.main()
+    model.main(True)
 
     #model.test_model(test_data, test_labels)
