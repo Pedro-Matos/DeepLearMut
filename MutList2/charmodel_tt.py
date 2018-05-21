@@ -107,7 +107,8 @@ class CharModel:
 
         y = [to_categorical(i, num_classes=self.lab_len) for i in y_pad]
 
-
+        print(self.maxSeqLength)
+        exit()
         # early stopping and best epoch
         #early_stop = keras.callbacks.EarlyStopping(monitor='loss', patience=2, verbose=0, mode='auto')
         #filepath = "max-seq.h5"

@@ -357,7 +357,6 @@ class WordModel:
         # get the training corpus
         cr = corpusreader.CorpusReader(test_data, test_labels)
         corpus = cr.trainseqs
-        exit()
 
         # get the number of the embedding
         for idx in range(len(corpus)):
@@ -379,17 +378,24 @@ class WordModel:
             corpus[idx]['embs'] = words_id
 
         input = Input(shape=(None,))
-        model = Embedding(len(self.words_list) + 1, 200, weights=[self.embedding_matrix], trainable=False)(input)
-        model = Bidirectional(LSTM(units=50, return_sequences=True,
-                                   recurrent_dropout=0.1))(model)  # variational biLSTM
-        model = TimeDistributed(Dense(50, activation="relu"))(model)  # a dense layer as suggested by neuralNer
+        el = Embedding(len(self.words_list) + 1, 200, weights=[self.embedding_matrix], trainable=False)(input)
+        bl1 = Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                            merge_mode="concat",
+                            name="lstm1")(el)
+        bl2 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                            merge_mode="concat",
+                            name="lstm2")(bl1)
+        bl3 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                            merge_mode="concat",
+                            name="lstm3")(bl2)
+        model = TimeDistributed(Dense(50, activation="relu"))(bl3)  # a dense layer as suggested by neuralNer
         crf = CRF(self.lab_len)  # CRF layer
         out = crf(model)  # output
 
         model = Model(input, out)
         model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
         model.summary()
-        save_load_utils.load_all_weights(model, '../word_models/words19.h5')
+        save_load_utils.load_all_weights(model, '../word_models/words39_multiLSTM.h5')
 
         for doc in corpus:
             doc_arr = doc['embs']
@@ -457,7 +463,7 @@ class WordModel:
 
 if __name__ == "__main__":
     model = WordModel()
-    model.main()
-    #test_data = '../corpus_char/tmVarCorpus/treated/test_data.txt'
-    #test_labels = '../corpus_char/tmVarCorpus/treated/test_labels.tsv'
-    #model.test_model_2(test_data, test_labels)
+    #model.main()
+    test_data = '../corpus_char/tmVarCorpus/treated/test_data.txt'
+    test_labels = '../corpus_char/tmVarCorpus/treated/test_labels.tsv'
+    model.test_model_2(test_data, test_labels)
