@@ -48,7 +48,7 @@ class WordModel:
         # get the training corpus
         cr = corpusreader.CorpusReader(self.textfile, self.annotfile)
         corpus = cr.trainseqs
-
+        print(len(corpus))
         train = []
         print("Processing training data", datetime.now())
         for doc in corpus:
@@ -112,16 +112,8 @@ class WordModel:
 
         input = Input(shape=(None,))
         el = Embedding(len(self.words_list) + 1, 200, weights=[self.embedding_matrix], trainable=False)(input)
-        bl1 = Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
-                            merge_mode="concat",
-                            name="lstm1")(el)
-        bl2 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
-                            merge_mode="concat",
-                            name="lstm2")(bl1)
-        bl3 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
-                            merge_mode="concat",
-                            name="lstm3")(bl2)
-        model = TimeDistributed(Dense(50, activation="relu"))(bl3)  # a dense layer as suggested by neuralNer
+        model = Bidirectional(LSTM(units=50, return_sequences=True, recurrent_dropout = 0.1))(el)  # variational biLSTM
+        model = TimeDistributed(Dense(50, activation="relu"))(model)  # a dense layer as suggested by neuralNer
         crf = CRF(self.lab_len)  # CRF layer
         out = crf(model)  # output
 
@@ -166,7 +158,7 @@ class WordModel:
 
         # Pick the best model, and save it with a useful name
         print("Choosing the best epoch")
-        shutil.copyfile("words-results/epoch_%s.h5" % f_index, "words_glove_multiLSTM%s.h5" % f_index)
+        shutil.copyfile("words-results/epoch_%s.h5" % f_index, "words_glove_%s.h5" % f_index)
 
 
 
@@ -370,8 +362,131 @@ class WordModel:
 
         return f
 
+    def test_exist(self, glove, test_data, test_labels):
+        # get word embeddings
+        utils = wordUtils.Utils()
+
+        if glove:
+            # use glove
+            self.words_list, self.embedding_matrix = utils.load_glove()
+            unword_n = len(self.words_list)
+
+        else:
+            self.words_list, self.embedding_matrix = utils.load_word2vec()
+            unword_n = len(self.words_list)
+
+        # get the training corpus
+        cr = corpusreader.CorpusReader(test_data, test_labels)
+        corpus = cr.trainseqs
+
+        # get the number of the embedding
+        for idx in range(len(corpus)):
+            words = corpus[idx]['tokens']
+            words_id = []
+            for i in words:
+
+                # get the number of the embedding
+                try:
+                    # the index of the word in the embedding matrix
+                    index = self.words_list.index(i)
+                except ValueError:
+                    # use the embedding full of zeros to identify an unknown word
+                    index = unword_n
+
+                # the index of the word in the embedding matrix
+                words_id.append(index)
+
+            corpus[idx]['embs'] = words_id
+
+        input = Input(shape=(None,))
+        el = Embedding(len(self.words_list) + 1, 200, weights=[self.embedding_matrix], trainable=False)(input)
+        bl1 = Bidirectional(LSTM(128, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                            merge_mode="concat",
+                            name="lstm1")(el)
+        bl2 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                            merge_mode="concat",
+                            name="lstm2")(bl1)
+        bl3 = Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.5, dropout=0.5),
+                            merge_mode="concat",
+                            name="lstm3")(bl2)
+        model = TimeDistributed(Dense(50, activation="relu"))(bl3)  # a dense layer as suggested by neuralNer
+        crf = CRF(self.lab_len)  # CRF layer
+        out = crf(model)  # output
+
+        model = Model(input, out)
+        model.compile(optimizer="rmsprop", loss=crf.loss_function, metrics=[crf.accuracy])
+        model.summary()
+        save_load_utils.load_all_weights(model, 'word_models/words_glove_multiLSTM31.h5')
+
+        for doc in corpus:
+            doc_arr = doc['embs']
+            p = model.predict(np.array([doc_arr]))
+            p = np.argmax(p, axis=-1)
+
+            position = 0
+            offsets = defaultdict(list)
+            counter = 0
+            # check if there are any mutations identified
+            # {'O': 0, 'B-E': 1, 'I-E': 2, 'E-E': 3, 'S-E': 4}
+            B = False
+            last = 0
+            for idx in p[0]:
+                if idx == 1 and last == 1:
+                    counter = counter + 1
+                    offsets[counter].append(position)
+                    B = True
+                elif idx == 1:
+                    B = True
+                    offsets[counter].append(position)
+                    last = 1
+                elif idx == 2 and B:
+                    offsets[counter].append(position)
+                    last = 2
+                elif idx == 3 and B:
+                    offsets[counter].append(position)
+                    last = 3
+                    B = False
+                    counter = counter + 1
+                elif idx == 4:
+                    offsets[counter].append(position)
+                    counter = counter + 1
+                    last = 4
+                else:
+                    B = False
+
+                position = position + 1
+
+            # open file to write
+            textid = str(doc['textid'])
+            abstract = open("words-silver/" + textid + ".a1", 'w')
+            for i in offsets:
+                word = offsets.get(i)
+                size = len(word)
+                if size == 1:
+                    s = word[0]  # just one; singleton
+
+                    abstract.write(str(doc['tokstart'][s]) + "\t")
+                    abstract.write(str(doc['tokend'][s]) + "\t")
+                    abstract.write(str(doc['tokens'][s]) + "\n")
+
+
+                elif size > 1:
+                    s = word[0]  # start of token
+                    e = word[-1]  # end of token
+
+                    abstract.write(str(doc['tokstart'][s]) + "\t")
+                    abstract.write(str(doc['tokend'][e]) + "\t")
+                    token = ""
+                    for c in word:
+                        token = token + doc['tokens'][c]
+
+                    abstract.write(str(token) + "\n")
+
+
 if __name__ == "__main__":
     model = WordModel()
-    model.main(True)
+    #model.main(True)
+    test_data = 'corpus_char/tmVarCorpus/treated/test_data.txt'
+    test_labels = 'corpus_char/tmVarCorpus/treated/test_labels.tsv'
+    model.test_exist(True, test_data, test_labels)
 
-    #model.test_model(test_data, test_labels)

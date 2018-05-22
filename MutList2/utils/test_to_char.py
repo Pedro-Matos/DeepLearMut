@@ -3,7 +3,7 @@ from collections import defaultdict
 
 class DataToTest:
     def __init__(self):
-        self.path_corpus = '../corpus_char/tmVarCorpus/treated/test_data/'
+        self.path_corpus = 'corpus_char/tmVarCorpus/treated/test_data/'
         self.dic_corpus = defaultdict(list)
         self.dic_all = defaultdict(list)
 
