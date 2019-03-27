@@ -1,5 +1,5 @@
 # DeepLearMut
-Tese's repository. About deep learning to mutations in text analysis.
+Thesis repository about deep learning to mutations in text analysis.
 
 Directory's **MutList** is responsible for the work done with TensorFlow in order to get used to neural networks.
 
